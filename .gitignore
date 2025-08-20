@@ -8,6 +8,7 @@
 [Mm]emoryCaptures/
 [Cc]rashReports/
 UserSettings/            # остаётся локальным (EditorUserSettings.asset и т.п.)
+.vsconfig
 
 # Gradle/Android артефакты
 .gradle/
