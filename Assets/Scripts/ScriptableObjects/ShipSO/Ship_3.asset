@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2936498be55427c458b91b13252b050d, type: 3}
+  m_Name: Ship_3
+  m_EditorClassIdentifier: 
+  id: ship3
+  displayName: Ship_3
+  acceleration: 20
+  maxSpeed: 50
+  deceleration: 10
+  turnSpeed: 100
+  maxHealth: 300
+  shipPrefab: {fileID: 931274326230567687, guid: 2532fa026c99b354798ec7340b0cd07e, type: 3}

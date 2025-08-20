@@ -1,0 +1,52 @@
+# --- Unity: не добавлять кеши, логи, билды ---
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Cc]rashReports/
+UserSettings/            # остаётся локальным (EditorUserSettings.asset и т.п.)
+
+# Gradle/Android артефакты
+.gradle/
+*.apk
+*.aab
+
+# Xcode/Apple артефакты
+*.xcworkspace/
+*.xcuserstate
+*.ipa
+*.app
+*.dSYM/
+
+# IDE/Editor
+.vs/
+.idea/
+.vscode/
+*.sln
+*.csproj
+*.pidb
+*.suo
+*.user
+*.userprefs
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Пакеты/архивы
+*.unitypackage
+*.zip
+
+# ОС-мусор
+.DS_Store
+Thumbs.db
+
+# --- ВАЖНО: оставляем в репозитории ---
+# Assets/          (исходники)
+# Packages/        (manifest.json, packages-lock.json)
+# ProjectSettings/ (настройки проекта)
