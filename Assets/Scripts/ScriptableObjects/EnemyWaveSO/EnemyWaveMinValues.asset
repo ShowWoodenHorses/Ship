@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fd7dbcaf578286489dd82fb698404a7, type: 3}
-  m_Name: Bullet1
+  m_Script: {fileID: 11500000, guid: 5a16ef82d152bc744814e680d9174692, type: 3}
+  m_Name: EnemyWaveMinValues
   m_EditorClassIdentifier: 
-  id: bullet1
-  speed: 44
-  damageEnemy: 20
-  damageBuilding: 0
-  lifeBeforeDestroy: 4
-  bulletPrefab: {fileID: 593526565559787040, guid: 0f56bd66cb436f440a0db51c2716a3b3, type: 3}
+  minValueEnemies:
+  - minScore: 15
+    enemyWaveId: level1
+  - minScore: 55
+    enemyWaveId: level2
+  - minScore: 100
+    enemyWaveId: level3

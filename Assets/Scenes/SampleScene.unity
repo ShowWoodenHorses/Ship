@@ -262,26 +262,17 @@ MonoBehaviour:
   - {fileID: 139650797}
   - {fileID: 2140023322}
   enemyTypes:
-  - prefab: {fileID: 6778489575331791697, guid: d59ed546c9713774a8c0281814aef0de, type: 3}
-    maxCount: 2
-    currentCount: 0
   - prefab: {fileID: 6778489575331791697, guid: e8c73b3a837f6cb45a9cc401e9876fac, type: 3}
-    maxCount: 2
-    currentCount: 0
-  - prefab: {fileID: 6618765107879026343, guid: f40bdf767f724e940909e66e3602f96c, type: 3}
-    maxCount: 2
-    currentCount: 0
-  - prefab: {fileID: 6778489575331791697, guid: 3f126dfa11ebe8f4eb52de5201a344d0, type: 3}
-    maxCount: 2
-    currentCount: 0
-  - prefab: {fileID: 416581670768146461, guid: 069a03fd76e49344fb8edf44e48e800c, type: 3}
     maxCount: 2
     currentCount: 0
   playerTransform: {fileID: 700890867}
   maxTotalEnemies: 5
   checkInterval: 1
+  timeForUpdate: 10
   currentTotalEnemies: 0
   scoreManager: {fileID: 1562816406}
+  enemyWaveDatabase: {fileID: 11400000, guid: 226c242dfeec7ca4296dbec5d7d2e1d4, type: 2}
+  currentEnemyWaveId: 
 --- !u!1 &106548824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,6 +1293,7 @@ MonoBehaviour:
   startShipId: ship1
   bulletDatabase: {fileID: 11400000, guid: 0b638926e2c7a34438b49cd63a6a7d44, type: 2}
   startBulletPrefabId: bullet1
+  currentBulletPrefabId: 
   currentBulletPrefab: {fileID: 0}
 --- !u!114 &700890869
 MonoBehaviour:
@@ -2635,6 +2627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScore: 0
   allTimeScore: 0
+  enemyWaveMinValues: {fileID: 11400000, guid: e3d9b38d19bd7354cbfb4e0920165979, type: 2}
 --- !u!4 &1562816407
 Transform:
   m_ObjectHideFlags: 0

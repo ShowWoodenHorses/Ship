@@ -32,6 +32,7 @@ public class ShipCannonMultiSide : MonoBehaviour
 
     void Start()
     {
+        InitializeBullet();
         InitializeCannons();
         SetupVisualEffects();
     }
@@ -53,9 +54,13 @@ public class ShipCannonMultiSide : MonoBehaviour
         }
     }
 
-    public void InitializeBullet(GameObject bulletPrefab)
+    void InitializeBullet()
     {
-        cannonballPrefab = bulletPrefab;
+        ShipManager shipManager = transform.parent.GetComponent<ShipManager>();
+        if(shipManager != null)
+        {
+            cannonballPrefab = shipManager.GetCurrentBulletPrefab();
+        }
     }
 
     void SetupVisualEffects()
@@ -302,5 +307,10 @@ public class ShipCannonMultiSide : MonoBehaviour
             maxAngle = Mathf.Max(maxAngle, Mathf.Max(c.maxLeftRotation, c.maxRightRotation));
         }
         return maxAngle;
+    }
+
+    public void UpdateBullet(GameObject bulletPrefab)
+    {
+        cannonballPrefab = bulletPrefab;
     }
 }

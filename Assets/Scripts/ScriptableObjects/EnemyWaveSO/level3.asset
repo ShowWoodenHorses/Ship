@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fd7dbcaf578286489dd82fb698404a7, type: 3}
-  m_Name: Bullet1
+  m_Script: {fileID: 11500000, guid: d8b8871da951d8040a4847196a0271ed, type: 3}
+  m_Name: level3
   m_EditorClassIdentifier: 
-  id: bullet1
-  speed: 44
-  damageEnemy: 20
-  damageBuilding: 0
-  lifeBeforeDestroy: 4
-  bulletPrefab: {fileID: 593526565559787040, guid: 0f56bd66cb436f440a0db51c2716a3b3, type: 3}
+  id: level3
+  enemyTypes:
+  - prefab: {fileID: 416581670768146461, guid: 069a03fd76e49344fb8edf44e48e800c, type: 3}
+    maxCount: 4
+    currentCount: 0
+  maxLimitEnemy: 10
+  intervalSpawn: 5

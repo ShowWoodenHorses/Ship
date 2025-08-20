@@ -13,6 +13,7 @@ namespace Assets.Scripts.Player
         [Header("Снаряд")]
         [SerializeField] private BulletDatabase bulletDatabase;
         [SerializeField] private string startBulletPrefabId = "bullet1";
+        [SerializeField] private string currentBulletPrefabId;
         [SerializeField] private GameObject currentBulletPrefab;
 
         private GameObject currentShipInstance;
@@ -22,8 +23,8 @@ namespace Assets.Scripts.Player
 
         void Start()
         {
+            currentBulletPrefabId = startBulletPrefabId;
             UpgradeShip(startShipId);
-            UpgradeBullet(startBulletPrefabId);
         }
 
         public void UpgradeShip(string shipId)
@@ -80,6 +81,7 @@ namespace Assets.Scripts.Player
             {
                 health.SetHealth(config.maxHealth);
             }
+            UpgradeBullet(currentBulletPrefabId);
         }
 
         private void UpdateBullet(BulletConfig config)
@@ -96,8 +98,9 @@ namespace Assets.Scripts.Player
             ShipCannonMultiSide shipCannonMultiSide = transform.GetChild(0).GetComponent<ShipCannonMultiSide>();
             if(shipCannonMultiSide != null)
             {
-                shipCannonMultiSide.InitializeBullet(currentBulletPrefab);
+                shipCannonMultiSide.UpdateBullet(currentBulletPrefab);
             }
+            currentBulletPrefabId = config.id;
         }
     }
 
