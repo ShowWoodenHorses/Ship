@@ -32,13 +32,13 @@ namespace Assets.Scripts.UI.Shop
             listButtons.Add(SelectItemText);
         }
 
-        public void Initialize(ShopShipConfig shopShipConfig)
+        public void Initialize(ShopItemConfig shopItemConfig)
         {
-            this.idItem = shopShipConfig.idItem;
-            this.nameItemText.text = shopShipConfig.nameItemText;
-            this.costItemText.text = shopShipConfig.costItem.ToString();
-            this.costItem = shopShipConfig.costItem;
-            this.iconItem.sprite = shopShipConfig.iconItem;
+            this.idItem = shopItemConfig.idItem;
+            this.nameItemText.text = shopItemConfig.nameItemText;
+            this.costItemText.text = shopItemConfig.costItem.ToString();
+            this.costItem = shopItemConfig.costItem;
+            this.iconItem.sprite = shopItemConfig.iconItem;
             UpdateButtons(BuyButton);
 
             BuyButton.GetComponent<Button>().onClick.AddListener(() => BuyClick());

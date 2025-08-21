@@ -2,32 +2,31 @@
 using Assets.Scripts.Configs;
 using Assets.Scripts.Player;
 using Assets.Scripts.UI.Shop;
-using NUnit.Framework.Interfaces;
 using UnityEngine;
 
 namespace Assets.Scripts.UI
 {
     public class ShopController : MonoBehaviour
     {
-        [SerializeField] private ScoreManager scoreManager;
-        [SerializeField] private ShipManager shipManager;
+        [SerializeField] private protected ScoreManager scoreManager;
+        [SerializeField] private protected ShipManager shipManager;
 
-        [SerializeField] private ShopShipConfig[] shopShipConfigs;
-        [SerializeField] private List<string> avaliableItems;
-        [SerializeField] private List<GameObject> allItems;
-        [SerializeField] private GameObject prefabShopItem;
-        [SerializeField] private Transform parentPosition;
+        [SerializeField] private protected ShopItemConfig[] shopItemConfigs;
+        [SerializeField] private protected List<string> avaliableItems; //Для сохранения
+        [SerializeField] private protected List<GameObject> allItems;
+        [SerializeField] private protected GameObject prefabShopItem;
+        [SerializeField] private protected Transform parentPosition;
 
-        [SerializeField] private string currentIdItem;
+        [SerializeField] private protected string currentIdItem; //Для сохранения
 
-        [SerializeField] private GameObject noMoneyObj;
+        [SerializeField] private protected GameObject noMoneyObj;
 
-        private void Start()
+        private protected void Start()
         {
             CreateShopItems();
         }
 
-        private void UpdateAvaliableItems()
+        private protected void UpdateAvaliableItems()
         {
             foreach(var item in allItems)
             {
@@ -46,11 +45,11 @@ namespace Assets.Scripts.UI
             }
         }
 
-        private void CreateShopItems()
+        private protected void CreateShopItems()
         {
-            for (int i = 0; i < shopShipConfigs.Length; i++)
+            for (int i = 0; i < shopItemConfigs.Length; i++)
             {
-                ShopShipConfig config = shopShipConfigs[i];
+                ShopItemConfig config = shopItemConfigs[i];
 
                 GameObject newItem = Instantiate(prefabShopItem, parentPosition);
                 ShopItemData shopItemData = newItem.GetComponent<ShopItemData>();
@@ -66,7 +65,7 @@ namespace Assets.Scripts.UI
             }
         }
 
-        private void PurchaseHandler(ShopItemData itemData)
+        private protected void PurchaseHandler(ShopItemData itemData)
         {
             Debug.Log(itemData.idItem);
 
@@ -81,20 +80,25 @@ namespace Assets.Scripts.UI
             avaliableItems.Add(itemData.idItem);
         }
 
-        private void ChoiceItemHandler(ShopItemData itemData)
+        private protected void ChoiceItemHandler(ShopItemData itemData)
         {
             Debug.Log(itemData.idItem);
 
             if (avaliableItems.Contains(itemData.idItem))
             {
-                shipManager.UpgradeShip(itemData.idItem);
+                UpdateItem(itemData.idItem);
                 currentIdItem = itemData.idItem;
                 itemData.UpdateButtons(itemData.SelectItemText);
                 UpdateAvaliableItems();
             }
         }
 
-        private void OnDestroy()
+        public virtual void UpdateItem(string id)
+        {
+            shipManager.UpgradeShip(id);
+        }
+
+        private protected void OnDestroy()
         {
             foreach(var item in allItems)
             {
