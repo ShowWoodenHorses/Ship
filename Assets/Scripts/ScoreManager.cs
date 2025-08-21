@@ -7,32 +7,32 @@ namespace Assets.Scripts
 {
     public class ScoreManager : MonoBehaviour
     {
-        [SerializeField] private int currentScore;
-        [SerializeField] private int allTimeScore;
+        [SerializeField] private int currentMoney;
+        [SerializeField] private int allTimeMoney;
         [SerializeField] private EnemyWaveMinValues enemyWaveMinValues;
 
         public Action<string> OnUpdateWave;
 
-        public void AddScore(int smount)
+        public void AddMoney(int amount)
         {
-            currentScore += smount;
-            allTimeScore += smount;
+            currentMoney += amount;
+            allTimeMoney += amount;
             CheckAndSendForUpdate();
         }
 
-        public void RemoveScore(int smount)
+        public void RemoveMoney(int amount)
         {
-            currentScore -= smount;
+            currentMoney -= amount;
         }
 
-        public int GetCurrentScore()
+        public int GetCurrentMoney()
         {
-            return currentScore;
+            return currentMoney;
         }
 
-        public int GetAllTimeScore()
+        public int GetAllTimeMoney()
         {
-            return allTimeScore;
+            return allTimeMoney;
         }
 
         private void CheckAndSendForUpdate()
@@ -42,7 +42,7 @@ namespace Assets.Scripts
             string currentWaveId;
             for (int i = enemyWaveMinValues.minValueEnemies.Length - 1; i >= 0; i--)
             {
-                if (allTimeScore >= enemyWaveMinValues.minValueEnemies[i].minScore)
+                if (allTimeMoney >= enemyWaveMinValues.minValueEnemies[i].minScore)
                 {
                     currentWaveId = enemyWaveMinValues.minValueEnemies[i].enemyWaveId;
                     OnUpdateWave?.Invoke(currentWaveId);

@@ -121,7 +121,7 @@ public class EnemySpawner : MonoBehaviour
                 enemyType.currentCount--;
                 if (enemyController.IsReward())
                 {
-                    scoreManager.AddScore(enemyController.GetReward());
+                    scoreManager.AddMoney(enemyController.GetReward());
                 }
                 break;
             }

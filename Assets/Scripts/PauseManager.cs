@@ -4,8 +4,6 @@ namespace Assets.Scripts
 {
     public class PauseManager : MonoBehaviour
     {
-        [SerializeField] private GameObject pauseUI;
-
         private bool userPaused = false;    // пауза через кнопку
         private bool systemPaused = false;  // пауза из-за потери фокуса
 
@@ -33,8 +31,6 @@ namespace Assets.Scripts
             Time.timeScale = shouldPause ? 0f : 1f;
             AudioListener.pause = shouldPause;
 
-            if (pauseUI != null)
-                pauseUI.SetActive(userPaused); // показываем UI только при пользовательской паузе
         }
 
         // Вызывается кнопкой
