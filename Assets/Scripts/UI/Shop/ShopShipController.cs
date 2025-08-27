@@ -7,9 +7,10 @@ namespace Assets.Scripts.UI.Shop
     public class ShopShipController : ShopController
     {
 
-        public void Initialize(List<string> saveAvaliableItems, string currentItemsId)
+        public void Initialize(List<string> saveAvaliableItems, string currentItemsId, SaveLifecycle saveLifecycle)
         {
             enabled = false;
+            this.saveLifecycle = saveLifecycle;
             UpdateAvaliableItems(saveAvaliableItems, currentItemsId);
             base.CreateShopItems();
             enabled = true;
@@ -17,7 +18,7 @@ namespace Assets.Scripts.UI.Shop
         public override void UpdateItem(string id)
         {
             shipManager.UpgradeShip(id);
-            SaveLifecycle.instance.SelectShip(id);
+            saveLifecycle.SelectShip(id);
         }
 
         private void UpdateAvaliableItems(List<string> saveAvaliableItems, string currentItemsId)

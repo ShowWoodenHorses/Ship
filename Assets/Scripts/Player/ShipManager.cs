@@ -9,10 +9,8 @@ namespace Assets.Scripts.Player
     {
         [Header("Корабль")]
         [SerializeField] private ShipDatabase shipDatabase;
-        [SerializeField] private string startShipId = "sloop"; // стартовый корабль
         [Header("Снаряд")]
         [SerializeField] private BulletDatabase bulletDatabase;
-        [SerializeField] private string startBulletPrefabId = "bullet1";
         [SerializeField] private string currentBulletPrefabId;
         [SerializeField] private GameObject currentBulletPrefab;
 

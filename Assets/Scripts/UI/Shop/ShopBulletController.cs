@@ -7,15 +7,16 @@ namespace Assets.Scripts.UI.Shop
     public class ShopBulletController : ShopController
     {
 
-        public void Initialize(List<string> saveAvaliableItems, string currentItemsId)
+        public void Initialize(List<string> saveAvaliableItems, string currentItemsId, SaveLifecycle saveLifecycle)
         {
+            this.saveLifecycle = saveLifecycle;
             UpdateAvaliableItems(saveAvaliableItems, currentItemsId);
             base.CreateShopItems();
         }
         public override void UpdateItem(string id)
         {
             shipManager.UpgradeBullet(id);
-            SaveLifecycle.instance.SelectBullet(id);
+            saveLifecycle.SelectBullet(id);
         }
 
         private void UpdateAvaliableItems(List<string> saveAvaliableItems, string currentItemsId)

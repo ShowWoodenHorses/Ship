@@ -7,20 +7,15 @@ namespace Assets.Scripts.Save
     {
         public static SaveData Data { get; private set; }  // доступ к данным сейва из других скриптов
 
-        public static SaveLifecycle instance;
-        public static SaveLifecycle Instance { get { return instance; } }
+        //Bootstrap
+        //void Awake()
+        //{
+        //    Data = SaveSystem.Load();
+        //}
 
-        void Awake()
+        public void Initialize(SaveData save)
         {
-            Data = SaveSystem.Load();                      // загружаем сейв при старте игры/сцены
-            if(instance == null)
-            {
-                instance = this;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+            Data = save;
         }
 
         void OnApplicationPause(bool pause)

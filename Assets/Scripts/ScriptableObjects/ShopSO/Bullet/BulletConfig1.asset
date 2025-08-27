@@ -15,4 +15,4 @@ MonoBehaviour:
   nameItemText: BulletConfig1
   iconItem: {fileID: 21300000, guid: f8047940cd1d7424a93908fd6ea05734, type: 3}
   idItem: bullet1
-  costItem: 50
+  costItem: 10

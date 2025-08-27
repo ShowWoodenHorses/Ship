@@ -22,6 +22,8 @@ namespace Assets.Scripts.UI
 
         [SerializeField] private protected GameObject noMoneyObj;
 
+        private protected SaveLifecycle saveLifecycle;
+
         //Bootstrap
         //private protected void Start()
         //{
@@ -85,7 +87,7 @@ namespace Assets.Scripts.UI
             scoreManager.RemoveMoney(itemData.costItem);
             itemData.UpdateButtons(itemData.SelectButton);
             avaliableItems.Add(itemData.idItem);
-            SaveLifecycle.instance.BuyItem(itemData.idItem);
+            saveLifecycle.BuyItem(itemData.idItem);
         }
 
         private protected void ChoiceItemHandler(ShopItemData itemData)

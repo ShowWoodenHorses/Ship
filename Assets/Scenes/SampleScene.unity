@@ -863,12 +863,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopBulletController: {fileID: 1840973769}
   shopShipController: {fileID: 409754090}
+  scoreManager: {fileID: 1562816406}
   enemyPool: {fileID: 1450235060}
   bulletPool: {fileID: 1603085927}
   shipManager: {fileID: 700890868}
   shipMovement: {fileID: 700890869}
   enemySpawner: {fileID: 98831854}
   mapGeneration: {fileID: 1327079934}
+  saveLifecycle: {fileID: 1564413788}
 --- !u!4 &158090193
 Transform:
   m_ObjectHideFlags: 0
@@ -3426,9 +3428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipDatabase: {fileID: 11400000, guid: b29ba5d58beec4d468efaa0f6f5abd8c, type: 2}
-  startShipId: ship1
   bulletDatabase: {fileID: 11400000, guid: 0b638926e2c7a34438b49cd63a6a7d44, type: 2}
-  startBulletPrefabId: bullet1
   currentBulletPrefabId: 
   currentBulletPrefab: {fileID: 0}
 --- !u!114 &700890869

@@ -14,24 +14,27 @@ namespace Assets.Scripts
 
         public Action<string> OnUpdateWave;
 
-        public void Initialize(int currentMoney, int allMoney)
+        private SaveLifecycle saveLifecycle;
+
+        public void Initialize(int currentMoney, int allMoney, SaveLifecycle saveLifecycle)
         {
             this.currentMoney = currentMoney;
             this.allTimeMoney = allMoney;
+            this.saveLifecycle = saveLifecycle;
         }
 
         public void AddMoney(int amount)
         {
             currentMoney += amount;
             allTimeMoney += amount;
-            SaveLifecycle.instance.AddMoney(currentMoney, allTimeMoney);
+            saveLifecycle.AddMoney(currentMoney, allTimeMoney);
             CheckAndSendForUpdate();
         }
 
         public void RemoveMoney(int amount)
         {
             currentMoney -= amount;
-            SaveLifecycle.instance.RemoveMoney(currentMoney);
+            saveLifecycle.RemoveMoney(currentMoney);
         }
 
         public int GetCurrentMoney()
@@ -54,7 +57,7 @@ namespace Assets.Scripts
                 if (allTimeMoney >= enemyWaveMinValues.minValueEnemies[i].minScore)
                 {
                     currentWaveId = enemyWaveMinValues.minValueEnemies[i].enemyWaveId;
-                    SaveLifecycle.instance.ChangeWave(currentWaveId);
+                    saveLifecycle.ChangeWave(currentWaveId);
                     OnUpdateWave?.Invoke(currentWaveId);
                     break;
                 }

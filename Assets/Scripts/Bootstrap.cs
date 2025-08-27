@@ -9,6 +9,8 @@ namespace Assets.Scripts
 {
     public class Bootstrap : MonoBehaviour
     {
+        private SaveData data;
+
         [Header("Shop")]
         [SerializeField] private ShopBulletController shopBulletController;
         [SerializeField] private ShopShipController shopShipController;
@@ -28,19 +30,27 @@ namespace Assets.Scripts
         [Header("Generation")]
         [SerializeField] private MapGeneration mapGeneration;
 
+        [Header("Save")]
+        [SerializeField] private SaveLifecycle saveLifecycle;
+
 
         private void Awake()
         {
-            SaveData data = SaveSystem.Load();
+            data = SaveSystem.Load();
+        }
+
+        private void Start()
+        {
+            saveLifecycle.Initialize(data);
 
             mapGeneration.Initialize();
 
             enemyPool.Initialize();
             bulletPool.Initialize();
 
-            shopBulletController.Initialize(data.ownedItems, data.selectedBulletId);
-            shopShipController.Initialize(data.ownedItems, data.selectedShipId);
-            scoreManager.Initialize(data.currentCoins, data.allCoins);
+            shopBulletController.Initialize(data.ownedItems, data.selectedBulletId, saveLifecycle);
+            shopShipController.Initialize(data.ownedItems, data.selectedShipId, saveLifecycle);
+            scoreManager.Initialize(data.currentCoins, data.allCoins, saveLifecycle);
 
             shipManager.Initialize(data.selectedShipId, data.selectedBulletId);
             enemySpawner.Initialize(data.currentWaveEnemyId);

@@ -15,4 +15,4 @@ MonoBehaviour:
   nameItemText: ShipConfig3
   iconItem: {fileID: 21300000, guid: 6158e15c61eb82742a1ce3434b7c2ffc, type: 3}
   idItem: ShipConfig3
-  costItem: 300
+  costItem: 3
