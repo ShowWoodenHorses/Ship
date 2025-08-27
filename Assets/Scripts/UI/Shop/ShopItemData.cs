@@ -25,7 +25,7 @@ namespace Assets.Scripts.UI.Shop
         public Action<ShopItemData> OnBuyItem;
         public Action<ShopItemData> OnSelectItem;
 
-        private void Awake()
+        private void AddButtons()
         {
             listButtons.Add(BuyButton);
             listButtons.Add(SelectButton);
@@ -39,6 +39,7 @@ namespace Assets.Scripts.UI.Shop
             this.costItemText.text = shopItemConfig.costItem.ToString();
             this.costItem = shopItemConfig.costItem;
             this.iconItem.sprite = shopItemConfig.iconItem;
+            AddButtons();
             UpdateButtons(BuyButton);
 
             BuyButton.GetComponent<Button>().onClick.AddListener(() => BuyClick());

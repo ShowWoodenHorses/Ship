@@ -7,11 +7,23 @@ public class MapGeneration : MonoBehaviour
     [SerializeField] private IslandGeneration islandGenerator;
     [SerializeField] private NavMeshSurface navMeshSurface;
 
-    private void Start()
+
+    //Bootstrap
+    //private void Start()
+    //{
+    //    waterGenerator.GenerateWater();
+    //    islandGenerator.GenerateIsland();
+
+    //    navMeshSurface.BuildNavMesh();
+    //}
+
+    public void Initialize()
     {
+        enabled = false;
         waterGenerator.GenerateWater();
         islandGenerator.GenerateIsland();
 
         navMeshSurface.BuildNavMesh();
+        enabled = true;
     }
 }

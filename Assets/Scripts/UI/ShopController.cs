@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Assets.Scripts.Configs;
 using Assets.Scripts.Player;
+using Assets.Scripts.Save;
 using Assets.Scripts.UI.Shop;
 using UnityEngine;
 
@@ -21,10 +22,11 @@ namespace Assets.Scripts.UI
 
         [SerializeField] private protected GameObject noMoneyObj;
 
-        private protected void Start()
-        {
-            CreateShopItems();
-        }
+        //Bootstrap
+        //private protected void Start()
+        //{
+        //    CreateShopItems();
+        //}
 
         private protected void UpdateAvaliableItems()
         {
@@ -33,7 +35,11 @@ namespace Assets.Scripts.UI
                 var data = item.GetComponent<ShopItemData>();
                 foreach(var id in avaliableItems)
                 {
-                    if (data.idItem == currentIdItem) continue;
+                    if (data.idItem == currentIdItem)
+                    {
+                        data.UpdateButtons(data.SelectItemText);
+                        continue;
+                    }
 
                     if (data.idItem == id)
                     {
@@ -63,6 +69,7 @@ namespace Assets.Scripts.UI
 
                 allItems.Add(newItem);
             }
+            UpdateAvaliableItems();
         }
 
         private protected void PurchaseHandler(ShopItemData itemData)
@@ -78,6 +85,7 @@ namespace Assets.Scripts.UI
             scoreManager.RemoveMoney(itemData.costItem);
             itemData.UpdateButtons(itemData.SelectButton);
             avaliableItems.Add(itemData.idItem);
+            SaveLifecycle.instance.BuyItem(itemData.idItem);
         }
 
         private protected void ChoiceItemHandler(ShopItemData itemData)
@@ -95,7 +103,6 @@ namespace Assets.Scripts.UI
 
         public virtual void UpdateItem(string id)
         {
-            shipManager.UpgradeShip(id);
         }
 
         private protected void OnDestroy()

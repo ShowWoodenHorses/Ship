@@ -37,8 +37,29 @@ public class EnemySpawner : MonoBehaviour
         scoreManager.OnUpdateWave -= OnUpdateSettingSpawn;
     }
 
-    private void Start()
+    //Bootstrap
+    //private void Start()
+    //{
+    //    if (playerTransform == null)
+    //    {
+    //        var playerObj = GameObject.FindGameObjectWithTag("Player");
+    //        if (playerObj != null) playerTransform = playerObj.transform;
+    //    }
+
+    //    if (playerTransform == null)
+    //    {
+    //        Debug.LogError("EnemySpawner: Игрок не найден!");
+    //        enabled = false;
+    //        return;
+    //    }
+
+    //    timer = checkInterval;
+    //}
+
+    public void Initialize(string enemyWaveId)
     {
+        enabled = false;
+
         if (playerTransform == null)
         {
             var playerObj = GameObject.FindGameObjectWithTag("Player");
@@ -53,6 +74,8 @@ public class EnemySpawner : MonoBehaviour
         }
 
         timer = checkInterval;
+        OnUpdateSettingSpawn(enemyWaveId);
+        enabled = true;
     }
 
     private void Update()

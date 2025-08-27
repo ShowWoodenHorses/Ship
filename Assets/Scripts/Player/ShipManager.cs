@@ -21,10 +21,17 @@ namespace Assets.Scripts.Player
         private ShipHealth health;
         private ShipCannonMultiSide cannons;
 
-        void Start()
+        //Bootstrap
+        //void Start()
+        //{
+        //    currentBulletPrefabId = startBulletPrefabId;
+        //    UpgradeShip(startShipId);
+        //}
+
+        public void Initialize(string shipId, string bulletId)
         {
-            currentBulletPrefabId = startBulletPrefabId;
-            UpgradeShip(startShipId);
+            currentBulletPrefabId = bulletId;
+            UpgradeShip(shipId);
         }
 
         public void UpgradeShip(string shipId)

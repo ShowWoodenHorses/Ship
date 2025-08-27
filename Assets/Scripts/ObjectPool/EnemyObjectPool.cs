@@ -16,7 +16,22 @@ public class EnemyObjectPool : MonoBehaviour
     public List<Pool> pools;
     private Dictionary<GameObject, Queue<GameObject>> poolDictionary;
 
-    private void Awake()
+    //Bootstrap
+    //private void Awake()
+    //{
+    //    if (instance == null)
+    //    {
+    //        instance = this;
+    //    }
+    //    else
+    //    {
+    //        Destroy(gameObject);
+    //    }
+        
+    //    //InitializePool();
+    //}
+
+    public void Initialize()
     {
         if (instance == null)
         {
