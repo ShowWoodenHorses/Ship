@@ -23,6 +23,7 @@ namespace Assets.Scripts
         [Header("Player")]
         [SerializeField] private ShipManager shipManager;
         [SerializeField] private ShipMovement shipMovement;
+        [SerializeField] private Transform playerTransform;
 
         [Header("Spawner")]
         [SerializeField] private EnemySpawner enemySpawner;
@@ -53,7 +54,7 @@ namespace Assets.Scripts
             scoreManager.Initialize(data.currentCoins, data.allCoins, saveLifecycle);
 
             shipManager.Initialize(data.selectedShipId, data.selectedBulletId);
-            enemySpawner.Initialize(data.currentWaveEnemyId);
+            enemySpawner.Initialize(data.currentWaveEnemyId, playerTransform);
         }
     }
 }

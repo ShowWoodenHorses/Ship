@@ -9,11 +9,9 @@ namespace Assets.Scripts.UI.Shop
 
         public void Initialize(List<string> saveAvaliableItems, string currentItemsId, SaveLifecycle saveLifecycle)
         {
-            enabled = false;
             this.saveLifecycle = saveLifecycle;
             UpdateAvaliableItems(saveAvaliableItems, currentItemsId);
             base.CreateShopItems();
-            enabled = true;
         }
         public override void UpdateItem(string id)
         {

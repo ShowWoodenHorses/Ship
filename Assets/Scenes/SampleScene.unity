@@ -868,6 +868,7 @@ MonoBehaviour:
   bulletPool: {fileID: 1603085927}
   shipManager: {fileID: 700890868}
   shipMovement: {fileID: 700890869}
+  playerTransform: {fileID: 700890867}
   enemySpawner: {fileID: 98831854}
   mapGeneration: {fileID: 1327079934}
   saveLifecycle: {fileID: 1564413788}

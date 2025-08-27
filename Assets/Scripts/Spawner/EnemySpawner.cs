@@ -56,26 +56,12 @@ public class EnemySpawner : MonoBehaviour
     //    timer = checkInterval;
     //}
 
-    public void Initialize(string enemyWaveId)
+    public void Initialize(string enemyWaveId, Transform playerTransform)
     {
-        enabled = false;
-
-        if (playerTransform == null)
-        {
-            var playerObj = GameObject.FindGameObjectWithTag("Player");
-            if (playerObj != null) playerTransform = playerObj.transform;
-        }
-
-        if (playerTransform == null)
-        {
-            Debug.LogError("EnemySpawner: Игрок не найден!");
-            enabled = false;
-            return;
-        }
+        this.playerTransform = playerTransform;
 
         timer = checkInterval;
         OnUpdateSettingSpawn(enemyWaveId);
-        enabled = true;
     }
 
     private void Update()
