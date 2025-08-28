@@ -38,10 +38,7 @@ namespace Assets.Scripts
         private void Awake()
         {
             data = SaveSystem.Load();
-        }
 
-        private void Start()
-        {
             saveLifecycle.Initialize(data);
 
             mapGeneration.Initialize();

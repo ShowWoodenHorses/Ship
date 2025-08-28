@@ -724,6 +724,7 @@ GameObject:
   - component: {fileID: 1223600738335082159}
   - component: {fileID: 5344438849358073349}
   - component: {fileID: 3842319470429668176}
+  - component: {fileID: 728377385065082248}
   m_Layer: 8
   m_Name: test_ship_1
   m_TagString: Untagged
@@ -808,6 +809,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 5, z: 10}
   m_Center: {x: 0, y: 2, z: 0}
+--- !u!114 &728377385065082248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2732526771718883395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb998a3619b242847904bf7f6574df5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sailUp: {fileID: 864546767777257922}
+  sailDown: {fileID: 1728891536526193171}
+  transitionTime: 2
 --- !u!1 &3283305829143169025
 GameObject:
   m_ObjectHideFlags: 0

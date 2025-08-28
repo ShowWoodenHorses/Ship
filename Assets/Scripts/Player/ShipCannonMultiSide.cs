@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using Assets.Scripts;
 using Assets.Scripts.Player;
+using Assets.Scripts.Animation;
 
 public class ShipCannonMultiSide : MonoBehaviour
 {
@@ -194,6 +195,8 @@ public class ShipCannonMultiSide : MonoBehaviour
             var cannon = sideList[idx];
             if (cannon.TryShoot())
             {
+                var recoil = cannon.GetComponent<CannonRecoil>();
+                recoil?.PlayRecoil();
                 cannon.IsWithinRotationLimits(mouseWorld, out Vector3 shootDir);
                 FireCannon(cannon.ShotPos.position, shootDir);
                 nextCannonIndex[side] = (idx + 1) % sideList.Count;

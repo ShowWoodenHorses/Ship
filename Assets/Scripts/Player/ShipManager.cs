@@ -3,6 +3,8 @@ using UnityEngine;
 
 namespace Assets.Scripts.Player
 {
+    using Assets.Scripts.Animation;
+    using DG.Tweening;
     using UnityEngine;
 
     public class ShipManager : MonoBehaviour
@@ -18,6 +20,7 @@ namespace Assets.Scripts.Player
         private ShipMovement movement;
         private ShipHealth health;
         private ShipCannonMultiSide cannons;
+        private ShipSway shipSway;
 
         //Bootstrap
         //void Start()
@@ -28,6 +31,7 @@ namespace Assets.Scripts.Player
 
         public void Initialize(string shipId, string bulletId)
         {
+            shipSway = GetComponent<ShipSway>();
             currentBulletPrefabId = bulletId;
             UpgradeShip(shipId);
         }
@@ -63,7 +67,9 @@ namespace Assets.Scripts.Player
         {
             // удалить старый
             if (currentShipInstance != null)
+            {
                 Destroy(currentShipInstance);
+            }
 
             // создать новый
             currentShipInstance = Instantiate(config.shipPrefab, transform.position, transform.rotation, transform);
@@ -72,6 +78,9 @@ namespace Assets.Scripts.Player
             movement = GetComponent<ShipMovement>();
             health = currentShipInstance.GetComponent<ShipHealth>();
             cannons = currentShipInstance.GetComponent<ShipCannonMultiSide>();
+            shipSway?.Initialize(currentShipInstance.transform);
+            SailController sailEffect = currentShipInstance.GetComponent<SailController>();
+            sailEffect?.LowerSails();
 
             // применить параметры
             if (movement != null)
@@ -106,6 +115,12 @@ namespace Assets.Scripts.Player
                 shipCannonMultiSide.UpdateBullet(currentBulletPrefab);
             }
             currentBulletPrefabId = config.id;
+        }
+
+        private void OnDestroy()
+        {
+            DOTween.Kill(currentShipInstance, complete: false);
+            DOTween.Kill(currentShipInstance.GetComponentsInChildren<Transform>(), complete: false);
         }
     }
 

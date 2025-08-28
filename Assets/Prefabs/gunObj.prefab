@@ -97,6 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2130408365791623454}
   - component: {fileID: -5319483843746040944}
+  - component: {fileID: 9074662823844870609}
   m_Layer: 0
   m_Name: gunObj
   m_TagString: Untagged
@@ -138,6 +139,22 @@ MonoBehaviour:
   rotationSpeed: 5
   ShotPos: {fileID: 1183834208240494235}
   reloadTime: 2
+--- !u!114 &9074662823844870609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635267863817185222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f346fffca64762746857dd8ccf73d962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannonVisual: {fileID: 7034794415870674524}
+  recoilDistance: 1
+  recoilDuration: 0.5
+  returnDuration: 0.5
 --- !u!1 &2264731242270071449
 GameObject:
   m_ObjectHideFlags: 0
