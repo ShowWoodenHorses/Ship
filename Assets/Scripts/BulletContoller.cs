@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using Assets.Scripts.Interface;
+using Assets.Scripts.ObjectPool;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Assets.Scripts
 {
@@ -11,6 +13,9 @@ namespace Assets.Scripts
         [SerializeField] private float speed;
         [SerializeField] private int damage;
         [SerializeField] private float lifeBeforeDestroy;
+
+        [SerializeField] private GameObject effectShotInWater;
+        [SerializeField] private GameObject effectShotInBuilding;
 
         private Rigidbody rb;
 
@@ -34,6 +39,7 @@ namespace Assets.Scripts
         IEnumerator LifeBeforeDestroy()
         {
             yield return new WaitForSeconds(lifeBeforeDestroy);
+            SpawnEffect(effectShotInWater);
             Deactive();
         }
 
@@ -44,6 +50,23 @@ namespace Assets.Scripts
             {
                 objectForDamage.TakeDamage(damage);
                 Deactive();
+            }
+            var building = other.gameObject.GetComponent<IObstaclable>();
+            if (building != null)
+            {
+                SpawnEffect(effectShotInBuilding);
+                Deactive();
+            }
+        }
+
+        private void SpawnEffect(GameObject effectObj)
+        {
+            GameObject effect = EffectObjectPool.Instance.GetObject(effectObj);
+            effect.transform.SetPositionAndRotation(transform.position, Quaternion.identity);
+            EffectController effectController = effect.GetComponent<EffectController>();
+            if (effectController != null)
+            {
+                effectController.Initialize(effect);
             }
         }
 

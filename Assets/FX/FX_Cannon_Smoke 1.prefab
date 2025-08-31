@@ -56,7 +56,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0.1
+    scalar: 0
     minScalar: 0.1
     maxCurve:
       serializedVersion: 2
@@ -4800,13 +4800,14 @@ GameObject:
   - component: {fileID: 486942}
   - component: {fileID: 19834114}
   - component: {fileID: 19971978}
+  - component: {fileID: -6343852202453973978}
   m_Layer: 0
-  m_Name: FX_Cannon_Smoke
+  m_Name: FX_Cannon_Smoke 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &486942
 Transform:
   m_ObjectHideFlags: 0
@@ -4815,8 +4816,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199582}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.0018730153, y: -0.05611319, z: 0.033308037, w: 0.997867}
+  m_LocalPosition: {x: 0.9820885, y: 2.4008336, z: -1.612}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4846,7 +4847,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 1
+    scalar: 0.05
     minScalar: 1
     maxCurve:
       serializedVersion: 2
@@ -9552,3 +9553,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-6343852202453973978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca8cea1680d27b478e968c5c1d2f475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeBeforeDestroy: 2

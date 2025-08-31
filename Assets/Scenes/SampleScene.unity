@@ -866,6 +866,7 @@ MonoBehaviour:
   scoreManager: {fileID: 1562816406}
   enemyPool: {fileID: 1450235060}
   bulletPool: {fileID: 1603085927}
+  effectPool: {fileID: 1404347095}
   shipManager: {fileID: 700890868}
   shipMovement: {fileID: 700890869}
   playerTransform: {fileID: 700890867}
@@ -5810,6 +5811,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1849541057}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1404347094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1404347096}
+  - component: {fileID: 1404347095}
+  m_Layer: 0
+  m_Name: EffectObjectPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1404347095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404347094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042bc87724a8bc447a1056aaed5e4950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - prefab: {fileID: 6460890540305610336, guid: b7c7b0f97edd9ee4ca3e24251b614128, type: 3}
+    size: 5
+  - prefab: {fileID: 199582, guid: 02e25b69473c97c4d9226857e0231c35, type: 3}
+    size: 5
+  - prefab: {fileID: 199582, guid: 22f0c762fb1a0bf4bb4afec4df34ea56, type: 3}
+    size: 5
+--- !u!4 &1404347096
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404347094}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1410099619
 GameObject:
   m_ObjectHideFlags: 0
@@ -9070,6 +9122,7 @@ SceneRoots:
   - {fileID: 1342876472}
   - {fileID: 1450235061}
   - {fileID: 1603085928}
+  - {fileID: 1404347096}
   - {fileID: 98831853}
   - {fileID: 2140023323}
   - {fileID: 139650798}

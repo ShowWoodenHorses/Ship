@@ -152,3 +152,5 @@ MonoBehaviour:
   speed: 33
   damage: 33
   lifeBeforeDestroy: 33
+  effectShotInWater: {fileID: 199582, guid: 02e25b69473c97c4d9226857e0231c35, type: 3}
+  effectShotInBuilding: {fileID: 199582, guid: 22f0c762fb1a0bf4bb4afec4df34ea56, type: 3}

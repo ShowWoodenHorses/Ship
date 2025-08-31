@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using Assets.Scripts.Animation;
+using Assets.Scripts.ObjectPool;
 using Assets.Scripts.Player;
 using Assets.Scripts.Save;
 using Assets.Scripts.UI.Shop;
@@ -20,6 +21,7 @@ namespace Assets.Scripts
         [Header("Pool")]
         [SerializeField] private EnemyObjectPool enemyPool;
         [SerializeField] private BulletObjectPool bulletPool;
+        [SerializeField] private EffectObjectPool effectPool;
 
         [Header("Player")]
         [SerializeField] private ShipManager shipManager;
@@ -49,6 +51,7 @@ namespace Assets.Scripts
 
             enemyPool.Initialize();
             bulletPool.Initialize();
+            effectPool.Initialize();
 
             shopBulletController.Initialize(data.ownedItems, data.selectedBulletId, saveLifecycle);
             shopShipController.Initialize(data.ownedItems, data.selectedShipId, saveLifecycle);

@@ -774,6 +774,7 @@ MonoBehaviour:
   projectileSpeed: 30
   trajectoryResolution: 30
   timeStep: 0.1
+  effectShot: {fileID: 6460890540305610336, guid: b7c7b0f97edd9ee4ca3e24251b614128, type: 3}
 --- !u!114 &5344438849358073349
 MonoBehaviour:
   m_ObjectHideFlags: 0

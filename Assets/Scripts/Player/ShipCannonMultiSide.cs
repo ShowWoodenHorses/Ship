@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Assets.Scripts;
 using Assets.Scripts.Player;
 using Assets.Scripts.Animation;
+using Assets.Scripts.ObjectPool;
 
 public class ShipCannonMultiSide : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class ShipCannonMultiSide : MonoBehaviour
     public float projectileSpeed = 30f;
     public int trajectoryResolution = 30;
     public float timeStep = 0.06f;
+
+    [Header("Ёффекты")]
+    [SerializeField] private GameObject effectShot;
 
     private Dictionary<CannonSide, List<ShipCannon>> cannons = new();
     private Dictionary<CannonSide, int> nextCannonIndex = new();
@@ -63,6 +67,7 @@ public class ShipCannonMultiSide : MonoBehaviour
             c.Initialize(this);
             cannons[c.side].Add(c);
         }
+        effectShot.SetActive(false);
     }
 
     void InitializeBullet()
@@ -218,6 +223,7 @@ public class ShipCannonMultiSide : MonoBehaviour
 
 
                 cannon.IsWithinRotationLimits(mouseWorld, out Vector3 shootDir);
+                EffectShot(cannon.ShotPos.position, shootDir);
                 FireCannon(cannon.ShotPos.position, shootDir);
                 nextCannonIndex[side] = (idx + 1) % sideList.Count;
                 return;
@@ -335,6 +341,17 @@ public class ShipCannonMultiSide : MonoBehaviour
     public void UpdateBullet(GameObject bulletPrefab)
     {
         cannonballPrefab = bulletPrefab;
+    }
+
+    private void EffectShot(Vector3 position, Vector3 direction)
+    {
+        GameObject effect = EffectObjectPool.Instance.GetObject(effectShot);
+        effect.transform.SetPositionAndRotation(position, Quaternion.LookRotation(direction));
+        EffectController effectController = effect.GetComponent<EffectController>();
+        if (effectController != null)
+        {
+            effectController.Initialize(effect);
+        }
     }
 
     private void OnDestroy()
