@@ -207,7 +207,16 @@ public class ShipCannonMultiSide : MonoBehaviour
             {
                 var recoil = cannon.GetComponent<CannonRecoil>();
                 //recoil?.PlayRecoil();
-                gameplayAnimationController.PlayRecoil(cannon.transform, recoil.recoilDistance, recoil.recoilDuration, recoil.returnDuration);
+
+                gameplayAnimationController.PlayRecoil(
+                    cannon.transform, 
+                    recoil.recoilDistance, 
+                    recoil.recoilDuration, 
+                    recoil.returnDuration,
+                    recoil.GetDirection(recoil.direction)
+                    );
+
+
                 cannon.IsWithinRotationLimits(mouseWorld, out Vector3 shootDir);
                 FireCannon(cannon.ShotPos.position, shootDir);
                 nextCannonIndex[side] = (idx + 1) % sideList.Count;

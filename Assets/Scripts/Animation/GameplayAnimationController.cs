@@ -8,9 +8,6 @@ namespace Assets.Scripts.Animation
         private Sequence sailSequence;
         private Tween swayTween;
 
-        /// <summary>
-        /// Покачивание корабля (бесконечное)
-        /// </summary>
         public void ShipSway(Transform childTransform, float wobbleAmount, float wobbleDuration)
         {
             // Убиваем старое покачивание, если было
@@ -22,16 +19,11 @@ namespace Assets.Scripts.Animation
                 .SetLoops(-1, LoopType.Yoyo)
                 .SetLink(childTransform.gameObject);
         }
-
-        /// <summary>
-        /// Анимация опускания парусов (одноразовая, но можно запускать многократно)
-        /// </summary>
         public void LowerSails(GameObject sailDown, GameObject sailUp, float transitionTime)
         {
             // Убиваем старую последовательность, если была
             sailSequence?.Kill();
 
-            // Сбрасываем состояние
             sailDown.SetActive(false);
             sailUp.SetActive(true);
             sailUp.transform.localScale = Vector3.one;
@@ -46,14 +38,11 @@ namespace Assets.Scripts.Animation
                 .SetLink(sailDown); // Привязываем к объекту
         }
 
-        /// <summary>
-        /// Анимация отдачи пушки
-        /// </summary>
-        public void PlayRecoil(Transform cannonVisual, float recoilDistance, float recoilDuration, float returnDuration)
+        public void PlayRecoil(Transform cannonVisual, float recoilDistance, float recoilDuration, float returnDuration, Vector3 direction)
         {
             Vector3 startLocalPos = cannonVisual.localPosition;
 
-            cannonVisual.DOLocalMove(startLocalPos - Vector3.right * recoilDistance, recoilDuration)
+            cannonVisual.DOLocalMove(startLocalPos - direction * recoilDistance, recoilDuration)
                 .SetEase(Ease.OutQuad)
                 .OnComplete(() =>
                 {
