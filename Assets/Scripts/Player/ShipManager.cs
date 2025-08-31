@@ -20,7 +20,8 @@ namespace Assets.Scripts.Player
         private ShipMovement movement;
         private ShipHealth health;
         private ShipCannonMultiSide cannons;
-        private ShipSway shipSway;
+        private GameplayAnimationController gameplayAnimationController;
+        private SailController sailController;
 
         //Bootstrap
         //void Start()
@@ -29,9 +30,9 @@ namespace Assets.Scripts.Player
         //    UpgradeShip(startShipId);
         //}
 
-        public void Initialize(string shipId, string bulletId)
+        public void Initialize(string shipId, string bulletId, GameplayAnimationController gameplayAnimationController)
         {
-            shipSway = GetComponent<ShipSway>();
+            this.gameplayAnimationController = gameplayAnimationController;
             currentBulletPrefabId = bulletId;
             UpgradeShip(shipId);
         }
@@ -65,24 +66,24 @@ namespace Assets.Scripts.Player
 
         private void SpawnShip(ShipConfig config)
         {
-            // удалить старый
             if (currentShipInstance != null)
             {
+                gameplayAnimationController.DeleteAnimations(currentShipInstance);
                 Destroy(currentShipInstance);
             }
 
-            // создать новый
             currentShipInstance = Instantiate(config.shipPrefab, transform.position, transform.rotation, transform);
 
-            // подключить компоненты
             movement = GetComponent<ShipMovement>();
             health = currentShipInstance.GetComponent<ShipHealth>();
             cannons = currentShipInstance.GetComponent<ShipCannonMultiSide>();
-            shipSway?.Initialize(currentShipInstance.transform);
-            SailController sailEffect = currentShipInstance.GetComponent<SailController>();
-            sailEffect?.LowerSails();
+            sailController = currentShipInstance.GetComponent<SailController>();
 
-            // применить параметры
+            cannons.Initialize(gameplayAnimationController);
+
+            gameplayAnimationController.ShipSway(currentShipInstance.transform, 5f, 2f);
+            gameplayAnimationController.LowerSails(sailController.sailDown, sailController.sailUp, sailController.transitionTime);
+
             if (movement != null)
             {
                 movement.acceleration = config.acceleration;
@@ -115,12 +116,6 @@ namespace Assets.Scripts.Player
                 shipCannonMultiSide.UpdateBullet(currentBulletPrefab);
             }
             currentBulletPrefabId = config.id;
-        }
-
-        private void OnDestroy()
-        {
-            DOTween.Kill(currentShipInstance, complete: false);
-            DOTween.Kill(currentShipInstance.GetComponentsInChildren<Transform>(), complete: false);
         }
     }
 

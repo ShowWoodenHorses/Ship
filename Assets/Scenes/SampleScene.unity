@@ -872,6 +872,7 @@ MonoBehaviour:
   enemySpawner: {fileID: 98831854}
   mapGeneration: {fileID: 1327079934}
   saveLifecycle: {fileID: 1564413788}
+  gameplayAnimationController: {fileID: 339796675}
 --- !u!4 &158090193
 Transform:
   m_ObjectHideFlags: 0
@@ -1433,6 +1434,50 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1346952845}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &339796674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 339796676}
+  - component: {fileID: 339796675}
+  m_Layer: 0
+  m_Name: GameplayAnimationController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &339796675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339796674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650cf1cc39aff844c9f4d939a7e32bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &339796676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339796674}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &379903841
 GameObject:
@@ -9034,3 +9079,4 @@ SceneRoots:
   - {fileID: 1562816407}
   - {fileID: 1564413789}
   - {fileID: 158090193}
+  - {fileID: 339796676}

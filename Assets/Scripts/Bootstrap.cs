@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Assets.Scripts.Animation;
 using Assets.Scripts.Player;
 using Assets.Scripts.Save;
 using Assets.Scripts.UI.Shop;
@@ -34,6 +35,9 @@ namespace Assets.Scripts
         [Header("Save")]
         [SerializeField] private SaveLifecycle saveLifecycle;
 
+        [Header("Animation")]
+        [SerializeField] private GameplayAnimationController gameplayAnimationController;
+
 
         private void Awake()
         {
@@ -50,7 +54,7 @@ namespace Assets.Scripts
             shopShipController.Initialize(data.ownedItems, data.selectedShipId, saveLifecycle);
             scoreManager.Initialize(data.currentCoins, data.allCoins, saveLifecycle);
 
-            shipManager.Initialize(data.selectedShipId, data.selectedBulletId);
+            shipManager.Initialize(data.selectedShipId, data.selectedBulletId, gameplayAnimationController);
             enemySpawner.Initialize(data.currentWaveEnemyId, playerTransform);
         }
     }

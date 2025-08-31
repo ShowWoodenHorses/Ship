@@ -31,11 +31,21 @@ public class ShipCannonMultiSide : MonoBehaviour
     private CannonSide currentActiveSide;
     private ShipCannon currentSelectedCannon;
 
-    void Start()
+    private GameplayAnimationController gameplayAnimationController;
+
+    //void Start()
+    //{
+    //    InitializeBullet();
+    //    InitializeCannons();
+    //    SetupVisualEffects();
+    //}
+
+    public void Initialize(GameplayAnimationController gameplayAnimationController)
     {
         InitializeBullet();
         InitializeCannons();
         SetupVisualEffects();
+        this.gameplayAnimationController = gameplayAnimationController;
     }
 
     void InitializeCannons()
@@ -196,7 +206,8 @@ public class ShipCannonMultiSide : MonoBehaviour
             if (cannon.TryShoot())
             {
                 var recoil = cannon.GetComponent<CannonRecoil>();
-                recoil?.PlayRecoil();
+                //recoil?.PlayRecoil();
+                gameplayAnimationController.PlayRecoil(cannon.transform, recoil.recoilDistance, recoil.recoilDuration, recoil.returnDuration);
                 cannon.IsWithinRotationLimits(mouseWorld, out Vector3 shootDir);
                 FireCannon(cannon.ShotPos.position, shootDir);
                 nextCannonIndex[side] = (idx + 1) % sideList.Count;
@@ -315,5 +326,10 @@ public class ShipCannonMultiSide : MonoBehaviour
     public void UpdateBullet(GameObject bulletPrefab)
     {
         cannonballPrefab = bulletPrefab;
+    }
+
+    private void OnDestroy()
+    {
+        gameplayAnimationController.DeleteAnimations(gameObject);
     }
 }
