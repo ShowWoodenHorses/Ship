@@ -9,8 +9,14 @@ public class ShipMovement : MonoBehaviour
     public float turnSpeed = 50f;           // Скорость поворота
 
     private float currentSpeed = 0f;
+    private Rigidbody rb;
 
-    void Update()
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    void FixedUpdate()
     {
         HandleMovement();
         HandleRotation();
@@ -19,35 +25,35 @@ public class ShipMovement : MonoBehaviour
     void HandleMovement()
     {
         if (Input.GetKey(KeyCode.W))
-        {
             currentSpeed += acceleration * Time.deltaTime;
-        }
         else if (Input.GetKey(KeyCode.S))
-        {
             currentSpeed -= deceleration * Time.deltaTime;
-        }
         else
-        {
-            // Постепенное замедление, если не нажаты кнопки
             currentSpeed = Mathf.MoveTowards(currentSpeed, 0, deceleration * Time.deltaTime);
-        }
 
-        currentSpeed = Mathf.Clamp(currentSpeed, -maxSpeed * 0.5f, maxSpeed); // Можно двигаться немного назад
-        transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
+        currentSpeed = Mathf.Clamp(currentSpeed, -maxSpeed * 0.5f, maxSpeed);
+
+        Vector3 move = transform.forward * currentSpeed * Time.deltaTime;
+        rb.MovePosition(rb.position + move);
     }
 
     void HandleRotation()
     {
         float turn = 0f;
-        if (Input.GetKey(KeyCode.A))
-        {
-            turn = -1f;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            turn = 1f;
-        }
+        if (Input.GetKey(KeyCode.A)) turn = -1f;
+        else if (Input.GetKey(KeyCode.D)) turn = 1f;
 
-        transform.Rotate(Vector3.up, turn * turnSpeed * Time.deltaTime);
+        Quaternion turnRotation = Quaternion.Euler(0f, turn * turnSpeed * Time.deltaTime, 0f);
+        rb.MoveRotation(rb.rotation * turnRotation);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        currentSpeed = 0f;
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        currentSpeed = 0f;
     }
 }

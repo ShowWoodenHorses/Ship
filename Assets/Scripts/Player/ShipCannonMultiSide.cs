@@ -358,4 +358,12 @@ public class ShipCannonMultiSide : MonoBehaviour
     {
         gameplayAnimationController.DeleteAnimations(gameObject);
     }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("столкновение с " + collision.gameObject.name);
+    }
+
+    
 }

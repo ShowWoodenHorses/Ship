@@ -25,16 +25,12 @@ namespace Assets.Scripts.Animation
             sailSequence?.Kill();
 
             sailDown.SetActive(false);
-            sailUp.SetActive(true);
-            sailUp.transform.localScale = Vector3.one;
             sailDown.transform.localScale = Vector3.zero;
 
             sailDown.SetActive(true);
 
             sailSequence = DOTween.Sequence()
-                .Append(sailUp.transform.DOScale(Vector3.zero, transitionTime).SetEase(Ease.InOutSine))
                 .Join(sailDown.transform.DOScale(Vector3.one, transitionTime).SetEase(Ease.InOutSine))
-                .OnComplete(() => sailUp.SetActive(false))
                 .SetLink(sailDown); // Привязываем к объекту
         }
 

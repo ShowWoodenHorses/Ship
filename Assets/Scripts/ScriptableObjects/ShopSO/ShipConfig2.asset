@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItemText: ShipConfig2
   iconItem: {fileID: 21300000, guid: 986e20669d498db43ada48ff8944d0c4, type: 3}
-  idItem: ship3
-  costItem: 7
+  idItem: ship2
+  costItem: 5

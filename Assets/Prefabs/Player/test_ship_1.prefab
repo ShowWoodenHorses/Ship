@@ -103,7 +103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6531219926921148734
 Transform:
   m_ObjectHideFlags: 0
@@ -116,8 +116,7 @@ Transform:
   m_LocalPosition: {x: -1.7992548e-16, y: 2.1307924, z: 0.40515617}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 134044733404871744}
+  m_Children: []
   m_Father: {fileID: 6278947569241053627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6891793529776126934
@@ -240,7 +239,8 @@ Transform:
   m_LocalPosition: {x: -1.799264e-16, y: 1.8470232, z: 0.40515822}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 134044733404871744}
   m_Father: {fileID: 6278947569241053627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &916006807142976075
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 7750087941298041507}
   - component: {fileID: 6908607904073957385}
   m_Layer: 8
-  m_Name: SM_Veh_Boat_Medium_01_Sails
+  m_Name: sails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -322,12 +322,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728891536526193171}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2297059, y: 8.957437, z: 1.3015066}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.2297059, y: 9.241206, z: 1.3015046}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6531219926921148734}
+  m_Father: {fileID: 3809131244786845365}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7750087941298041507
 MeshFilter:
