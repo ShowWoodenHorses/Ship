@@ -3,6 +3,7 @@ using Assets.Scripts.Animation;
 using Assets.Scripts.ObjectPool;
 using Assets.Scripts.Player;
 using Assets.Scripts.Save;
+using Assets.Scripts.UI;
 using Assets.Scripts.UI.Shop;
 using UnityEngine;
 using UnityEngine.SceneManagement;

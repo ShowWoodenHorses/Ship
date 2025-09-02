@@ -4,6 +4,7 @@ using Assets.Scripts;
 using Assets.Scripts.Player;
 using Assets.Scripts.Animation;
 using Assets.Scripts.ObjectPool;
+using Assets.Scripts.UI;
 
 public class ShipCannonMultiSide : MonoBehaviour
 {
@@ -16,11 +17,6 @@ public class ShipCannonMultiSide : MonoBehaviour
     public GameObject cannonballPrefab;
     public SectorHighlightMesh sectorHighlightEffect;
 
-    [Header("Line renderers")]
-    public LineRenderer trajectoryLine;
-    public LineRenderer activeCannonLaser;
-    public float laserWidth = 0.06f;
-
     [Header("ѕараметры стрельбы")]
     public float projectileSpeed = 30f;
     public int trajectoryResolution = 30;
@@ -28,6 +24,7 @@ public class ShipCannonMultiSide : MonoBehaviour
 
     [Header("Ёффекты")]
     [SerializeField] private GameObject effectShot;
+    [SerializeField] private ShipAimLine shipAimLine;
 
     private Dictionary<CannonSide, List<ShipCannon>> cannons = new();
     private Dictionary<CannonSide, int> nextCannonIndex = new();
@@ -48,7 +45,7 @@ public class ShipCannonMultiSide : MonoBehaviour
     {
         InitializeBullet();
         InitializeCannons();
-        SetupVisualEffects();
+        shipAimLine.Initialize();
         this.gameplayAnimationController = gameplayAnimationController;
     }
 
@@ -79,25 +76,7 @@ public class ShipCannonMultiSide : MonoBehaviour
         }
     }
 
-    void SetupVisualEffects()
-    {
-        if (activeCannonLaser != null)
-        {
-            activeCannonLaser.startWidth = laserWidth;
-            activeCannonLaser.endWidth = laserWidth;
-            if (activeCannonLaser.material == null)
-                activeCannonLaser.material = new Material(Shader.Find("Sprites/Default"));
-            activeCannonLaser.enabled = false;
-            activeCannonLaser.positionCount = 2;
-        }
-
-        if (trajectoryLine != null)
-        {
-            trajectoryLine.positionCount = 0;
-        }
-    }
-
-    void Update()
+    void FixedUpdate()
     {
         Vector3 mouseWorld = GetMouseWorldPoint();
         currentActiveSide = DetermineActiveSide(mouseWorld);
@@ -116,8 +95,16 @@ public class ShipCannonMultiSide : MonoBehaviour
         }
         else
         {
-            ClearVisualEffects();
             currentSelectedCannon = null;
+        }
+    }
+
+    private void Update()
+    {
+        if (currentSelectedCannon == null)
+        {
+            shipAimLine.Hide();
+            return;
         }
     }
 
@@ -164,37 +151,19 @@ public class ShipCannonMultiSide : MonoBehaviour
 
     void UpdateLaserAndTrajectoryForSelected(Vector3 mouseWorld)
     {
-        if (currentSelectedCannon == null)
-        {
-            ClearVisualEffects();
-            return;
-        }
-
         Vector3 shootDir;
         bool inLimits = currentSelectedCannon.IsWithinRotationLimits(mouseWorld, out shootDir);
 
-        Vector3 startPos = currentSelectedCannon.transform.position;
-
-        if (activeCannonLaser != null)
+        if (inLimits)
         {
-            activeCannonLaser.enabled = true;
-            activeCannonLaser.SetPosition(0, startPos);
-            if (inLimits)
-            {
-                activeCannonLaser.SetPosition(1, mouseWorld);
-            }
-            else
-            {
-                activeCannonLaser.SetPosition(1, startPos + shootDir * 50f);
-            }
+            Vector3 startPos = transform.position;
+            Vector3 endPos = mouseWorld;
+            shipAimLine.DrawLine(startPos, endPos, true);
         }
-
-        if (trajectoryLine != null)
+        else
         {
-            ShowTrajectory(startPos, shootDir.normalized * projectileSpeed);
+            shipAimLine.Hide();
         }
-
-        Debug.DrawRay(currentSelectedCannon.transform.position, currentSelectedCannon.transform.forward * 5f, Color.red);
     }
 
     void TryShootOnce(CannonSide side, Vector3 mouseWorld)
@@ -247,31 +216,6 @@ public class ShipCannonMultiSide : MonoBehaviour
                 bulletController.Initialize(direction.normalized);
             }
         }
-    }
-
-    void ShowTrajectory(Vector3 origin, Vector3 velocity)
-    {
-        if (trajectoryLine == null) return;
-
-        Vector3 pos = origin;
-        Vector3 vel = velocity;
-
-        Vector3[] points = new Vector3[trajectoryResolution];
-        for (int i = 0; i < trajectoryResolution; i++)
-        {
-            points[i] = pos;
-            vel += Physics.gravity * timeStep;
-            pos += vel * timeStep;
-        }
-
-        trajectoryLine.positionCount = trajectoryResolution;
-        trajectoryLine.SetPositions(points);
-    }
-
-    void ClearVisualEffects()
-    {
-        if (activeCannonLaser != null) activeCannonLaser.enabled = false;
-        if (trajectoryLine != null) trajectoryLine.positionCount = 0;
     }
 
     Quaternion GetSideRotation(CannonSide side)

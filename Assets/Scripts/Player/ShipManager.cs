@@ -4,6 +4,7 @@ using UnityEngine;
 namespace Assets.Scripts.Player
 {
     using Assets.Scripts.Animation;
+    using Assets.Scripts.UI;
     using DG.Tweening;
     using UnityEngine;
 
