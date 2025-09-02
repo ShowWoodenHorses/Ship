@@ -155,6 +155,7 @@ MonoBehaviour:
   recoilDistance: 1
   recoilDuration: 0.5
   returnDuration: 0.5
+  direction: 0
 --- !u!1 &2264731242270071449
 GameObject:
   m_ObjectHideFlags: 0
