@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 421602}
   - component: {fileID: 3384158}
   - component: {fileID: 2311770}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Fountain_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 432694}
   - component: {fileID: 3391614}
   - component: {fileID: 2397274}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Fountain_Water_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

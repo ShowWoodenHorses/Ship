@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 406856}
   - component: {fileID: 3305842}
   - component: {fileID: 2363306}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Extra_Cargo_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 497550}
   - component: {fileID: 3325676}
   - component: {fileID: 2337152}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Small_01_Hull_Attachments
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 423210}
   - component: {fileID: 3347184}
   - component: {fileID: 2332122}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Oar_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 414686}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Attachments
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 472042}
   - component: {fileID: 3326150}
   - component: {fileID: 2379564}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Oar_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 473598}
   - component: {fileID: 3372378}
   - component: {fileID: 2326872}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Oar_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 473834}
   - component: {fileID: 3317714}
   - component: {fileID: 2347656}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Oar_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

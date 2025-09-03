@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 436034}
   - component: {fileID: 3356256}
   - component: {fileID: 2392616}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Scrub_Brush_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

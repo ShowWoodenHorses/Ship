@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 426156}
   - component: {fileID: 3391394}
   - component: {fileID: 2393910}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Extra_Gun_01_Barrel_Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 490534}
   - component: {fileID: 3374076}
   - component: {fileID: 2334696}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Extra_Gun_01_Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 482988}
   - component: {fileID: 3371284}
   - component: {fileID: 2351302}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Extra_Gun_01_Cover_Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}

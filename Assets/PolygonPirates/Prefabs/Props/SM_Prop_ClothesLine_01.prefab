@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 455646}
   - component: {fileID: 3383870}
   - component: {fileID: 2328112}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_ClothesLine_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

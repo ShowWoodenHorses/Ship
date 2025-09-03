@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 446120}
   - component: {fileID: 3355682}
   - component: {fileID: 2362104}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Skeleton_Shackle_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

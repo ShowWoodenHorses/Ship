@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 494732}
   - component: {fileID: 3365966}
   - component: {fileID: 2340786}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_SugarCane_Pile_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

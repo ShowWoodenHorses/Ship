@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 422094}
   - component: {fileID: 3398846}
   - component: {fileID: 2394948}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_RoofFence_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

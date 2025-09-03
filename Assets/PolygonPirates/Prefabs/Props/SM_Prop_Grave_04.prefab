@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 485054}
   - component: {fileID: 3373164}
   - component: {fileID: 2358976}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Grave_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}

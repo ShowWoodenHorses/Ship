@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 460432}
   - component: {fileID: 3335074}
   - component: {fileID: 2351444}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_LobsterPot_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

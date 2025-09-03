@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 447976}
   - component: {fileID: 3352634}
   - component: {fileID: 2392910}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Well_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

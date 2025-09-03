@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 493714}
   - component: {fileID: 3399706}
   - component: {fileID: 2352134}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Sign_Attachment_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

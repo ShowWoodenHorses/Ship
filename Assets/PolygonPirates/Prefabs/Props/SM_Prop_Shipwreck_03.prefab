@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 432928}
   - component: {fileID: 3365876}
   - component: {fileID: 2343964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Shipwreck_03_Sails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 490084}
   - component: {fileID: 3338788}
   - component: {fileID: 2327054}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Shipwreck_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

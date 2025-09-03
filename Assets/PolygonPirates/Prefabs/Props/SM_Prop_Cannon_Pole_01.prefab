@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 456916}
   - component: {fileID: 3386208}
   - component: {fileID: 2301608}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Cannon_Pole_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

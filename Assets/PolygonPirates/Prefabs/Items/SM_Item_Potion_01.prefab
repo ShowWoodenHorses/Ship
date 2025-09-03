@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 432084}
   - component: {fileID: 3371098}
   - component: {fileID: 2379826}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Item_Potion_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

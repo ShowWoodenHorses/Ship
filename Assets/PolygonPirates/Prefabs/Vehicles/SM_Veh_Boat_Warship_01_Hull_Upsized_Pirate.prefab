@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 440504}
   - component: {fileID: 3331250}
   - component: {fileID: 2351612}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Mast_SailUp_03_Upsized_Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 454962}
   - component: {fileID: 3353116}
   - component: {fileID: 2362974}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Mast_SailUp_01_Upsized_Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 454480}
   - component: {fileID: 3311086}
   - component: {fileID: 2301852}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Sails_02_Upsized_Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 408050}
   - component: {fileID: 3309056}
   - component: {fileID: 2357956}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Mast_SailUp_04_Upsized_Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 454994}
   - component: {fileID: 3366558}
   - component: {fileID: 2356348}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Mast_03_Upsized_Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 447068}
   - component: {fileID: 3372108}
   - component: {fileID: 2369002}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Mast_SailUp_02_Upsized_Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 469668}
   - component: {fileID: 3364658}
   - component: {fileID: 2330440}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Sails_05_Upsized_Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -614,7 +614,7 @@ GameObject:
   - component: {fileID: 493636}
   - component: {fileID: 3366086}
   - component: {fileID: 2397186}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Mast_01_Upsized_Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +701,7 @@ GameObject:
   - component: {fileID: 402742}
   - component: {fileID: 3377006}
   - component: {fileID: 2329736}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Sails_03_Upsized_Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -787,7 +787,7 @@ GameObject:
   - component: {fileID: 414786}
   - component: {fileID: 3312920}
   - component: {fileID: 2392048}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Rigging_Upsized_Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -873,7 +873,7 @@ GameObject:
   - component: {fileID: 405778}
   - component: {fileID: 3334898}
   - component: {fileID: 2330266}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Hull_Upsized_Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -969,7 +969,7 @@ GameObject:
   - component: {fileID: 465196}
   - component: {fileID: 3381636}
   - component: {fileID: 2361148}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Mast_02_Upsized_Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1056,7 +1056,7 @@ GameObject:
   - component: {fileID: 447058}
   - component: {fileID: 3354932}
   - component: {fileID: 2323474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Sails_01_Upsized_Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1142,7 +1142,7 @@ GameObject:
   - component: {fileID: 417530}
   - component: {fileID: 3359962}
   - component: {fileID: 2324432}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Sails_04_Upsized_Pirate
   m_TagString: Untagged
   m_Icon: {fileID: 0}

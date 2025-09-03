@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 467258}
   - component: {fileID: 3356048}
   - component: {fileID: 2354934}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Crate_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 481126}
   - component: {fileID: 3379558}
   - component: {fileID: 2358642}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Medium_01_Sails_Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 487070}
   - component: {fileID: 3370244}
   - component: {fileID: 2387718}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Crate_Covered_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 407696}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Attachments
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 436064}
   - component: {fileID: 3388342}
   - component: {fileID: 2335778}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Crate_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 427414}
   - component: {fileID: 3306000}
   - component: {fileID: 2384308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_ShipWheel_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 408804}
   - component: {fileID: 3357072}
   - component: {fileID: 2300222}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Medium_01_Sails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 469544}
   - component: {fileID: 3388974}
   - component: {fileID: 2377118}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Crate_Cannonballs_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +651,7 @@ GameObject:
   - component: {fileID: 441480}
   - component: {fileID: 3366248}
   - component: {fileID: 2347496}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Crate_Covered_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -737,7 +737,7 @@ GameObject:
   - component: {fileID: 469478}
   - component: {fileID: 3343752}
   - component: {fileID: 2328726}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Cannon_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -823,7 +823,7 @@ GameObject:
   - component: {fileID: 404466}
   - component: {fileID: 3358242}
   - component: {fileID: 2384152}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Medium_01_Hull_Attachments
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 429286}
   - component: {fileID: 3385872}
   - component: {fileID: 2340900}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Medium_01_Mast
   m_TagString: Untagged
   m_Icon: {fileID: 0}

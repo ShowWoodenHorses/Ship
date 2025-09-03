@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 435150}
   - component: {fileID: 3372718}
   - component: {fileID: 2392420}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_ShipWheel_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

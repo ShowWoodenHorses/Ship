@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 465564}
   - component: {fileID: 3323740}
   - component: {fileID: 2386608}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Item_Candelabra_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

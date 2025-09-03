@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 457334}
   - component: {fileID: 3357592}
   - component: {fileID: 2328294}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_BottleTorch_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

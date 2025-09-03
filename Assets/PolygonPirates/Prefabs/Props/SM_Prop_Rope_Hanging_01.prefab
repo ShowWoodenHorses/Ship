@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 429150}
   - component: {fileID: 3373590}
   - component: {fileID: 2369470}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Rope_Hanging_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

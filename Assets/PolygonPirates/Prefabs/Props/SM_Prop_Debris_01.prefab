@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 459924}
   - component: {fileID: 3346014}
   - component: {fileID: 2328922}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Debris_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

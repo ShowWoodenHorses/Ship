@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 421972}
   - component: {fileID: 3391940}
   - component: {fileID: 2398820}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Medium_01_Sails_Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 482722}
   - component: {fileID: 3361010}
   - component: {fileID: 2340028}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Medium_01_Mast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 479510}
   - component: {fileID: 3337678}
   - component: {fileID: 2326374}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Medium_01_Sails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 441788}
   - component: {fileID: 3320446}
   - component: {fileID: 2321160}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Medium_01_Hull
   m_TagString: Untagged
   m_Icon: {fileID: 0}

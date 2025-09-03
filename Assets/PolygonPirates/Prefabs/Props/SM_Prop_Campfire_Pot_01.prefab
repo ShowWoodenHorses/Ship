@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 452122}
   - component: {fileID: 3376564}
   - component: {fileID: 2319804}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Campfire_Pot_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 490892}
   - component: {fileID: 3367526}
   - component: {fileID: 2312256}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Planter_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

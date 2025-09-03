@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 492676}
   - component: {fileID: 3321252}
   - component: {fileID: 2303558}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Barrel_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 406358}
   - component: {fileID: 3325254}
   - component: {fileID: 2384794}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Pole_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

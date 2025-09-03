@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 447262}
   - component: {fileID: 3308520}
   - component: {fileID: 2330228}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Extra_Barrels_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

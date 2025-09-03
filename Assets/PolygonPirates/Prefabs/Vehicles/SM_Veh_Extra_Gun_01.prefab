@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 449030}
   - component: {fileID: 3354508}
   - component: {fileID: 2390986}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Extra_Gun_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 449410}
   - component: {fileID: 3318186}
   - component: {fileID: 2306002}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Extra_Gun_01_Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 422242}
   - component: {fileID: 3391360}
   - component: {fileID: 2314214}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Extra_Gun_01_Cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}

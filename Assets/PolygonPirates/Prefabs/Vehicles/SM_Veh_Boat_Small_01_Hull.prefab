@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 464820}
   - component: {fileID: 3326968}
   - component: {fileID: 2351448}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Boat_Small_01_Hull
   m_TagString: Untagged
   m_Icon: {fileID: 0}

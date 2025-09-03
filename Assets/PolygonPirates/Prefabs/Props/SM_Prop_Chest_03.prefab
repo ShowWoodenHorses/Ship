@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 454508}
   - component: {fileID: 3333346}
   - component: {fileID: 2392250}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Chest_Lid_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 452878}
   - component: {fileID: 3349358}
   - component: {fileID: 2386844}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Chest_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 444266}
   - component: {fileID: 3333952}
   - component: {fileID: 2360516}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Chest_Treasure_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

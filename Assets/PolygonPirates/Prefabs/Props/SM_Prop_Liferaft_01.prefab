@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 416306}
   - component: {fileID: 3329178}
   - component: {fileID: 2311118}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Liferaft_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

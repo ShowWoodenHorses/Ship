@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 495480}
   - component: {fileID: 3394236}
   - component: {fileID: 2377292}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Cannon_03_Separate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 408992}
   - component: {fileID: 3392060}
   - component: {fileID: 2310016}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Cannon_03_Wheel_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 497978}
   - component: {fileID: 3342416}
   - component: {fileID: 2305030}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Cannon_03_Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 473732}
   - component: {fileID: 3379878}
   - component: {fileID: 2376132}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Cannon_03_Wheel_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
