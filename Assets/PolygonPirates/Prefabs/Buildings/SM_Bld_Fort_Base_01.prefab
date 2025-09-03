@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 411650}
   - component: {fileID: 3322924}
   - component: {fileID: 2333126}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Bld_Fort_Base_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 433654}
   - component: {fileID: 3357400}
   - component: {fileID: 2356598}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Bld_Mansion_Tower_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

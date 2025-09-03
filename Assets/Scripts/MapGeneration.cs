@@ -19,7 +19,7 @@ public class MapGeneration : MonoBehaviour
 
     public void Initialize()
     {
-        waterGenerator.GenerateWater();
+        //waterGenerator.GenerateWater();
         islandGenerator.GenerateIsland();
 
         navMeshSurface.BuildNavMesh();

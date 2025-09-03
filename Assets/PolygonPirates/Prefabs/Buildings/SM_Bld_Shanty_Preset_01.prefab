@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 419846}
   - component: {fileID: 3328504}
   - component: {fileID: 2369438}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Bld_Shanty_Preset_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

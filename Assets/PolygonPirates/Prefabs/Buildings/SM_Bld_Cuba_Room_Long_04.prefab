@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 452498}
   - component: {fileID: 3313370}
   - component: {fileID: 2345996}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Bld_Cuba_Room_Long_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 442492}
   - component: {fileID: 3332766}
   - component: {fileID: 2312472}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Bld_Dock_Stairs_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

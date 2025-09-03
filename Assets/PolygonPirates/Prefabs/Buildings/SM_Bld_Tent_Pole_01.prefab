@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 421466}
   - component: {fileID: 3392654}
   - component: {fileID: 2317132}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Bld_Tent_Pole_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

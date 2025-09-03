@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 495838}
   - component: {fileID: 3343040}
   - component: {fileID: 2360256}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Bld_Mansion_Roof_End_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 422544}
   - component: {fileID: 3377230}
   - component: {fileID: 2326310}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Bld_Shanty_SideAttachment_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}

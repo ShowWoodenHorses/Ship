@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 475232}
   - component: {fileID: 3391000}
   - component: {fileID: 2366498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Bld_Fort_Base_Circle_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

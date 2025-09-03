@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 456590}
   - component: {fileID: 3356678}
   - component: {fileID: 2364056}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Beach_Pile_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

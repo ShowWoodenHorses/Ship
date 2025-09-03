@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 400632}
   - component: {fileID: 3369586}
   - component: {fileID: 2302136}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Bld_Stone_Wall_End_Top_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

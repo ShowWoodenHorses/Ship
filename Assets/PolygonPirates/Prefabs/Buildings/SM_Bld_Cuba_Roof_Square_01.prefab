@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 481778}
   - component: {fileID: 3366272}
   - component: {fileID: 2305652}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Bld_Cuba_Roof_Square_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

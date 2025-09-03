@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 462332}
   - component: {fileID: 3326038}
   - component: {fileID: 2319598}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Bld_Shanty_Deck_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

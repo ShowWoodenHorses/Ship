@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 415346}
   - component: {fileID: 3302720}
   - component: {fileID: 2332866}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Bld_Rickety_House_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 438176}
   - component: {fileID: 3383752}
   - component: {fileID: 2303224}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Flat_Sand_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

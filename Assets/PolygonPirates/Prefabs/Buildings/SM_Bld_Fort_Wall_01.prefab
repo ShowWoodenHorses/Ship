@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 451906}
   - component: {fileID: 3375848}
   - component: {fileID: 2307190}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Bld_Fort_Wall_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

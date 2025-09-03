@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 497376}
   - component: {fileID: 3373780}
   - component: {fileID: 2361366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Bld_Rickety_Dock_Platform_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

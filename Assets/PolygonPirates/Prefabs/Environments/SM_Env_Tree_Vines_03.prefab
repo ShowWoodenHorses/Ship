@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 425780}
   - component: {fileID: 3328180}
   - component: {fileID: 2322294}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Tree_Vines_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
