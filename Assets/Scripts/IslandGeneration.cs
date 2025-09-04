@@ -1,25 +1,60 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class IslandGeneration : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> prefabs;
-    [SerializeField] private List<Transform> positions;
-    [SerializeField] private int count;
+    [Header("Small island")]
+    [SerializeField] private List<GameObject> smallPrefabs;
+    [SerializeField] private List<Transform> smallPositions;
 
-    private void Start()
+    [Header("Middle island")]
+    [SerializeField] private List<GameObject> middlePrefabs;
+    [SerializeField] private List<Transform> middlePositions;
+
+    [Header("Big island")]
+    [SerializeField] private List<GameObject> bigPrefabs;
+    [SerializeField] private List<Transform> bigPositions;
+
+    public void Initialize()
     {
+        GenerateIsland(bigPrefabs, bigPositions);
+        GenerateIsland(middlePrefabs, middlePositions);
+        GenerateIsland(smallPrefabs, smallPositions);
     }
 
-    public void GenerateIsland()
+    [ContextMenu("Generate Island")]
+    public void Generate()
     {
-        for(int i = 0; i < count; i++)
+        ClearTiles();
+        Initialize();
+    }
+
+    [ContextMenu("Clean Island")]
+    public void ClearTiles()
+    {
+        // Удаляем всё, что уже сгенерировано
+        for (int i = transform.childCount - 1; i > 0; i--)
         {
-            int indexCurrentPosition = Random.Range(0, positions.Count);
+            DestroyImmediate(transform.GetChild(i).gameObject);
+        }
+    }
+
+    private void GenerateIsland(List<GameObject> prefabs, List<Transform> positions)
+    {
+        List<Transform> newPositions = new List<Transform> ();
+        foreach (Transform t in positions)
+        {
+            newPositions.Add(t);
+        }
+
+        for (int i = 0; i < positions.Count; i++)
+        {
+            int indexCurrentPosition = Random.Range(0, newPositions.Count);
             GameObject currentPrefab = prefabs[Random.Range(0, prefabs.Count)];
 
-            Instantiate(currentPrefab, positions[indexCurrentPosition].position, Quaternion.identity, transform);
-            positions.Remove(positions[indexCurrentPosition]);
+            Instantiate(currentPrefab, newPositions[indexCurrentPosition].position, Quaternion.Euler(0f, Random.Range(0, 359), 0f), transform);
+            newPositions.Remove(newPositions[indexCurrentPosition]);
         }
     }
 }

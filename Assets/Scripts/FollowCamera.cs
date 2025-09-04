@@ -2,15 +2,25 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
-    public Transform target;      // Корабль или объект, за которым следовать
-    public Vector3 offset;        // Смещение относительно цели
-    public Quaternion offsetRotation;        // Смещение относительно цели
+    public Transform target; // Корабль
+    public Vector3 offset;   // Смещение
+    public Quaternion offsetRotation;
+
+
+    [Header("Ограничение")]
+    public float minX, maxX, minZ, maxZ;
 
     void LateUpdate()
     {
         if (target != null)
         {
-            transform.position = target.position + offset;
+            Vector3 desiredPosition = target.position + offset;
+
+            // Ограничиваем позицию камеры
+            desiredPosition.x = Mathf.Clamp(desiredPosition.x, minX, maxX);
+            desiredPosition.z = Mathf.Clamp(desiredPosition.z, minZ, maxZ);
+
+            transform.position = desiredPosition;
             transform.rotation = offsetRotation;
         }
     }
