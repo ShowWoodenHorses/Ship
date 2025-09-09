@@ -252,6 +252,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Beach_03
       objectReference: {fileID: 0}
+    - target: {fileID: 177418, guid: f8ca1af5413cfec47ab975dd7f75ee74, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 415910, guid: f8ca1af5413cfec47ab975dd7f75ee74, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
