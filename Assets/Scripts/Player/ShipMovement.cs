@@ -8,9 +8,6 @@ public class ShipMovement : MonoBehaviour
     public float deceleration = 3f;         // Насколько быстро тормозит
     public float turnSpeed = 50f;           // Скорость поворота
 
-    [Header("Ограничение")]
-    public float minX, maxX, minZ, maxZ;
-
     private float currentSpeed = 0f;
     private Rigidbody rb;
 
@@ -24,7 +21,6 @@ public class ShipMovement : MonoBehaviour
     {
         HandleMovement();
         HandleRotation();
-        ClampPosition();
     }
 
     void HandleMovement()
@@ -50,15 +46,6 @@ public class ShipMovement : MonoBehaviour
 
         Quaternion turnRotation = Quaternion.Euler(0f, turn * turnSpeed * Time.deltaTime, 0f);
         rb.MoveRotation(rb.rotation * turnRotation);
-    }
-
-    void ClampPosition()
-    {
-        Vector3 pos = rb.position;
-        pos.x = Mathf.Clamp(pos.x, minX, maxX);
-        pos.z = Mathf.Clamp(pos.z, minZ, maxZ);
-
-        rb.MovePosition(pos);
     }
 
     private void OnCollisionEnter(Collision collision)
