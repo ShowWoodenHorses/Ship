@@ -32,6 +32,9 @@ public class ShipCannonMultiSide : MonoBehaviour
     private CannonSide currentActiveSide;
     private ShipCannon currentSelectedCannon;
 
+    private CannonSide currentActiveSideRightNow;
+    private Vector3 mouseWorldRightNow;
+
     private GameplayAnimationController gameplayAnimationController;
 
     //void Start()
@@ -88,10 +91,8 @@ public class ShipCannonMultiSide : MonoBehaviour
             RotateCannonsToTarget(currentActiveSide, mouseWorld);
             UpdateLaserAndTrajectoryForSelected(mouseWorld);
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                TryShootOnce(currentActiveSide, mouseWorld);
-            }
+            currentActiveSideRightNow = currentActiveSide;
+            mouseWorldRightNow = mouseWorld;
         }
         else
         {
@@ -105,6 +106,11 @@ public class ShipCannonMultiSide : MonoBehaviour
         {
             shipAimLine.Hide();
             return;
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            TryShootOnce(currentActiveSideRightNow, mouseWorldRightNow);
         }
     }
 
