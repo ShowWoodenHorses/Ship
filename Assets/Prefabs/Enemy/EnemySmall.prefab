@@ -233,6 +233,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   reward: 10
+  isReward: 1
 --- !u!65 &7107804566485540698
 BoxCollider:
   m_ObjectHideFlags: 0

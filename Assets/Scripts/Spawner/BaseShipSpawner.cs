@@ -30,13 +30,11 @@ namespace Assets.Scripts.Spawner
                 GameObject enemy = EnemyObjectPool.Instance.GetObject(enemyToSpawn);
                 if (enemy != null)
                 {
-                    enemy.transform.position = hit.position;
-                    enemy.transform.rotation = Quaternion.identity;
-
                     var ai = enemy.GetComponent<EnemyMovementBase>();
                     if (ai != null)
                     {
                         ai.SetTarget(playerTransform);
+                        ai.SetStartPosition(hit.position);
                     }
 
                     return enemy;

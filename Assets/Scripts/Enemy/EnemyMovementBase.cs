@@ -38,6 +38,12 @@ public abstract class EnemyMovementBase : MonoBehaviour
         weaponSystem?.SetTarget(newTarget);
     }
 
+    public virtual void SetStartPosition(Vector3 startPosition)
+    {
+        agent.Warp(startPosition);
+        transform.rotation = Quaternion.identity;
+    }
+
     protected void MoveTo(Vector3 position)
     {
         agent.isStopped = false;
