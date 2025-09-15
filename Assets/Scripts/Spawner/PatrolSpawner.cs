@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using Assets.Scripts.Interface;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.Spawner
 {
@@ -8,7 +6,6 @@ namespace Assets.Scripts.Spawner
     {
         public GameObject patrolEnemyPrefab;
         public Transform[] patrolRoutePoints; // точки на карте
-        public int count = 3;
 
         public override bool HaveThisPrefab(GameObject prefab)
         {

@@ -449,11 +449,11 @@ GameObject:
   - component: {fileID: 1200362124379417653}
   - component: {fileID: 3944656256418418549}
   - component: {fileID: 8681831137369936405}
-  - component: {fileID: 719073707280446423}
+  - component: {fileID: 55011488311753866}
   - component: {fileID: 97215329225786903}
   - component: {fileID: 8201650254804865045}
   m_Layer: 0
-  m_Name: Enemy4
+  m_Name: EnemyPatrol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -495,7 +495,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -334000983
   m_Radius: 3
-  m_Speed: 2
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 30
   m_AngularSpeed: 60
@@ -522,7 +522,7 @@ MonoBehaviour:
   cannonballPrefab: {fileID: 593526565559787040, guid: 2f96c39e14d52144fad64640061b64de, type: 3}
   projectileSpeed: 30
   debugEnabled: 1
---- !u!114 &719073707280446423
+--- !u!114 &55011488311753866
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -531,16 +531,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1834302381995290884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddc27070dec4a244596c4deae01b6d94, type: 3}
+  m_Script: {fileID: 11500000, guid: 17dfa093c98d8d1498316d58b0817697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  orbitRadius: 30
-  orbitPointsCount: 12
-  waypointAdvanceDistance: 5
-  enterOrbitDistance: 32
-  exitOrbitDistance: 40
-  turnRateDegPerSec: 180
+  patrolPoints: []
+  detectionRadius: 30
+  chaseRadius: 40
+  orbitRadius: 25
+  orbitSpeed: 7
+  player: {fileID: 0}
 --- !u!114 &97215329225786903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,7 +555,7 @@ MonoBehaviour:
   prefabRef: {fileID: 0}
   maxHealth: 300
   currentHealth: 0
-  reward: 90
+  reward: 70
   isReward: 1
 --- !u!65 &8201650254804865045
 BoxCollider:
