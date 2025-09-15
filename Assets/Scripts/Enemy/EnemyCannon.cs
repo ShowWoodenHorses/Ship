@@ -27,7 +27,7 @@ public class EnemyCannon : MonoBehaviour
     public float maxRightRotation = 45f;
     public float fireRadius = 50f;
     public float reloadTime = 3f;
-    public float aimToleranceDeg = 6f;
+    public float aimToleranceDeg = 6f; // допустимая угловая погрешность прицеливания в градусах
 
     [Header("Debug")]
     public DebugLevel debugLevel = DebugLevel.Full;
@@ -38,9 +38,7 @@ public class EnemyCannon : MonoBehaviour
     // --- внутреннее состояние ---
     private Transform _target;
     private GameObject _projectilePrefab;
-    private float _projectileSpeed;
     private float _reloadTimer;
-    private float _debugTimer;
 
     // pivot-related
     private Transform _pivot;
@@ -49,11 +47,10 @@ public class EnemyCannon : MonoBehaviour
     private Vector3 _zeroForwardLocal;         // базовый forward (в системе координат родителя pivot)
     private readonly StringBuilder _sb = new StringBuilder(512);
 
-    public void Initialize(Transform target, GameObject projectilePrefab, float projectileSpeed)
+    public void Initialize(Transform target, GameObject projectilePrefab)
     {
         _target = target;
         _projectilePrefab = projectilePrefab;
-        _projectileSpeed = projectileSpeed;
     }
 
     private void Awake()
@@ -157,15 +154,18 @@ public class EnemyCannon : MonoBehaviour
         float worldAngle = Vector3.Angle(_barrel.forward, dirToTarget);
 
         bool inAim = worldAngle <= aimToleranceDeg;
+        Debug.Log("TryFire");
 
         if (inAim)
         {
+            Debug.Log("TryFire -> Fire()");
             Fire();
         }
     }
 
     private void Fire()
     {
+        Debug.Log("Fire");
         if (_projectilePrefab == null) return;
         if (_barrel == null) _barrel = _pivot;
 

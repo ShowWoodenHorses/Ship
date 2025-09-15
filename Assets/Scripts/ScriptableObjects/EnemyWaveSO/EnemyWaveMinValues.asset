@@ -19,3 +19,19 @@ MonoBehaviour:
     enemyWaveId: level2
   - minScore: 100
     enemyWaveId: level3
+  - minScore: 200
+    enemyWaveId: level4
+  - minScore: 300
+    enemyWaveId: level5
+  - minScore: 500
+    enemyWaveId: level6
+  - minScore: 600
+    enemyWaveId: level7
+  - minScore: 900
+    enemyWaveId: level8
+  - minScore: 1200
+    enemyWaveId: level9
+  - minScore: 1500
+    enemyWaveId: level10
+  - minScore: 2000
+    enemyWaveId: level11

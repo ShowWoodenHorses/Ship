@@ -63,7 +63,7 @@ public abstract class EnemyMovementBase : MonoBehaviour
 
     protected abstract void HandleMovement();
 
-    protected virtual void Update()
+    protected virtual void FixedUpdate()
     {
         if (target == null) return;
 

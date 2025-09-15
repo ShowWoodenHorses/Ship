@@ -38,7 +38,7 @@ public class EnemyWeaponSystem : MonoBehaviour
         foreach (var cannon in _allCannons)
         {
             if (cannon == null) continue;
-            cannon.Initialize(_currentTarget, cannonballPrefab, projectileSpeed);
+            cannon.Initialize(_currentTarget, cannonballPrefab);
         }
 
     }
