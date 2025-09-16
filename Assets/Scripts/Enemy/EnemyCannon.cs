@@ -36,8 +36,8 @@ public class EnemyCannon : MonoBehaviour
     public bool drawGizmos = true;
 
     // --- внутреннее состояние ---
-    private Transform _target;
-    private GameObject _projectilePrefab;
+    [SerializeField] private Transform _target;
+    [SerializeField] private GameObject _projectilePrefab;
     private float _reloadTimer;
 
     // pivot-related
@@ -45,7 +45,6 @@ public class EnemyCannon : MonoBehaviour
     private Transform _barrel;
     private Quaternion _initialLocalRot;       // локальная ориентация pivot в Awake (базовая)
     private Vector3 _zeroForwardLocal;         // базовый forward (в системе координат родителя pivot)
-    private readonly StringBuilder _sb = new StringBuilder(512);
 
     public void Initialize(Transform target, GameObject projectilePrefab)
     {
