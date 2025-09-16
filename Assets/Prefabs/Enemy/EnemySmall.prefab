@@ -150,7 +150,7 @@ Transform:
   m_GameObject: {fileID: 6778489575331791697}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.009097946, z: -0, w: 0.99995863}
-  m_LocalPosition: {x: -12.37, y: 0, z: 22.36}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -234,6 +234,9 @@ MonoBehaviour:
   currentHealth: 0
   reward: 10
   isReward: 1
+  HealthObject: {fileID: 0}
+  timeShowHealth: 2
+  healthSlider: {fileID: 0}
 --- !u!65 &7107804566485540698
 BoxCollider:
   m_ObjectHideFlags: 0

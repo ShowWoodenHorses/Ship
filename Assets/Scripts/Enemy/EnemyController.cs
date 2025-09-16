@@ -1,6 +1,8 @@
 using UnityEngine;
 using System;
 using Assets.Scripts.Interface;
+using System.Collections;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour, IDamagable, IReward
 {
@@ -19,11 +21,17 @@ public class EnemyController : MonoBehaviour, IDamagable, IReward
     [SerializeField] private int reward;
     [SerializeField] private bool isReward = true;
 
+    [Header("Canvas")]
+    [SerializeField] private GameObject HealthObject;
+    [SerializeField] private float timeShowHealth = 2f;
+    [SerializeField] private Slider healthSlider;
+
     private void OnEnable()
     {
         // Когда объект берётся из пула — восстанавливаем здоровье
         currentHealth = maxHealth;
         isDead = false;
+        InitializeSliderHealth();
     }
 
     public void TakeDamage(int damage)
@@ -31,6 +39,7 @@ public class EnemyController : MonoBehaviour, IDamagable, IReward
         if (isDead) return;
 
         currentHealth -= damage;
+        StartCoroutine(ShowHealth());
         if (currentHealth <= 0)
         {
             currentHealth = 0;
@@ -60,5 +69,20 @@ public class EnemyController : MonoBehaviour, IDamagable, IReward
     public bool IsReward()
     {
         return isReward;
+    }
+
+    private IEnumerator ShowHealth()
+    {
+        HealthObject.SetActive(true);
+        healthSlider.value = currentHealth;
+        yield return new WaitForSeconds(timeShowHealth);
+        HealthObject.SetActive(false);
+    }
+
+    private void InitializeSliderHealth()
+    {
+        HealthObject.SetActive(false);
+        healthSlider.maxValue = maxHealth;
+        healthSlider.value = maxHealth;
     }
 }
