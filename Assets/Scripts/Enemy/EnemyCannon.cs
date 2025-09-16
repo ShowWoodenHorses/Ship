@@ -154,18 +154,15 @@ public class EnemyCannon : MonoBehaviour
         float worldAngle = Vector3.Angle(_barrel.forward, dirToTarget);
 
         bool inAim = worldAngle <= aimToleranceDeg;
-        Debug.Log("TryFire");
 
         if (inAim)
         {
-            Debug.Log("TryFire -> Fire()");
             Fire();
         }
     }
 
     private void Fire()
     {
-        Debug.Log("Fire");
         if (_projectilePrefab == null) return;
         if (_barrel == null) _barrel = _pivot;
 
@@ -181,101 +178,4 @@ public class EnemyCannon : MonoBehaviour
         }
         _reloadTimer = reloadTime;
     }
-
-    private void DrawRuntimeDebug()
-    {
-        if (_barrel == null || _pivot == null || _target == null) return;
-
-        Vector3 p = _barrel.position;
-        Debug.DrawLine(p, p + _barrel.forward * 6f, Color.green); // barrel forward
-        Debug.DrawLine(p, _target.position, Color.yellow); // to target
-
-        // zero forward in world:
-        Vector3 zeroWorld = _pivot.parent != null ? _pivot.parent.TransformDirection(_zeroForwardLocal) : _pivot.TransformDirection(_zeroForwardLocal);
-        Debug.DrawLine(p, p + zeroWorld * 5f, new Color(0.2f, 0.6f, 1f));
-
-        // sector bounds
-        Vector3 left = _pivot.parent != null ? _pivot.parent.TransformDirection(Quaternion.AngleAxis(-maxLeftRotation, Vector3.up) * _zeroForwardLocal)
-                                             : Quaternion.AngleAxis(-maxLeftRotation, Vector3.up) * zeroWorld;
-        Vector3 right = _pivot.parent != null ? _pivot.parent.TransformDirection(Quaternion.AngleAxis(maxRightRotation, Vector3.up) * _zeroForwardLocal)
-                                              : Quaternion.AngleAxis(maxRightRotation, Vector3.up) * zeroWorld;
-
-        Debug.DrawLine(p, p + left * 5.5f, Color.cyan);
-        Debug.DrawLine(p, p + right * 5.5f, Color.cyan);
-    }
-
-    private void LogState()
-    {
-        if (_target == null || _pivot == null) return;
-
-        Transform parent = _pivot.parent;
-        Vector3 localPivot = _pivot.localPosition;
-        Vector3 localTarget = parent != null ? parent.InverseTransformPoint(_target.position) : _target.position;
-        Vector3 localDelta = localTarget - localPivot;
-        Vector3 localDeltaFlat = new Vector3(localDelta.x, 0f, localDelta.z);
-
-        float targetAngle = localDeltaFlat.sqrMagnitude > 0.0001f
-            ? Vector3.SignedAngle(_zeroForwardLocal, localDeltaFlat.normalized, Vector3.up)
-            : 0f;
-
-        Vector3 currentForwardLocal = _pivot.localRotation * aimForwardLocal;
-        float currentAngle = Vector3.SignedAngle(_zeroForwardLocal, currentForwardLocal, Vector3.up);
-
-        Vector3 dirToTargetWorld = (_target.position - (_barrel != null ? _barrel.position : _pivot.position));
-        float dist = dirToTargetWorld.magnitude;
-        dirToTargetWorld.Normalize();
-        float worldAngle = Vector3.Angle((_barrel != null ? _barrel.forward : _pivot.forward), dirToTargetWorld);
-
-        bool inRadius = dist <= fireRadius;
-        bool inAim = worldAngle <= aimToleranceDeg;
-
-        _sb.Clear();
-        _sb.AppendLine($"[CANNON DEBUG] '{name}' (side={side})");
-        _sb.AppendLine($"  Parent      : {(parent != null ? parent.name : "NULL")}, parentPos={(parent != null ? parent.position.ToString("F3") : "—")}, parentRot={(parent != null ? parent.eulerAngles.ToString("F1") : "—")}, parentScale={(parent != null ? parent.lossyScale.ToString("F3") : "—")}");
-        _sb.AppendLine($"  Pivot (world): {_pivot.position.ToString("F3")}, localPivot={localPivot.ToString("F3")}");
-        _sb.AppendLine($"  Barrel      : {(_barrel != null ? _barrel.name : "NULL")}, pos={(_barrel != null ? _barrel.position.ToString("F3") : "—")}");
-        _sb.AppendLine($"  Target Pos  : {_target.position.ToString("F3")}");
-        _sb.AppendLine($"  Local Target: {localTarget.ToString("F3")}");
-        _sb.AppendLine($"  Local Delta : {localDelta.ToString("F3")} (flat={localDeltaFlat.ToString("F3")})");
-        _sb.AppendLine($"  Aim axis loc: {aimForwardLocal.ToString("F3")}, zeroFwdLocal={_zeroForwardLocal.ToString("F3")}");
-        _sb.AppendLine($"  Angles (deg): target={targetAngle:F2}, current={currentAngle:F2}, worldAim={worldAngle:F2}");
-        _sb.AppendLine($"  Limits (deg): left={-maxLeftRotation:F1}, right={maxRightRotation:F1}, tol={aimToleranceDeg:F1}");
-        _sb.AppendLine($"  Distance    : {dist:F2} / fireRadius={fireRadius:F2}");
-        _sb.AppendLine($"  Can Fire?   : inRadius={inRadius}, inAim={inAim} => {(inRadius && inAim ? "YES" : "NO")}");
-        Debug.Log(_sb.ToString(), this);
-    }
-
-#if UNITY_EDITOR
-    private void OnDrawGizmosSelected()
-    {
-        if (!drawGizmos) return;
-        Transform p = pivot != null ? pivot : transform;
-        Transform b = barrel != null ? barrel : (p.childCount > 0 ? p.GetChild(0) : p);
-
-        Vector3 pos = (b != null ? b.position : p.position);
-
-        // zero forward world
-        Quaternion initialLocal = Application.isPlaying ? _initialLocalRot : p.localRotation;
-        Vector3 zeroFwdLocalNow = Application.isPlaying ? _zeroForwardLocal : (initialLocal * aimForwardLocal);
-        Vector3 zeroFwdWorld = p.parent != null ? p.parent.TransformDirection(zeroFwdLocalNow) : p.TransformDirection(zeroFwdLocalNow);
-
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawLine(pos, pos + zeroFwdWorld * 4.5f);
-
-        Vector3 leftWorld = p.parent != null
-            ? p.parent.TransformDirection(Quaternion.AngleAxis(-maxLeftRotation, Vector3.up) * zeroFwdLocalNow)
-            : Quaternion.AngleAxis(-maxLeftRotation, Vector3.up) * zeroFwdWorld;
-
-        Vector3 rightWorld = p.parent != null
-            ? p.parent.TransformDirection(Quaternion.AngleAxis(maxRightRotation, Vector3.up) * zeroFwdLocalNow)
-            : Quaternion.AngleAxis(maxRightRotation, Vector3.up) * zeroFwdWorld;
-
-        Gizmos.color = Color.blue;
-        Gizmos.DrawLine(pos, pos + leftWorld * 5f);
-        Gizmos.DrawLine(pos, pos + rightWorld * 5f);
-
-        Gizmos.color = Color.green;
-        if (b != null) Gizmos.DrawLine(pos, pos + b.forward * 4.5f);
-    }
-#endif
 }
