@@ -1128,7 +1128,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -334000983
   m_Radius: 3
-  m_Speed: 2
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 30
   m_AngularSpeed: 15
@@ -1726,12 +1726,24 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
+      propertyPath: aimToleranceDeg
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: maxLeftRotation
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: maxRightRotation
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
+      propertyPath: aimForwardLocal.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
+      propertyPath: aimForwardLocal.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1818,6 +1830,10 @@ PrefabInstance:
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: rotationSpeed
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
+      propertyPath: aimToleranceDeg
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: maxLeftRotation
@@ -1926,6 +1942,10 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
+      propertyPath: aimToleranceDeg
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: maxLeftRotation
       value: 20
       objectReference: {fileID: 0}
@@ -2026,6 +2046,10 @@ PrefabInstance:
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: rotationSpeed
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
+      propertyPath: aimToleranceDeg
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: maxLeftRotation
@@ -2130,6 +2154,10 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
+      propertyPath: aimToleranceDeg
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: maxLeftRotation
       value: 20
       objectReference: {fileID: 0}
@@ -2139,11 +2167,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: aimForwardLocal.x
-      value: 1
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
+      propertyPath: aimForwardLocal.y
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: aimForwardLocal.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2230,6 +2262,10 @@ PrefabInstance:
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: rotationSpeed
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
+      propertyPath: aimToleranceDeg
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: maxLeftRotation
@@ -2334,6 +2370,10 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
+      propertyPath: aimToleranceDeg
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: maxLeftRotation
       value: 20
       objectReference: {fileID: 0}
@@ -2434,6 +2474,10 @@ PrefabInstance:
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: rotationSpeed
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
+      propertyPath: aimToleranceDeg
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: maxLeftRotation
@@ -2542,6 +2586,10 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
+      propertyPath: aimToleranceDeg
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: maxLeftRotation
       value: 20
       objectReference: {fileID: 0}
@@ -2646,6 +2694,10 @@ PrefabInstance:
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: rotationSpeed
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
+      propertyPath: aimToleranceDeg
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: maxLeftRotation

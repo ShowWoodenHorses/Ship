@@ -26,6 +26,8 @@ public class EnemyPatrolAI : MonoBehaviour
         if (weaponSystem != null)
             weaponSystem.SetTarget(player);
 
+        transform.position = patrolPoints[Random.Range(0, patrolPoints.Length)].position;
+
         agent = GetComponent<NavMeshAgent>();
 
         if (patrolPoints != null && patrolPoints.Length > 0)

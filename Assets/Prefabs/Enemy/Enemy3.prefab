@@ -1208,6 +1208,10 @@ PrefabInstance:
       value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
+      propertyPath: aimToleranceDeg
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: drawRuntimeRays
       value: 0
       objectReference: {fileID: 0}
@@ -1318,6 +1322,10 @@ PrefabInstance:
       value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
+      propertyPath: aimToleranceDeg
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: drawRuntimeRays
       value: 0
       objectReference: {fileID: 0}
@@ -1422,6 +1430,10 @@ PrefabInstance:
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: rotationSpeed
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
+      propertyPath: aimToleranceDeg
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: drawRuntimeRays
@@ -1536,6 +1548,10 @@ PrefabInstance:
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: rotationSpeed
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
+      propertyPath: aimToleranceDeg
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8815254016045209626, guid: 6150d5e16a6733e49ae0ac11c865589b, type: 3}
       propertyPath: drawRuntimeRays
