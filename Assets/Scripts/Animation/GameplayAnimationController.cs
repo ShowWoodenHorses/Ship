@@ -47,6 +47,15 @@ namespace Assets.Scripts.Animation
                 .SetLink(cannonVisual.gameObject);
         }
 
+        public Sequence DestroyShip(Transform transform)
+        {
+            sailSequence = DOTween.Sequence()
+                .Join(transform.transform.DOMoveY(transform.position.y - 20f, 3f))
+                .SetLink(transform.gameObject); // Привязываем к объекту
+
+            return sailSequence;
+        }
+
         /// <summary>
         /// Полностью удалить все анимации у объекта
         /// </summary>

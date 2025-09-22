@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Assets.Scripts;
+using Assets.Scripts.Animation;
 using Assets.Scripts.Configs;
 using Assets.Scripts.Spawner;
 using UnityEngine;
@@ -23,6 +24,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private EnemyWaveDatabase enemyWaveDatabase;
     [SerializeField] private string currentEnemyWaveId;
+
+    [Header("Animation")]
+    private GameplayAnimationController gameplayAnimation;
 
     [Header("Для Дебага")]
     public List<EnemyType> availableEnemies;
@@ -56,9 +60,10 @@ public class EnemySpawner : MonoBehaviour
     //    timer = checkInterval;
     //}
 
-    public void Initialize(string enemyWaveId, Transform playerTransform)
+    public void Initialize(string enemyWaveId, Transform playerTransform, GameplayAnimationController gameplayAnimation)
     {
         this.playerTransform = playerTransform;
+        this.gameplayAnimation = gameplayAnimation;
 
         timer = checkInterval;
         OnUpdateSettingSpawn(enemyWaveId);
@@ -99,7 +104,7 @@ public class EnemySpawner : MonoBehaviour
         {
             if (spawner.HaveThisPrefab(enemyToSpawn.prefab))
             {
-                GameObject enemyInstance = spawner.Spawn(playerTransform, enemyToSpawn.prefab);
+                GameObject enemyInstance = spawner.Spawn(playerTransform, enemyToSpawn.prefab, gameplayAnimation);
                 if (enemyInstance != null)
                 {
                     enemyToSpawn.currentCount++;
@@ -109,7 +114,7 @@ public class EnemySpawner : MonoBehaviour
                     var enemyController = enemyInstance.GetComponent<EnemyController>();
                     if (enemyController != null)
                     {
-                        enemyController.prefabRef = enemyToSpawn.prefab;
+                        enemyController.Initialize(enemyToSpawn.prefab, gameplayAnimation);
                         enemyController.OnEnemyDeath += OnEnemyDeath;
                     }
                 }

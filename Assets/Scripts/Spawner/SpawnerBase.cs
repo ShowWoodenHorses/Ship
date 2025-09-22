@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Assets.Scripts.Animation;
 using Assets.Scripts.Interface;
 using UnityEngine;
 
@@ -8,6 +9,6 @@ namespace Assets.Scripts.Spawner
     {
         public abstract bool HaveThisPrefab(GameObject prefab);
 
-        public abstract GameObject Spawn(Transform playerTransform, GameObject prefab);
+        public abstract GameObject Spawn(Transform playerTransform, GameObject prefab, GameplayAnimationController gameplayAnimationController);
     }
 }

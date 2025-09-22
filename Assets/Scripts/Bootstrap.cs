@@ -66,7 +66,7 @@ namespace Assets.Scripts
 
             shipManager.Initialize(data.selectedShipId, data.selectedBulletId, gameplayAnimationController);
             gameManager.Initialize(uiController, scoreManager);
-            enemySpawner.Initialize(data.currentWaveEnemyId, playerTransform);
+            enemySpawner.Initialize(data.currentWaveEnemyId, playerTransform, gameplayAnimationController);
         }
     }
 }

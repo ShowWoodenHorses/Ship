@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Assets.Scripts.Animation;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -21,7 +22,7 @@ namespace Assets.Scripts.Spawner
             return false;
         }
 
-        public override GameObject Spawn(Transform playerTransform, GameObject enemyToSpawn)
+        public override GameObject Spawn(Transform playerTransform, GameObject enemyToSpawn, GameplayAnimationController gameplayAnimationController)
         {
             Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
 

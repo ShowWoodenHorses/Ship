@@ -3,6 +3,8 @@ using System;
 using Assets.Scripts.Interface;
 using System.Collections;
 using UnityEngine.UI;
+using DG.Tweening;
+using Assets.Scripts.Animation;
 
 public class EnemyController : MonoBehaviour, IDamagable, IReward
 {
@@ -26,9 +28,23 @@ public class EnemyController : MonoBehaviour, IDamagable, IReward
     [SerializeField] private float timeShowHealth = 2f;
     [SerializeField] private Slider healthSlider;
 
+    [Header("Animation")]
+    private GameplayAnimationController gameplayAnimation;
+    private Sequence sequence;
+
     private void OnEnable()
     {
         // Когда объект берётся из пула — восстанавливаем здоровье
+        currentHealth = maxHealth;
+        isDead = false;
+        InitializeSliderHealth();
+    }
+
+    public void Initialize(GameObject prefabRef, GameplayAnimationController gameplayAnimation)
+    {
+        this.prefabRef = prefabRef;
+        this.gameplayAnimation = gameplayAnimation;
+
         currentHealth = maxHealth;
         isDead = false;
         InitializeSliderHealth();
@@ -54,11 +70,8 @@ public class EnemyController : MonoBehaviour, IDamagable, IReward
         isDead = true;
         isReward = haveReward;
 
-        // Вызываем событие смерти
-        OnEnemyDeath?.Invoke(gameObject);
-
         // Важно: сам объект не уничтожаем, он вернётся в пул из EnemySpawner
-        gameObject.SetActive(false);
+        StartCoroutine(DestroyEnemy());
     }
 
     public int GetReward()
@@ -84,5 +97,18 @@ public class EnemyController : MonoBehaviour, IDamagable, IReward
         HealthObject.SetActive(false);
         healthSlider.maxValue = maxHealth;
         healthSlider.value = maxHealth;
+    }
+
+    private IEnumerator DestroyEnemy()
+    {
+        HealthObject.SetActive(false);
+        sequence = gameplayAnimation.DestroyShip(transform);
+        yield return new WaitForSeconds(2f);
+
+        // Вызываем событие смерти
+        OnEnemyDeath?.Invoke(gameObject);
+        gameObject.SetActive(false);
+        sequence?.Kill();
+
     }
 }

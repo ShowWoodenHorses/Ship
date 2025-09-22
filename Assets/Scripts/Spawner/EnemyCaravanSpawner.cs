@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using Assets.Scripts.Spawner;
+using Assets.Scripts.Animation;
 
 public class EnemyCaravanSpawner : SpawnerBase
 {
@@ -10,6 +11,8 @@ public class EnemyCaravanSpawner : SpawnerBase
     public Transform[] spawnPoints;
     public Transform[] destinationPoints;
     public float spawnInterval = 2f;
+
+    private GameplayAnimationController gameplayAnimationController;
 
     IEnumerator SpawnCaravanGuards(Transform playerTransform, Transform pointA, Transform pointB)
     {
@@ -28,18 +31,31 @@ public class EnemyCaravanSpawner : SpawnerBase
                 transportAI.Initialize(playerTransform, pointA, pointB);
             }
 
+            EnemyController enemyController = enemy.GetComponent<EnemyController>();
+            if (enemyController != null)
+            {
+                enemyController.Initialize(prefab, gameplayAnimationController);
+            }
+
             yield return new WaitForSeconds(spawnInterval);
         }
     }
 
-    public override GameObject Spawn(Transform playerTransform, GameObject prefab)
+    public override GameObject Spawn(Transform playerTransform, GameObject prefab, GameplayAnimationController gameplayAnimationController)
     {
         Transform pointA = spawnPoints[Random.Range(0, spawnPoints.Length)];
         Transform pointB = destinationPoints[Random.Range(0, destinationPoints.Length)];
 
+        this.gameplayAnimationController = gameplayAnimationController;
+
         GameObject caravanObj = EnemyObjectPool.Instance.GetObject(prefab);
         if (caravanObj != null)
         {
+            EnemyController enemyController = caravanObj.GetComponent<EnemyController>();
+            if (enemyController != null)
+            {
+                enemyController.Initialize(prefab, gameplayAnimationController);
+            }
             EnemyTransportAI caravanTransportAI = caravanObj.GetComponent<EnemyTransportAI>();
             if(caravanTransportAI != null)
             {
