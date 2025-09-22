@@ -48,22 +48,21 @@ namespace Assets.Scripts.Enemy
             {
                 if(timeCooldown <= 0f)
                 {
-                    Shoot(direction);
+                    Shoot(direction, distance);
                     timeCooldown = timeReload;
                 }
             }
         }
 
-        private void Shoot(Vector3 direction)
+        private void Shoot(Vector3 direction, float distance)
         {
-            Debug.Log("SHOOT");
             GameObject bullet = BulletObjectPool.Instance.GetObject(prefabBullet);
             bullet.transform.SetPositionAndRotation(positionBullet.position, Quaternion.LookRotation(direction, Vector3.up));
 
             BulletContoller bulletContoller = bullet.GetComponent<BulletContoller>();
             if(bulletContoller != null)
             {
-                bulletContoller.Initialize(cannonObject.transform.forward);
+                bulletContoller.InitializeWithTimer(cannonObject.transform.forward, distance);
             }
         }
     }

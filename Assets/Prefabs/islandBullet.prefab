@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2857610880695615291}
   - component: {fileID: -8758882389063861053}
   m_Layer: 0
-  m_Name: bulletCannonStandftand
+  m_Name: islandBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,5 +152,5 @@ MonoBehaviour:
   speed: 30
   damage: 10
   lifeBeforeDestroy: 5
-  effectShotInWater: {fileID: 199582, guid: 02e25b69473c97c4d9226857e0231c35, type: 3}
+  effectShotInWater: {fileID: 199582, guid: 01d31bdda7b7e8145b535258c121ada6, type: 3}
   effectShotInBuilding: {fileID: 199582, guid: 22f0c762fb1a0bf4bb4afec4df34ea56, type: 3}
