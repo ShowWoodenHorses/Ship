@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Assets.Scripts.Interface;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ namespace Assets.Scripts.Player
     {
         [SerializeField] private int maxHealth;
         [SerializeField] private int currentHealth;
+
+        public static event Action<GameObject> OnPlayerDie;
 
         private void Start()
         {
@@ -19,6 +22,7 @@ namespace Assets.Scripts.Player
             if (currentHealth < 0)
             {
                 currentHealth = 0;
+                OnPlayerDie?.Invoke(gameObject);
                 Debug.Log("===== PLAYER DIE =========");
             }
         }

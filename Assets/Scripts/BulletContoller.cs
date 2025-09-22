@@ -11,7 +11,8 @@ namespace Assets.Scripts
     public class BulletContoller : MonoBehaviour
     {
         [SerializeField] private float speed;
-        [SerializeField] private int damage;
+        [SerializeField] private int damageEnemy;
+        [SerializeField] private int damageBuilding;
         [SerializeField] private float lifeBeforeDestroy;
 
         [SerializeField] private GameObject effectShotInWater;
@@ -54,13 +55,21 @@ namespace Assets.Scripts
         private void OnTriggerEnter(Collider other)
         {
             var objectForDamage = other.gameObject.GetComponent<IDamagable>();
-            if (objectForDamage != null)
+            var building = other.gameObject.GetComponent<IObstaclable>();
+
+            if (building != null && objectForDamage != null)
             {
-                objectForDamage.TakeDamage(damage);
+                objectForDamage.TakeDamage(damageBuilding);
                 Deactive();
             }
-            var building = other.gameObject.GetComponent<IObstaclable>();
-            if (building != null)
+
+            else if (objectForDamage != null)
+            {
+                objectForDamage.TakeDamage(damageEnemy);
+                Deactive();
+            }
+
+            else if (building != null)
             {
                 SpawnEffect(effectShotInBuilding);
                 Deactive();
@@ -83,9 +92,14 @@ namespace Assets.Scripts
             speed = s;
         }
 
-        public void SetDamage(int dmg)
+        public void SetDamageEnemy(int dmg)
         {
-            damage = dmg;
+            damageEnemy = dmg;
+        }
+
+        public void SetDamageBuilding(int dmg)
+        {
+            damageBuilding = dmg;
         }
 
         public void SetLifeTime(float time)

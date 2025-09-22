@@ -49,7 +49,7 @@ MonoBehaviour:
   timeReload: 5
   fireDistanceMax: 70
   fireDistanceMin: 10
-  prefabBullet: {fileID: 593526565559787040, guid: 67aefe9f8fe8fbb4895003e4667842b8, type: 3}
+  prefabBullet: {fileID: 215054644135332002, guid: 67aefe9f8fe8fbb4895003e4667842b8, type: 3}
   cannonObject: {fileID: 8559320359434770164}
   positionBullet: {fileID: 7541109642873527482}
 --- !u!1 &5779445189280151412

@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using Assets.Scripts.Animation;
+using Assets.Scripts.Game;
 using Assets.Scripts.ObjectPool;
 using Assets.Scripts.Player;
 using Assets.Scripts.Save;
 using Assets.Scripts.UI;
 using Assets.Scripts.UI.Shop;
+using DG.Tweening.Core.Easing;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -41,6 +43,10 @@ namespace Assets.Scripts
         [Header("Animation")]
         [SerializeField] private GameplayAnimationController gameplayAnimationController;
 
+        [Header("Game")]
+        [SerializeField] private GameManager gameManager;
+        [SerializeField] private UIController uiController;
+
 
         private void Awake()
         {
@@ -59,6 +65,7 @@ namespace Assets.Scripts
             scoreManager.Initialize(data.currentCoins, data.allCoins, saveLifecycle);
 
             shipManager.Initialize(data.selectedShipId, data.selectedBulletId, gameplayAnimationController);
+            gameManager.Initialize(uiController, scoreManager);
             enemySpawner.Initialize(data.currentWaveEnemyId, playerTransform);
         }
     }

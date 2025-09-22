@@ -15,6 +15,6 @@ MonoBehaviour:
   id: bullet1
   speed: 44
   damageEnemy: 20
-  damageBuilding: 0
+  damageBuilding: 10
   lifeBeforeDestroy: 2
   bulletPrefab: {fileID: 593526565559787040, guid: 0f56bd66cb436f440a0db51c2716a3b3, type: 3}

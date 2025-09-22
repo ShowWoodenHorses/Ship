@@ -1,13 +1,9 @@
 ﻿using Assets.Scripts.Configs;
+using Assets.Scripts.Animation;
 using UnityEngine;
 
 namespace Assets.Scripts.Player
 {
-    using Assets.Scripts.Animation;
-    using Assets.Scripts.UI;
-    using DG.Tweening;
-    using UnityEngine;
-
     public class ShipManager : MonoBehaviour
     {
         [Header("Корабль")]
@@ -107,7 +103,8 @@ namespace Assets.Scripts.Player
             if(bulletController != null)
             {
                 bulletController.SetSpeed(config.speed);
-                bulletController.SetDamage(config.damageEnemy);
+                bulletController.SetDamageEnemy(config.damageEnemy);
+                bulletController.SetDamageBuilding(config.damageBuilding);
                 bulletController.SetLifeTime(config.lifeBeforeDestroy);
             }
 
