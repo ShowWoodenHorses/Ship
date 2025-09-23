@@ -23168,7 +23168,6 @@ GameObject:
   - component: {fileID: 700890867}
   - component: {fileID: 700890868}
   - component: {fileID: 700890869}
-  - component: {fileID: 700890870}
   - component: {fileID: 700890871}
   m_Layer: 8
   m_Name: PLAYER
@@ -23224,21 +23223,6 @@ MonoBehaviour:
   maxSpeed: 20
   deceleration: 3
   turnSpeed: 50
---- !u!114 &700890870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700890866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 179d31cbc92bfa14084fa42f316df2f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shipVisual: {fileID: 0}
-  wobbleAmount: 5
-  wobbleDuration: 2
 --- !u!54 &700890871
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -237,6 +237,7 @@ MonoBehaviour:
   HealthObject: {fileID: 0}
   timeShowHealth: 2
   healthSlider: {fileID: 0}
+  modelForAnim: {fileID: 5654702094549842652}
 --- !u!65 &7107804566485540698
 BoxCollider:
   m_ObjectHideFlags: 0

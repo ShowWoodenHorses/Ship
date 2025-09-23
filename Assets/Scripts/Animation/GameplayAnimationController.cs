@@ -57,6 +57,20 @@ namespace Assets.Scripts.Animation
         }
 
         /// <summary>
+        /// Анимация покачивания для противников
+        /// </summary>
+        public Tween EnemySway(Transform childTransform, float wobbleAmount, float wobbleDuration)
+        {
+            Tween swayTween = childTransform
+                .DOLocalRotate(new Vector3(0, 0, wobbleAmount), wobbleDuration)
+                .SetEase(Ease.InOutSine)
+                .SetLoops(-1, LoopType.Yoyo)
+                .SetLink(childTransform.gameObject);
+
+            return swayTween;
+        }
+
+        /// <summary>
         /// Полностью удалить все анимации у объекта
         /// </summary>
         public void DeleteAnimations(GameObject obj)

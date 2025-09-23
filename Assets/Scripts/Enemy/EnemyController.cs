@@ -29,8 +29,12 @@ public class EnemyController : MonoBehaviour, IDamagable, IReward
     [SerializeField] private Slider healthSlider;
 
     [Header("Animation")]
+    [SerializeField] private GameObject modelForAnim;
+    [SerializeField] private float wobbleAmount = 5f;
+    [SerializeField] private float wobbleDuration = 2f;
     private GameplayAnimationController gameplayAnimation;
     private Sequence sequence;
+    private Tween enemySwayTween;
 
     private void OnEnable()
     {
@@ -44,6 +48,11 @@ public class EnemyController : MonoBehaviour, IDamagable, IReward
     {
         this.prefabRef = prefabRef;
         this.gameplayAnimation = gameplayAnimation;
+
+        if (gameplayAnimation != null)
+        {
+            enemySwayTween = gameplayAnimation.EnemySway(modelForAnim.transform, wobbleAmount, wobbleDuration);
+        }
 
         currentHealth = maxHealth;
         isDead = false;
@@ -109,6 +118,7 @@ public class EnemyController : MonoBehaviour, IDamagable, IReward
         OnEnemyDeath?.Invoke(gameObject);
         gameObject.SetActive(false);
         sequence?.Kill();
+        enemySwayTween?.Kill();
 
     }
 }

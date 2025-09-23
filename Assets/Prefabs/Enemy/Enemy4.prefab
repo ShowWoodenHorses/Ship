@@ -562,6 +562,9 @@ MonoBehaviour:
   HealthObject: {fileID: 6967008774786704014}
   timeShowHealth: 2
   healthSlider: {fileID: 7546880966149324836}
+  modelForAnim: {fileID: 1420723001705171221}
+  wobbleAmount: 5
+  wobbleDuration: 5
 --- !u!65 &8201650254804865045
 BoxCollider:
   m_ObjectHideFlags: 0
