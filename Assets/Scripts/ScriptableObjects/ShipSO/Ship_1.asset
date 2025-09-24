@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: ship1
   displayName: Ship_1
-  acceleration: 5
-  maxSpeed: 5
-  deceleration: 3
-  turnSpeed: 20
+  acceleration: 20
+  maxSpeed: 30
+  deceleration: 10
+  turnSpeed: 50
   maxHealth: 100
-  shipPrefab: {fileID: 2732526771718883395, guid: c5f6d8ea206fbaa47b64599b7b72f50c, type: 3}
+  shipPrefab: {fileID: 8980978008463346547, guid: 127935cbb930a4c4cb4e3000332289cf, type: 3}

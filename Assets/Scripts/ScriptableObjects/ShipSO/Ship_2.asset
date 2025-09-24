@@ -18,5 +18,5 @@ MonoBehaviour:
   maxSpeed: 20
   deceleration: 5
   turnSpeed: 50
-  maxHealth: 200
-  shipPrefab: {fileID: 3737544688726240483, guid: 7ee2126f894e6cf4ca20a5014cd01e32, type: 3}
+  maxHealth: 300
+  shipPrefab: {fileID: 1736246733104321944, guid: 47e18d8d88cbecc49a34f7f045487e59, type: 3}
