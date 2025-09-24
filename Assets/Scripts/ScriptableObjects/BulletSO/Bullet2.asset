@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Bullet2
   m_EditorClassIdentifier: 
   id: bullet2
-  speed: 22
-  damageEnemy: 10
+  speed: 75
+  damageEnemy: 20
   damageBuilding: 5
   lifeBeforeDestroy: 2
-  bulletPrefab: {fileID: 593526565559787040, guid: 2f96c39e14d52144fad64640061b64de, type: 3}
+  bulletPrefab: {fileID: 981903764045721830, guid: 168886c08820e8f4f9b183bce9545b55, type: 3}
