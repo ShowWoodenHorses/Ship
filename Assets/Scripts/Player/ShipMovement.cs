@@ -3,18 +3,26 @@ using DG.Tweening;
 
 public class ShipMovement : MonoBehaviour
 {
-    public float acceleration = 5f;         // Насколько быстро ускоряется
-    public float maxSpeed = 20f;            // Максимальная скорость
-    public float deceleration = 3f;         // Насколько быстро тормозит
-    public float turnSpeed = 50f;           // Скорость поворота
+    private float acceleration = 5f;         // Насколько быстро ускоряется
+    private float maxSpeed = 20f;            // Максимальная скорость
+    private float deceleration = 3f;         // Насколько быстро тормозит
+    private float turnSpeed = 50f;           // Скорость поворота
 
     private float currentSpeed = 0f;
     private Rigidbody rb;
 
-    private void Start()
+    public float CurrentSpeed => currentSpeed;
+    public float MaxSpeed => maxSpeed;
+
+    public void Initialize(float acceleration, float maxSpeed, float deceleration, float turnSpeed)
     {
         rb = GetComponent<Rigidbody>();
         rb.interpolation = RigidbodyInterpolation.Interpolate;
+
+        this.acceleration = acceleration;
+        this.maxSpeed = maxSpeed;
+        this.deceleration = deceleration;
+        this.turnSpeed = turnSpeed;
     }
 
     void FixedUpdate()

@@ -19,6 +19,7 @@ namespace Assets.Scripts.Player
         private ShipCannonMultiSide cannons;
         private GameplayAnimationController gameplayAnimationController;
         private SailController sailController;
+        private ShipWakeParticles shipWakeParticles;
 
         //Bootstrap
         //void Start()
@@ -75,6 +76,7 @@ namespace Assets.Scripts.Player
             health = currentShipInstance.GetComponent<ShipHealth>();
             cannons = currentShipInstance.GetComponent<ShipCannonMultiSide>();
             sailController = currentShipInstance.GetComponent<SailController>();
+            shipWakeParticles = currentShipInstance.GetComponent<ShipWakeParticles>();
 
             cannons.Initialize(gameplayAnimationController);
 
@@ -83,16 +85,21 @@ namespace Assets.Scripts.Player
 
             if (movement != null)
             {
-                movement.acceleration = config.acceleration;
-                movement.maxSpeed = config.maxSpeed;
-                movement.deceleration = config.deceleration;
-                movement.turnSpeed = config.turnSpeed;
+                movement.Initialize(
+                    config.acceleration,
+                    config.maxSpeed, 
+                    config.deceleration, 
+                    config.turnSpeed
+                    );
             }
 
             if (health != null)
             {
                 health.SetHealth(config.maxHealth);
             }
+
+            shipWakeParticles.Initialize(movement);
+
             UpgradeBullet(currentBulletPrefabId);
         }
 
