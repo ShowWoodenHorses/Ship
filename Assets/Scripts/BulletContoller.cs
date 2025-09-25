@@ -17,6 +17,7 @@ namespace Assets.Scripts
 
         [SerializeField] private GameObject effectShotInWater;
         [SerializeField] private GameObject effectShotInBuilding;
+        [SerializeField] private GameObject effectShotInEnemy;
 
         private Rigidbody rb;
 
@@ -59,12 +60,14 @@ namespace Assets.Scripts
 
             if (building != null && objectForDamage != null)
             {
+                SpawnEffect(effectShotInBuilding);
                 objectForDamage.TakeDamage(damageBuilding);
                 Deactive();
             }
 
             else if (objectForDamage != null)
             {
+                SpawnEffect(effectShotInEnemy);
                 objectForDamage.TakeDamage(damageEnemy);
                 Deactive();
             }

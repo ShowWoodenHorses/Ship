@@ -46028,6 +46028,8 @@ MonoBehaviour:
     size: 5
   - prefab: {fileID: 199582, guid: 01d31bdda7b7e8145b535258c121ada6, type: 3}
     size: 5
+  - prefab: {fileID: 199582, guid: 0c313793eb9ceca48942cc8730bea947, type: 3}
+    size: 5
 --- !u!4 &1404347096
 Transform:
   m_ObjectHideFlags: 0
