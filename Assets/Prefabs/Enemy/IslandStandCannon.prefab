@@ -52,6 +52,7 @@ MonoBehaviour:
   prefabBullet: {fileID: 308054035323330065, guid: e7ab7bf9f3a9e6b4baca6c10dc9c3252, type: 3}
   cannonObject: {fileID: 8559320359434770164}
   positionBullet: {fileID: 7541109642873527482}
+  effectShot: {fileID: 6460890540305610336, guid: b7c7b0f97edd9ee4ca3e24251b614128, type: 3}
 --- !u!1 &5779445189280151412
 GameObject:
   m_ObjectHideFlags: 0

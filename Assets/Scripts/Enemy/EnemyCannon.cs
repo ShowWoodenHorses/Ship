@@ -1,5 +1,6 @@
 using System.Text;
 using Assets.Scripts;
+using Assets.Scripts.ObjectPool;
 using UnityEngine;
 
 [ExecuteAlways]
@@ -29,12 +30,6 @@ public class EnemyCannon : MonoBehaviour
     public float reloadTime = 3f;
     public float aimToleranceDeg = 6f; // допустимая угловая погрешность прицеливания в градусах
 
-    [Header("Debug")]
-    public DebugLevel debugLevel = DebugLevel.Full;
-    public float debugLogInterval = 0.25f;
-    public bool drawRuntimeRays = true;
-    public bool drawGizmos = true;
-
     // --- внутреннее состояние ---
     [SerializeField] private Transform _target;
     [SerializeField] private GameObject _projectilePrefab;
@@ -45,6 +40,9 @@ public class EnemyCannon : MonoBehaviour
     private Transform _barrel;
     private Quaternion _initialLocalRot;       // локальная ориентация pivot в Awake (базовая)
     private Vector3 _zeroForwardLocal;         // базовый forward (в системе координат родителя pivot)
+
+    [Header("Эффекты")]
+    [SerializeField] private GameObject effectShot;
 
     public void Initialize(Transform target, GameObject projectilePrefab)
     {
@@ -156,6 +154,7 @@ public class EnemyCannon : MonoBehaviour
 
         if (inAim)
         {
+            EffectShot(_barrel.position, dirToTarget);
             Fire();
         }
     }
@@ -176,5 +175,15 @@ public class EnemyCannon : MonoBehaviour
             }
         }
         _reloadTimer = reloadTime;
+    }
+    private void EffectShot(Vector3 position, Vector3 direction)
+    {
+        GameObject effect = EffectObjectPool.Instance.GetObject(effectShot);
+        effect.transform.SetPositionAndRotation(position, Quaternion.LookRotation(direction));
+        EffectController effectController = effect.GetComponent<EffectController>();
+        if (effectController != null)
+        {
+            effectController.Initialize(effect);
+        }
     }
 }

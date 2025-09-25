@@ -60,6 +60,9 @@ MonoBehaviour:
   debugLogInterval: 0.25
   drawRuntimeRays: 1
   drawGizmos: 1
+  _target: {fileID: 0}
+  _projectilePrefab: {fileID: 0}
+  effectShot: {fileID: 6460890540305610336, guid: b7c7b0f97edd9ee4ca3e24251b614128, type: 3}
 --- !u!1 &1201383550413842456
 GameObject:
   m_ObjectHideFlags: 0

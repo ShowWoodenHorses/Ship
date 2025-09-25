@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Assets.Scripts.ObjectPool;
 using UnityEngine;
 
 namespace Assets.Scripts.Enemy
@@ -15,6 +16,9 @@ namespace Assets.Scripts.Enemy
         [SerializeField] private GameObject prefabBullet;
         [SerializeField] private GameObject cannonObject;
         [SerializeField] private Transform positionBullet;
+
+        [Header("Эффекты")]
+        [SerializeField] private GameObject effectShot;
 
         private float timeCooldown;
 
@@ -48,6 +52,7 @@ namespace Assets.Scripts.Enemy
             {
                 if(timeCooldown <= 0f)
                 {
+                    EffectShot(positionBullet.position, direction);
                     Shoot(direction, distance);
                     timeCooldown = timeReload;
                 }
@@ -63,6 +68,17 @@ namespace Assets.Scripts.Enemy
             if(bulletContoller != null)
             {
                 bulletContoller.InitializeWithTimer(cannonObject.transform.forward, distance);
+            }
+        }
+
+        private void EffectShot(Vector3 position, Vector3 direction)
+        {
+            GameObject effect = EffectObjectPool.Instance.GetObject(effectShot);
+            effect.transform.SetPositionAndRotation(position, Quaternion.LookRotation(direction));
+            EffectController effectController = effect.GetComponent<EffectController>();
+            if (effectController != null)
+            {
+                effectController.Initialize(effect);
             }
         }
     }
