@@ -10,9 +10,13 @@ namespace Assets.Scripts.Animation
 
         public void ShipSway(Transform childTransform, float wobbleAmount, float wobbleDuration)
         {
-            // Убиваем старое покачивание, если было
+            // убиваем старое покачивание
             swayTween?.Kill();
 
+            // ставим начальный угол влево
+            childTransform.localRotation = Quaternion.Euler(0, 0, -wobbleAmount);
+
+            // анимируем к +wobbleAmount и обратно
             swayTween = childTransform
                 .DOLocalRotate(new Vector3(0, 0, wobbleAmount), wobbleDuration)
                 .SetEase(Ease.InOutSine)
@@ -61,6 +65,9 @@ namespace Assets.Scripts.Animation
         /// </summary>
         public Tween EnemySway(Transform childTransform, float wobbleAmount, float wobbleDuration)
         {
+            // ставим начальный угол влево
+            childTransform.localRotation = Quaternion.Euler(0, 0, -wobbleAmount);
+
             Tween swayTween = childTransform
                 .DOLocalRotate(new Vector3(0, 0, wobbleAmount), wobbleDuration)
                 .SetEase(Ease.InOutSine)
