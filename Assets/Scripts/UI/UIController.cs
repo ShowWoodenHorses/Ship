@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.UI
 {
@@ -29,6 +30,11 @@ namespace Assets.Scripts.UI
         {
             losePanel.SetActive(true);
             pauseManager.Pause();
+        }
+
+        public void ExitMenu()
+        {
+            SceneManager.LoadScene("StartScene");
         }
     }
 }

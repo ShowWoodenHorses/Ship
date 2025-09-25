@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCoins: 0
   allCoins: 0
-  selectedShipId: ship3
+  selectedShipId: ship1
   selectedBulletId: bullet1
   currentWaveEnemyId: level1
   ownedItems:
-  - ship3
+  - ship1
   - bullet1

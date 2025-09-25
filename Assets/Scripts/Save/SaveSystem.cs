@@ -35,6 +35,17 @@ public static class SaveSystem
         Debug.Log($"[SaveSystem] Saved to {SavePath}");
     }
 
+    public static void New()
+    {
+        var fresh = CreateDefaultSave();
+        Save(fresh);
+    }
+
+    public static bool IsExistsSave()
+    {
+        return File.Exists(SavePath);
+    }
+
     // Загрузка
     public static SaveData Load()
     {

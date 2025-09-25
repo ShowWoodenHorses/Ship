@@ -11,8 +11,8 @@ namespace Assets.Scripts.Configs
 
         [Header("Характеристики")]
         public float speed;
-        public int damageEnemy;
-        public int damageBuilding;
+        public int damageEnemy = 5;
+        public int damageBuilding = 5;
         public float lifeBeforeDestroy;
 
         [Header("Префаб")]
