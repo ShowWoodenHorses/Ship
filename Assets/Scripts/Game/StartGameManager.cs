@@ -1,7 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Scene;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 namespace Assets.Scripts.Game
 {
@@ -23,14 +21,14 @@ namespace Assets.Scripts.Game
 
         public void LoadGame()
         {
-            SceneManager.LoadScene("SampleScene");
+            LoadingScreen.LoadScene("SampleScene");
 
         }
 
         public void NewGame()
         {
             SaveSystem.New();
-            SceneManager.LoadScene("SampleScene");
+            LoadingScreen.LoadScene("SampleScene");
         }
 
         public void ShowConfirmationOrNewGame()
