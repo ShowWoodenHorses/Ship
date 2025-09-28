@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Assets.Scripts.Configs;
 using Assets.Scripts.Interface;
 using Assets.Scripts.ObjectPool;
 using Unity.VisualScripting;
@@ -18,6 +19,8 @@ namespace Assets.Scripts
         [SerializeField] private GameObject effectShotInWater;
         [SerializeField] private GameObject effectShotInBuilding;
         [SerializeField] private GameObject effectShotInEnemy;
+
+        [SerializeField] private BulletConfig bulletConfig;
 
         private Rigidbody rb;
 
@@ -88,6 +91,14 @@ namespace Assets.Scripts
             {
                 effectController.Initialize(effect);
             }
+        }
+
+        public void SetSettings()
+        {
+            speed = bulletConfig.speed;
+            damageBuilding = bulletConfig.damageBuilding;
+            damageEnemy = bulletConfig.damageEnemy;
+            lifeBeforeDestroy = bulletConfig.lifeBeforeDestroy;
         }
 
         public void SetSpeed(float s)

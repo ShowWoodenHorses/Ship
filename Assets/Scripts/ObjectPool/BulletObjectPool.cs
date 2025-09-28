@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Assets.Scripts;
 using UnityEngine;
 
 public class BulletObjectPool : MonoBehaviour
@@ -54,6 +55,11 @@ public class BulletObjectPool : MonoBehaviour
             for (int i = 0; i < pool.size; i++)
             {
                 GameObject obj = Instantiate(pool.prefab, transform);
+                BulletContoller bulletController = obj.GetComponent<BulletContoller>();
+                if (bulletController != null)
+                {
+                    bulletController.SetSettings();
+                }
                 obj.SetActive(false);
                 objectQueue.Enqueue(obj);
             }
