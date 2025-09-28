@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ShipConfig4
   m_EditorClassIdentifier: 
   nameItemText: ShipConfig4
-  iconItem: {fileID: 21300000, guid: b56345312d13f8a4a837cc3d5596eda4, type: 3}
+  iconItem: {fileID: 21300000, guid: ec048dbce06d03b429a553f7dd8771f3, type: 3}
   idItem: ship4
   costItem: 400
