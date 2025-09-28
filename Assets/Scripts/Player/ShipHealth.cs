@@ -2,6 +2,7 @@
 using System.Collections;
 using Assets.Scripts.Interface;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Scripts.Player
 {
@@ -9,6 +10,7 @@ namespace Assets.Scripts.Player
     {
         [SerializeField] private int maxHealth;
         [SerializeField] private int currentHealth;
+        private Slider healthBarSlider;
 
         public static event Action<GameObject> OnPlayerDie;
 
@@ -16,21 +18,23 @@ namespace Assets.Scripts.Player
         {
             currentHealth = maxHealth;
         }
+
+        public void Initialize(int maxHealth, Slider slider)
+        {
+            this.maxHealth = maxHealth;
+            currentHealth = maxHealth;
+            healthBarSlider = slider;
+        }
         public void TakeDamage(int damage)
         {
             currentHealth -= damage;
+            healthBarSlider.value -= damage;
             if (currentHealth < 0)
             {
                 currentHealth = 0;
                 OnPlayerDie?.Invoke(gameObject);
                 Debug.Log("===== PLAYER DIE =========");
             }
-        }
-
-        public void SetHealth(int maxHealth)
-        {
-            this.maxHealth = maxHealth;
-            currentHealth = maxHealth;
         }
 
     }

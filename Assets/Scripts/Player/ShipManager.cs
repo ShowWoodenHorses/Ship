@@ -1,6 +1,7 @@
 ﻿using Assets.Scripts.Configs;
 using Assets.Scripts.Animation;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Scripts.Player
 {
@@ -12,6 +13,7 @@ namespace Assets.Scripts.Player
         [SerializeField] private BulletDatabase bulletDatabase;
         [SerializeField] private string currentBulletPrefabId;
         [SerializeField] private GameObject currentBulletPrefab;
+        [SerializeField] private Slider healthBarSlider;
 
         private GameObject currentShipInstance;
         private ShipMovement movement;
@@ -95,7 +97,9 @@ namespace Assets.Scripts.Player
 
             if (health != null)
             {
-                health.SetHealth(config.maxHealth);
+                health.Initialize(config.maxHealth, healthBarSlider);
+                healthBarSlider.maxValue = config.maxHealth;
+                healthBarSlider.value = config.maxHealth;
             }
 
             shipWakeParticles.Initialize(movement);
