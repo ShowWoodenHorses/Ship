@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Assets.Scripts.Animation;
 
 namespace Assets.Scripts.UI
 {
@@ -32,12 +33,12 @@ namespace Assets.Scripts.UI
 
         public void ShowWinPanel()
         {
-            winPanel.SetActive(true);
+            winPanel.GetComponent<HopupAnimUI>().Hopup();
             pauseManager.Pause();
         }
         public void ShowLosePanel()
         {
-            losePanel.SetActive(true);
+            losePanel.GetComponent<HopupAnimUI>().Hopup();
             pauseManager.Pause();
         }
 

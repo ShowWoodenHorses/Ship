@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Scene;
+﻿using Assets.Scripts.Animation;
+using Assets.Scripts.Scene;
 using UnityEngine;
 
 namespace Assets.Scripts.Game
@@ -35,7 +36,7 @@ namespace Assets.Scripts.Game
         {
             if (SaveSystem.IsExistsSave())
             {
-                ConfirmationPanel.SetActive(true);
+                ConfirmationPanel.GetComponent<HopupAnimUI>().Hopup();
             }
             else
             {

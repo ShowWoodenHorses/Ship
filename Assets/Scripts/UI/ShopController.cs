@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Assets.Scripts.Animation;
 using Assets.Scripts.Configs;
 using Assets.Scripts.Player;
 using Assets.Scripts.Save;
@@ -80,7 +81,7 @@ namespace Assets.Scripts.UI
 
             if (scoreManager.GetCurrentMoney() < itemData.costItem)
             {
-                noMoneyObj.SetActive(true);
+                noMoneyObj.GetComponent<HopupAnimUI>().Hopup();
                 return;
             }
 
