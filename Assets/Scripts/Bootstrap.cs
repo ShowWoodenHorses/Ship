@@ -1,20 +1,23 @@
 ﻿using System.Collections;
 using Assets.Scripts.Animation;
+using Assets.Scripts.Control;
 using Assets.Scripts.Game;
+using Assets.Scripts.Interface;
 using Assets.Scripts.ObjectPool;
 using Assets.Scripts.Player;
 using Assets.Scripts.Save;
 using Assets.Scripts.UI;
 using Assets.Scripts.UI.Shop;
-using DG.Tweening.Core.Easing;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts
 {
     public class Bootstrap : MonoBehaviour
     {
         private SaveData data;
+
+        [Header("Platform")]
+        [SerializeField] private CheckPLatform platform;
 
         [Header("Shop")]
         [SerializeField] private ShopBulletController shopBulletController;
@@ -52,6 +55,7 @@ namespace Assets.Scripts
         private void Awake()
         {
             data = SaveSystem.Load();
+            IShipInput shipInput = platform.CheckCurrentPlatform();
 
             saveLifecycle.Initialize(data);
 
@@ -65,7 +69,7 @@ namespace Assets.Scripts
             shopShipController.Initialize(data.ownedItems, data.selectedShipId, saveLifecycle);
             scoreManager.Initialize(data.currentCoins, data.allCoins, saveLifecycle);
 
-            shipManager.Initialize(data.selectedShipId, data.selectedBulletId, gameplayAnimationController, uiDisplayCannon);
+            shipManager.Initialize(data.selectedShipId, data.selectedBulletId, gameplayAnimationController, uiDisplayCannon, shipInput);
             gameManager.Initialize(uiController, scoreManager);
             enemySpawner.Initialize(data.currentWaveEnemyId, playerTransform, gameplayAnimationController);
         }

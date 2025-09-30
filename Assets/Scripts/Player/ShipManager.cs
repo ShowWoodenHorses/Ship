@@ -3,6 +3,7 @@ using Assets.Scripts.Animation;
 using UnityEngine;
 using UnityEngine.UI;
 using Assets.Scripts.UI;
+using Assets.Scripts.Interface;
 
 namespace Assets.Scripts.Player
 {
@@ -24,6 +25,7 @@ namespace Assets.Scripts.Player
         private SailController sailController;
         private ShipWakeParticles shipWakeParticles;
         private UIDisplayCannon uiDisplayCannon;
+        private IShipInput shipInput;
 
         //Bootstrap
         //void Start()
@@ -32,10 +34,11 @@ namespace Assets.Scripts.Player
         //    UpgradeShip(startShipId);
         //}
 
-        public void Initialize(string shipId, string bulletId, GameplayAnimationController gameplayAnimationController, UIDisplayCannon uiDisplayCannon)
+        public void Initialize(string shipId, string bulletId, GameplayAnimationController gameplayAnimationController, UIDisplayCannon uiDisplayCannon, IShipInput shipInput)
         {
             this.uiDisplayCannon = uiDisplayCannon;
             this.gameplayAnimationController = gameplayAnimationController;
+            this.shipInput = shipInput;
             currentBulletPrefabId = bulletId;
             UpgradeShip(shipId);
         }
@@ -84,7 +87,7 @@ namespace Assets.Scripts.Player
             sailController = currentShipInstance.GetComponent<SailController>();
             shipWakeParticles = currentShipInstance.GetComponent<ShipWakeParticles>();
 
-            cannons.Initialize(gameplayAnimationController, uiDisplayCannon);
+            cannons.Initialize(shipInput, gameplayAnimationController, uiDisplayCannon);
 
             gameplayAnimationController.ShipSway(currentShipInstance.transform, 5f, 2f);
             gameplayAnimationController.LowerSails(sailController.sailDown, sailController.sailUp, sailController.transitionTime);
@@ -95,7 +98,8 @@ namespace Assets.Scripts.Player
                     config.acceleration,
                     config.maxSpeed, 
                     config.deceleration, 
-                    config.turnSpeed
+                    config.turnSpeed,
+                    shipInput
                     );
             }
 

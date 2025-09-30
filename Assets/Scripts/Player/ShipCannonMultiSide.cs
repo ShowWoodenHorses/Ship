@@ -5,6 +5,8 @@ using Assets.Scripts.Player;
 using Assets.Scripts.Animation;
 using Assets.Scripts.ObjectPool;
 using Assets.Scripts.UI;
+using UnityEngine.EventSystems;
+using Assets.Scripts.Interface;
 
 public class ShipCannonMultiSide : MonoBehaviour
 {
@@ -38,6 +40,8 @@ public class ShipCannonMultiSide : MonoBehaviour
     private GameplayAnimationController gameplayAnimationController;
     private UIDisplayCannon uiDisplayCannon;
 
+    private IShipInput shipInput;
+
     //void Start()
     //{
     //    InitializeBullet();
@@ -45,8 +49,9 @@ public class ShipCannonMultiSide : MonoBehaviour
     //    SetupVisualEffects();
     //}
 
-    public void Initialize(GameplayAnimationController gameplayAnimationController, UIDisplayCannon uiDisplayCannon)
+    public void Initialize(IShipInput shipInput, GameplayAnimationController gameplayAnimationController, UIDisplayCannon uiDisplayCannon)
     {
+        this.shipInput = shipInput;
         this.uiDisplayCannon = uiDisplayCannon;
         InitializeBullet();
         InitializeCannons();
@@ -113,7 +118,7 @@ public class ShipCannonMultiSide : MonoBehaviour
             return;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !shipInput.IsPointerOverUI())
         {
             TryShootOnce(currentActiveSideRightNow, mouseWorldRightNow);
         }

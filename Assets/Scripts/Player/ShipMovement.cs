@@ -1,20 +1,23 @@
+using Assets.Scripts.Control;
+using Assets.Scripts.Interface;
 using UnityEngine;
-using DG.Tweening;
 
 public class ShipMovement : MonoBehaviour
 {
-    private float acceleration = 5f;         // Насколько быстро ускоряется
-    private float maxSpeed = 20f;            // Максимальная скорость
-    private float deceleration = 3f;         // Насколько быстро тормозит
-    private float turnSpeed = 50f;           // Скорость поворота
+    private float acceleration = 5f;
+    private float maxSpeed = 20f;
+    private float deceleration = 3f;
+    private float turnSpeed = 50f;
 
     private float currentSpeed = 0f;
     private Rigidbody rb;
 
+    private IShipInput shipInput;
+
     public float CurrentSpeed => currentSpeed;
     public float MaxSpeed => maxSpeed;
 
-    public void Initialize(float acceleration, float maxSpeed, float deceleration, float turnSpeed)
+    public void Initialize(float acceleration, float maxSpeed, float deceleration, float turnSpeed, IShipInput shipInput)
     {
         rb = GetComponent<Rigidbody>();
         rb.interpolation = RigidbodyInterpolation.Interpolate;
@@ -23,6 +26,8 @@ public class ShipMovement : MonoBehaviour
         this.maxSpeed = maxSpeed;
         this.deceleration = deceleration;
         this.turnSpeed = turnSpeed;
+
+        this.shipInput = shipInput;
     }
 
     void FixedUpdate()
@@ -33,10 +38,15 @@ public class ShipMovement : MonoBehaviour
 
     void HandleMovement()
     {
-        if (Input.GetKey(KeyCode.W))
-            currentSpeed += acceleration * Time.deltaTime;
-        else if (Input.GetKey(KeyCode.S))
-            currentSpeed -= deceleration * Time.deltaTime;
+        if (shipInput == null) return;
+
+        float accel = shipInput.GetAcceleration();
+        float brake = shipInput.GetBrake();
+
+        if (accel > 0)
+            currentSpeed += acceleration * accel * Time.deltaTime;
+        else if (brake > 0)
+            currentSpeed -= deceleration * brake * Time.deltaTime;
         else
             currentSpeed = Mathf.MoveTowards(currentSpeed, 0, deceleration * Time.deltaTime);
 
@@ -48,10 +58,9 @@ public class ShipMovement : MonoBehaviour
 
     void HandleRotation()
     {
-        float turn = 0f;
-        if (Input.GetKey(KeyCode.A)) turn = -1f;
-        else if (Input.GetKey(KeyCode.D)) turn = 1f;
+        if (shipInput == null) return;
 
+        float turn = shipInput.GetTurn();
         Quaternion turnRotation = Quaternion.Euler(0f, turn * turnSpeed * Time.deltaTime, 0f);
         rb.MoveRotation(rb.rotation * turnRotation);
     }
