@@ -95,4 +95,6 @@ public class ShipCannon : MonoBehaviour
         reloadTimer = reloadTime;
         return true;
     }
+
+    public float GetReloadTime() => reloadTime;
 }

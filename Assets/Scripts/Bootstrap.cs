@@ -46,6 +46,7 @@ namespace Assets.Scripts
         [Header("Game")]
         [SerializeField] private GameManager gameManager;
         [SerializeField] private UIController uiController;
+        [SerializeField] private UIDisplayCannon uiDisplayCannon;
 
 
         private void Awake()
@@ -64,7 +65,7 @@ namespace Assets.Scripts
             shopShipController.Initialize(data.ownedItems, data.selectedShipId, saveLifecycle);
             scoreManager.Initialize(data.currentCoins, data.allCoins, saveLifecycle);
 
-            shipManager.Initialize(data.selectedShipId, data.selectedBulletId, gameplayAnimationController);
+            shipManager.Initialize(data.selectedShipId, data.selectedBulletId, gameplayAnimationController, uiDisplayCannon);
             gameManager.Initialize(uiController, scoreManager);
             enemySpawner.Initialize(data.currentWaveEnemyId, playerTransform, gameplayAnimationController);
         }

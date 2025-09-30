@@ -36,6 +36,7 @@ public class ShipCannonMultiSide : MonoBehaviour
     private Vector3 mouseWorldRightNow;
 
     private GameplayAnimationController gameplayAnimationController;
+    private UIDisplayCannon uiDisplayCannon;
 
     //void Start()
     //{
@@ -44,8 +45,9 @@ public class ShipCannonMultiSide : MonoBehaviour
     //    SetupVisualEffects();
     //}
 
-    public void Initialize(GameplayAnimationController gameplayAnimationController)
+    public void Initialize(GameplayAnimationController gameplayAnimationController, UIDisplayCannon uiDisplayCannon)
     {
+        this.uiDisplayCannon = uiDisplayCannon;
         InitializeBullet();
         InitializeCannons();
         shipAimLine.Initialize();
@@ -62,11 +64,14 @@ public class ShipCannonMultiSide : MonoBehaviour
             nextCannonIndex[s] = 0;
         }
 
-        foreach (var c in allCannons)
+        for (int i = 0; i < allCannons.Length; i++)
         {
+            var c = allCannons[i];
             c.Initialize(this);
             cannons[c.side].Add(c);
+            uiDisplayCannon.Initialize(c.side, c.GetReloadTime());
         }
+
         effectShot.SetActive(false);
     }
 
@@ -196,10 +201,10 @@ public class ShipCannonMultiSide : MonoBehaviour
                     recoil.GetDirection(recoil.direction)
                     );
 
-
                 cannon.IsWithinRotationLimits(mouseWorld, out Vector3 shootDir);
                 EffectShot(cannon.ShotPos.position, shootDir);
                 FireCannon(cannon.ShotPos.position, shootDir);
+                uiDisplayCannon.UpdateCannons(side, idx);
                 nextCannonIndex[side] = (idx + 1) % sideList.Count;
                 return;
             }

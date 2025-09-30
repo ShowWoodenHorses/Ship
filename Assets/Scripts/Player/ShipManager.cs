@@ -2,6 +2,7 @@
 using Assets.Scripts.Animation;
 using UnityEngine;
 using UnityEngine.UI;
+using Assets.Scripts.UI;
 
 namespace Assets.Scripts.Player
 {
@@ -22,6 +23,7 @@ namespace Assets.Scripts.Player
         private GameplayAnimationController gameplayAnimationController;
         private SailController sailController;
         private ShipWakeParticles shipWakeParticles;
+        private UIDisplayCannon uiDisplayCannon;
 
         //Bootstrap
         //void Start()
@@ -30,8 +32,9 @@ namespace Assets.Scripts.Player
         //    UpgradeShip(startShipId);
         //}
 
-        public void Initialize(string shipId, string bulletId, GameplayAnimationController gameplayAnimationController)
+        public void Initialize(string shipId, string bulletId, GameplayAnimationController gameplayAnimationController, UIDisplayCannon uiDisplayCannon)
         {
+            this.uiDisplayCannon = uiDisplayCannon;
             this.gameplayAnimationController = gameplayAnimationController;
             currentBulletPrefabId = bulletId;
             UpgradeShip(shipId);
@@ -70,6 +73,7 @@ namespace Assets.Scripts.Player
             {
                 gameplayAnimationController.DeleteAnimations(currentShipInstance);
                 Destroy(currentShipInstance);
+                uiDisplayCannon.ClearList();
             }
 
             currentShipInstance = Instantiate(config.shipPrefab, transform.position, transform.rotation, transform);
@@ -80,7 +84,7 @@ namespace Assets.Scripts.Player
             sailController = currentShipInstance.GetComponent<SailController>();
             shipWakeParticles = currentShipInstance.GetComponent<ShipWakeParticles>();
 
-            cannons.Initialize(gameplayAnimationController);
+            cannons.Initialize(gameplayAnimationController, uiDisplayCannon);
 
             gameplayAnimationController.ShipSway(currentShipInstance.transform, 5f, 2f);
             gameplayAnimationController.LowerSails(sailController.sailDown, sailController.sailUp, sailController.transitionTime);
