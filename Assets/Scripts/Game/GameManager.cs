@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Assets.Scripts.Enemy;
 using Assets.Scripts.Player;
+using Assets.Scripts.Scene;
 using Assets.Scripts.UI;
 using UnityEngine;
 
@@ -56,6 +57,11 @@ namespace Assets.Scripts.Game
             }
 
             ShipHealth.OnPlayerDie -= CheckPlayerHealth;
+        }
+        public void NewGame()
+        {
+            SaveSystem.New();
+            LoadingScreen.LoadScene("SampleScene");
         }
     }
 }
