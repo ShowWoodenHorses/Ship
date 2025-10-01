@@ -14,6 +14,7 @@ namespace Assets.Scripts.UI.Shop
 
         public string idItem;
         public int costItem;
+        public string description;
 
         public Image iconItem;
 
@@ -25,6 +26,8 @@ namespace Assets.Scripts.UI.Shop
         public Action<ShopItemData> OnBuyItem;
         public Action<ShopItemData> OnSelectItem;
 
+        private TextMeshProUGUI descriptionItem;
+
         private void AddButtons()
         {
             listButtons.Add(BuyButton);
@@ -32,18 +35,22 @@ namespace Assets.Scripts.UI.Shop
             listButtons.Add(SelectItemText);
         }
 
-        public void Initialize(ShopItemConfig shopItemConfig)
+        public void Initialize(ShopItemConfig shopItemConfig, TextMeshProUGUI descriptionItem)
         {
             this.idItem = shopItemConfig.idItem;
             this.nameItemText.text = shopItemConfig.nameItemText;
             this.costItemText.text = shopItemConfig.costItem.ToString();
             this.costItem = shopItemConfig.costItem;
             this.iconItem.sprite = shopItemConfig.iconItem;
+            this.description = shopItemConfig.description;
+            this.descriptionItem = descriptionItem;
+
             AddButtons();
             UpdateButtons(BuyButton);
 
             BuyButton.GetComponent<Button>().onClick.AddListener(() => BuyClick());
             SelectButton.GetComponent<Button>().onClick.AddListener(() =>  SelectClick());
+            GetComponent<Button>().onClick.AddListener(() => SetDescription());
         }
 
         public void BuyClick()
@@ -63,6 +70,11 @@ namespace Assets.Scripts.UI.Shop
                 btn.SetActive(false);
             }
             button.SetActive(true);
+        }
+
+        public void SetDescription()
+        {
+            descriptionItem.text = description;
         }
     }
 }

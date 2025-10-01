@@ -4,6 +4,7 @@ using Assets.Scripts.Configs;
 using Assets.Scripts.Player;
 using Assets.Scripts.Save;
 using Assets.Scripts.UI.Shop;
+using TMPro;
 using UnityEngine;
 
 namespace Assets.Scripts.UI
@@ -22,6 +23,7 @@ namespace Assets.Scripts.UI
         [SerializeField] private protected string currentIdItem; //Для сохранения
 
         [SerializeField] private protected GameObject noMoneyObj;
+        [SerializeField] private protected TextMeshProUGUI descriptionItem;
 
         private protected SaveLifecycle saveLifecycle;
 
@@ -65,7 +67,7 @@ namespace Assets.Scripts.UI
 
                 if (shopItemData == null) continue;
 
-                shopItemData.Initialize(config);
+                shopItemData.Initialize(config, descriptionItem);
 
                 shopItemData.OnBuyItem += PurchaseHandler;
                 shopItemData.OnSelectItem += ChoiceItemHandler;

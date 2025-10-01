@@ -6,9 +6,13 @@ namespace Assets.Scripts.Configs
     public class ShopItemConfig : ScriptableObject
     {
         public string nameItemText;
+        public string nameItemText_EN;
         public Sprite iconItem;
 
         public string idItem;
         public int costItem;
+
+        [TextArea]
+        public string description;
     }
 }
