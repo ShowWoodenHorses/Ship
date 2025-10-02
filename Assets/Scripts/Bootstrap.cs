@@ -6,6 +6,7 @@ using Assets.Scripts.Interface;
 using Assets.Scripts.ObjectPool;
 using Assets.Scripts.Player;
 using Assets.Scripts.Save;
+using Assets.Scripts.Sound;
 using Assets.Scripts.UI;
 using Assets.Scripts.UI.Shop;
 using UnityEngine;
@@ -28,6 +29,7 @@ namespace Assets.Scripts
         [SerializeField] private EnemyObjectPool enemyPool;
         [SerializeField] private BulletObjectPool bulletPool;
         [SerializeField] private EffectObjectPool effectPool;
+        [SerializeField] private SoundPoolManager soundPoolManager;
 
         [Header("Player")]
         [SerializeField] private ShipManager shipManager;
@@ -51,6 +53,10 @@ namespace Assets.Scripts
         [SerializeField] private UIController uiController;
         [SerializeField] private UIDisplayCannon uiDisplayCannon;
 
+        [Header("Sound")]
+        [SerializeField] private MusicManager musicManager;
+        [SerializeField] private AudioSettingsManager audioSettingsManager;
+
 
         private void Awake()
         {
@@ -68,6 +74,10 @@ namespace Assets.Scripts
             shopBulletController.Initialize(data.ownedItems, data.selectedBulletId, saveLifecycle);
             shopShipController.Initialize(data.ownedItems, data.selectedShipId, saveLifecycle);
             scoreManager.Initialize(data.currentCoins, data.allCoins, saveLifecycle);
+
+            audioSettingsManager.Initialize();
+            soundPoolManager.Initialize();
+            musicManager.Initialize();
 
             shipManager.Initialize(data.selectedShipId, data.selectedBulletId, gameplayAnimationController, uiDisplayCannon, shipInput);
             gameManager.Initialize(uiController, scoreManager);

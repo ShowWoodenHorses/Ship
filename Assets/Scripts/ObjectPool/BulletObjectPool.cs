@@ -16,20 +16,6 @@ public class BulletObjectPool : MonoBehaviour
 
     public List<Pool> pools;
     private Dictionary<GameObject, Queue<GameObject>> poolDictionary;
-    //Bootstrap
-    //private void Awake()
-    //{
-    //    if (instance == null)
-    //    {
-    //        instance = this;
-    //    }
-    //    else
-    //    {
-    //        Destroy(gameObject);
-    //    }
-        
-    //    //InitializePool();
-    //}
 
     public void Initialize()
     {

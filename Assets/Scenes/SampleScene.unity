@@ -6626,6 +6626,7 @@ MonoBehaviour:
   enemyPool: {fileID: 1450235060}
   bulletPool: {fileID: 1603085927}
   effectPool: {fileID: 1404347095}
+  soundPoolManager: {fileID: 1480056283}
   shipManager: {fileID: 700890868}
   shipMovement: {fileID: 700890869}
   playerTransform: {fileID: 700890867}
@@ -6636,6 +6637,8 @@ MonoBehaviour:
   gameManager: {fileID: 868381101}
   uiController: {fileID: 950126500}
   uiDisplayCannon: {fileID: 1875640231}
+  musicManager: {fileID: 2123451554}
+  audioSettingsManager: {fileID: 659089739}
 --- !u!4 &158090193
 Transform:
   m_ObjectHideFlags: 0
@@ -22872,6 +22875,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658703883}
   m_Mesh: {fileID: 4300000, guid: 709a503c6402d4c449bf92d59d0a0821, type: 3}
+--- !u!1 &659089738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 659089740}
+  - component: {fileID: 659089739}
+  m_Layer: 0
+  m_Name: AudioSetting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &659089739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659089738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08d79edf5677e34fb0d3f7599c43b67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMixer: {fileID: 24100000, guid: f19320005adc7ae4b99d7e83722f3cd6, type: 2}
+  defaultMusicVolume: 0.5
+  defaultSFXVolume: 1
+  musicFadeInDuration: 3
+--- !u!4 &659089740
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659089738}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &659429448
 GameObject:
   m_ObjectHideFlags: 0
@@ -52330,6 +52381,64 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476429830}
   m_Mesh: {fileID: 4300000, guid: d729563dbdf9c654f8064db8129f2288, type: 3}
+--- !u!1 &1480056282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1480056284}
+  - component: {fileID: 1480056283}
+  m_Layer: 0
+  m_Name: AudioSoundPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1480056283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480056282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8008c9f0560c19a40b05ace23f80e662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - prefab: {fileID: 3296352006043120542, guid: 5af1ed4f40785504ca151e25cabc8c6a, type: 3}
+    size: 3
+  - prefab: {fileID: 3296352006043120542, guid: b99db62625d2ad04e8a39eefc1f2b2e2, type: 3}
+    size: 3
+  - prefab: {fileID: 3296352006043120542, guid: f55bce617e31cd345bd9d9ad96fbc05a, type: 3}
+    size: 3
+  - prefab: {fileID: 3296352006043120542, guid: 552e0fea8872dc04f921e67aaa5027aa, type: 3}
+    size: 10
+  - prefab: {fileID: 3296352006043120542, guid: 4353cb33cf5ba574fbc368b83e9f4d27, type: 3}
+    size: 5
+  - prefab: {fileID: 3296352006043120542, guid: 537eab0cbf38f554a8ec7f74ebc8adc2, type: 3}
+    size: 3
+  sfxGroup: {fileID: -4873237511761742332, guid: f19320005adc7ae4b99d7e83722f3cd6, type: 2}
+--- !u!4 &1480056284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480056282}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1480722049
 GameObject:
   m_ObjectHideFlags: 0
@@ -78290,6 +78399,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122153140}
   m_Mesh: {fileID: 4300000, guid: d729563dbdf9c654f8064db8129f2288, type: 3}
+--- !u!1 &2123451553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2123451555}
+  - component: {fileID: 2123451554}
+  m_Layer: 0
+  m_Name: BackMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2123451554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123451553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad40f25abcd5d14fa759a70697a4b12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourcePrefab: {fileID: 3296352006043120542, guid: f1a701a8c4b0329489887fdb2014ac61, type: 3}
+  musicGroup: {fileID: 9087867144161894413, guid: f19320005adc7ae4b99d7e83722f3cd6, type: 2}
+--- !u!4 &2123451555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123451553}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2125163037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79473,6 +79628,7 @@ SceneRoots:
   - {fileID: 29361915}
   - {fileID: 1342876472}
   - {fileID: 1450235061}
+  - {fileID: 1480056284}
   - {fileID: 1603085928}
   - {fileID: 1404347096}
   - {fileID: 98831853}
@@ -79488,3 +79644,5 @@ SceneRoots:
   - {fileID: 763512111}
   - {fileID: 2006777051}
   - {fileID: 1282872469}
+  - {fileID: 2123451555}
+  - {fileID: 659089740}

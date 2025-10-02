@@ -949,6 +949,7 @@ MonoBehaviour:
   timeStep: 0.1
   effectShot: {fileID: 6460890540305610336, guid: b7c7b0f97edd9ee4ca3e24251b614128, type: 3}
   shipAimLine: {fileID: 3443077954269572950}
+  soundShotPrefab: {fileID: 3296352006043120542, guid: 5af1ed4f40785504ca151e25cabc8c6a, type: 3}
 --- !u!114 &985074826825313360
 MonoBehaviour:
   m_ObjectHideFlags: 0

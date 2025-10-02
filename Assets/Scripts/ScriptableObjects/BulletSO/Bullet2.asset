@@ -18,3 +18,4 @@ MonoBehaviour:
   damageBuilding: 5
   lifeBeforeDestroy: 2
   bulletPrefab: {fileID: 981903764045721830, guid: 168886c08820e8f4f9b183bce9545b55, type: 3}
+  soundShotPrefab: {fileID: 3296352006043120542, guid: b99db62625d2ad04e8a39eefc1f2b2e2, type: 3}

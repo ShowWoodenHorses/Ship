@@ -7,6 +7,7 @@ using Assets.Scripts.ObjectPool;
 using Assets.Scripts.UI;
 using UnityEngine.EventSystems;
 using Assets.Scripts.Interface;
+using Assets.Scripts.Sound;
 
 public class ShipCannonMultiSide : MonoBehaviour
 {

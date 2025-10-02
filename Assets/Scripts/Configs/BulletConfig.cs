@@ -17,6 +17,7 @@ namespace Assets.Scripts.Configs
 
         [Header("Префаб")]
         public GameObject bulletPrefab;
+        public AudioSource soundShotPrefab;
 
     }
 }

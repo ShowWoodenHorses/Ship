@@ -2,6 +2,7 @@
 using Assets.Scripts.Configs;
 using Assets.Scripts.Interface;
 using Assets.Scripts.ObjectPool;
+using Assets.Scripts.Sound;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -20,6 +21,11 @@ namespace Assets.Scripts
         [SerializeField] private GameObject effectShotInBuilding;
         [SerializeField] private GameObject effectShotInEnemy;
 
+        [Header("Sounds")]
+        [SerializeField] private AudioSource soundShotPrefab;
+        [SerializeField] private AudioSource soundShotWavePrefab;
+        [SerializeField] private AudioSource soundTakeDamagePrefab;
+
         [SerializeField] private BulletConfig bulletConfig;
 
         private Rigidbody rb;
@@ -32,6 +38,7 @@ namespace Assets.Scripts
         public void Initialize(Vector3 pos)
         {
             rb.linearVelocity = pos * speed;
+            SoundPoolManager.Instance.PlaySound(soundShotPrefab);
 
             StartCoroutine(LifeBeforeDestroy());
         }
@@ -40,6 +47,7 @@ namespace Assets.Scripts
             float time = distance / speed;
             lifeBeforeDestroy = time;
             rb.linearVelocity = pos * speed;
+            SoundPoolManager.Instance.PlaySound(soundShotPrefab);
 
             StartCoroutine(LifeBeforeDestroy());
         }
@@ -52,6 +60,7 @@ namespace Assets.Scripts
         IEnumerator LifeBeforeDestroy()
         {
             yield return new WaitForSeconds(lifeBeforeDestroy);
+            PLaySoundEffect(soundShotWavePrefab);
             SpawnEffect(effectShotInWater);
             Deactive();
         }
@@ -63,6 +72,7 @@ namespace Assets.Scripts
 
             if (building != null && objectForDamage != null)
             {
+                PLaySoundEffect(soundTakeDamagePrefab);
                 SpawnEffect(effectShotInBuilding);
                 objectForDamage.TakeDamage(damageBuilding);
                 Deactive();
@@ -70,6 +80,7 @@ namespace Assets.Scripts
 
             else if (objectForDamage != null)
             {
+                PLaySoundEffect(soundTakeDamagePrefab);
                 SpawnEffect(effectShotInEnemy);
                 objectForDamage.TakeDamage(damageEnemy);
                 Deactive();
@@ -77,6 +88,7 @@ namespace Assets.Scripts
 
             else if (building != null)
             {
+                PLaySoundEffect(soundTakeDamagePrefab);
                 SpawnEffect(effectShotInBuilding);
                 Deactive();
             }
@@ -93,12 +105,18 @@ namespace Assets.Scripts
             }
         }
 
+        private void PLaySoundEffect(AudioSource audioSource)
+        {
+            SoundPoolManager.Instance.PlaySound(audioSource);
+        }
+
         public void SetSettings()
         {
             speed = bulletConfig.speed;
             damageBuilding = bulletConfig.damageBuilding;
             damageEnemy = bulletConfig.damageEnemy;
             lifeBeforeDestroy = bulletConfig.lifeBeforeDestroy;
+            soundShotPrefab = bulletConfig.soundShotPrefab;
         }
 
         public void SetSpeed(float s)
@@ -119,6 +137,11 @@ namespace Assets.Scripts
         public void SetLifeTime(float time)
         {
             lifeBeforeDestroy = time;
+        }
+
+        public void SetSoundShot(AudioSource audio)
+        {
+            soundShotPrefab = audio;
         }
     }
 }

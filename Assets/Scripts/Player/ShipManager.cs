@@ -125,6 +125,7 @@ namespace Assets.Scripts.Player
                 bulletController.SetDamageEnemy(config.damageEnemy);
                 bulletController.SetDamageBuilding(config.damageBuilding);
                 bulletController.SetLifeTime(config.lifeBeforeDestroy);
+                bulletController.SetSoundShot(config.soundShotPrefab);
             }
 
             ShipCannonMultiSide shipCannonMultiSide = transform.GetChild(0).GetComponent<ShipCannonMultiSide>();
