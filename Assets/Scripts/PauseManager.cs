@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Sound;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
@@ -14,12 +15,14 @@ namespace Assets.Scripts
 
         private void OnApplicationFocus(bool hasFocus)
         {
+            GlobalAudioManager.Instance?.SetSystemMute(!hasFocus);
             systemPaused = !hasFocus;
             UpdatePause();
         }
 
         private void OnApplicationPause(bool pauseStatus)
         {
+            GlobalAudioManager.Instance?.SetSystemMute(pauseStatus);
             systemPaused = pauseStatus;
             UpdatePause();
         }
@@ -29,18 +32,15 @@ namespace Assets.Scripts
             bool shouldPause = userPaused || systemPaused;
 
             Time.timeScale = shouldPause ? 0f : 1f;
-            AudioListener.pause = shouldPause;
 
         }
 
-        // Вызывается кнопкой
         public void Pause()
         {
             userPaused = true;
             UpdatePause();
         }
 
-        // Вызывается кнопкой
         public void Resume()
         {
             userPaused = false;

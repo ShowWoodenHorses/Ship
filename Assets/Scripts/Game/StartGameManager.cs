@@ -1,14 +1,16 @@
 ﻿using Assets.Scripts.Animation;
 using Assets.Scripts.Scene;
+using Assets.Scripts.Sound;
 using UnityEngine;
 
 namespace Assets.Scripts.Game
 {
     public class StartGameManager : MonoBehaviour
     {
-
         [SerializeField] private GameObject ContinueButton;
         [SerializeField] private GameObject ConfirmationPanel;
+
+        [SerializeField] private AudioSettingsManager audioSettingsManager;
         private void Awake()
         {
             ContinueButton.SetActive(false);
@@ -18,6 +20,11 @@ namespace Assets.Scripts.Game
             {
                 ContinueButton.SetActive(true);
             }
+        }
+
+        private void Start()
+        {
+            audioSettingsManager.Initialize();
         }
 
         public void LoadGame()

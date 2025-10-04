@@ -10,6 +10,7 @@ using Assets.Scripts.Sound;
 using Assets.Scripts.UI;
 using Assets.Scripts.UI.Shop;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace Assets.Scripts
 {
@@ -54,6 +55,7 @@ namespace Assets.Scripts
         [SerializeField] private UIDisplayCannon uiDisplayCannon;
 
         [Header("Sound")]
+        [SerializeField] private AudioMixer mainMixer;
         [SerializeField] private MusicManager musicManager;
         [SerializeField] private AudioSettingsManager audioSettingsManager;
 
@@ -76,8 +78,8 @@ namespace Assets.Scripts
             scoreManager.Initialize(data.currentCoins, data.allCoins, saveLifecycle);
 
             audioSettingsManager.Initialize();
-            soundPoolManager.Initialize();
-            musicManager.Initialize();
+            soundPoolManager.Initialize(mainMixer);
+            musicManager.Initialize(audioSettingsManager, mainMixer);
 
             shipManager.Initialize(data.selectedShipId, data.selectedBulletId, gameplayAnimationController, uiDisplayCannon, shipInput);
             gameManager.Initialize(uiController, scoreManager);

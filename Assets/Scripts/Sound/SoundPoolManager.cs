@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -7,13 +9,12 @@ namespace Assets.Scripts.Sound
 {
     public class SoundPoolManager : MonoBehaviour
     {
-        private static SoundPoolManager instance;
-        public static SoundPoolManager Instance { get { return instance; } }
+        public static SoundPoolManager Instance;
 
         [System.Serializable]
         public class SoundPool
         {
-            public AudioSource prefab; // Префаб с AudioSource
+            public AudioSource prefab;
             public int size = 5;
         }
 
@@ -22,11 +23,19 @@ namespace Assets.Scripts.Sound
 
         private Dictionary<AudioSource, Queue<AudioSource>> poolDictionary;
 
-        public void Initialize()
-        {
-            if (instance == null) instance = this;
-            else Destroy(gameObject);
+        private AudioMixer mainMixer;
+        private const string musicParam = "SFXVolume";
 
+        public void Initialize(AudioMixer mainMixer)
+        {
+            if (Instance == null) Instance = this;
+            else
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            this.mainMixer = mainMixer;
             InitializePools();
         }
 
@@ -50,17 +59,25 @@ namespace Assets.Scripts.Sound
         {
             AudioSource obj = Instantiate(prefab, transform);
             obj.playOnAwake = false;
+            obj.volume = 1f; // управление через AudioMixer
             if (sfxGroup != null)
                 obj.outputAudioMixerGroup = sfxGroup;
 
-            obj.gameObject.SetActive(false);
+            float startVal;
+            mainMixer.GetFloat(musicParam, out startVal);
+            startVal = Mathf.Pow(10, startVal / 20f); // перевод dB -> 0..1
+
+            // Фейдим через AudioMixer
+            DOTween.To(() => 0.01f,
+                       x => mainMixer.SetFloat(musicParam, Mathf.Log10(x) * 20f),
+            startVal,
+                       1f);
+
+            obj.gameObject.SetActive(true);
             return obj;
         }
 
-        /// <summary>
-        /// Взять объект из пула и проиграть
-        /// </summary>
-        public void PlaySound(AudioSource prefab, float volume = 1f, float pitch = 1f)
+        public void PlaySound(AudioSource prefab, float pitch = 1f)
         {
             if (!poolDictionary.ContainsKey(prefab))
             {
@@ -71,7 +88,6 @@ namespace Assets.Scripts.Sound
             AudioSource source;
             if (poolDictionary[prefab].Count == 0)
             {
-                // если пул пуст, создаём новый объект
                 source = CreateNewAudioSource(prefab);
             }
             else
@@ -80,8 +96,7 @@ namespace Assets.Scripts.Sound
             }
 
             source.gameObject.SetActive(true);
-            source.volume = volume;
-            source.pitch = pitch;
+            source.pitch = pitch; // только питч регулируем вручную
             source.Play();
 
             StartCoroutine(ReturnToPoolAfterPlay(prefab, source));
