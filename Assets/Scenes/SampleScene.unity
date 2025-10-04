@@ -6870,6 +6870,7 @@ GameObject:
   - component: {fileID: 167405419}
   - component: {fileID: 167405418}
   - component: {fileID: 167405417}
+  - component: {fileID: 167405421}
   - component: {fileID: 167405420}
   m_Layer: 5
   m_Name: CloseNoMoneyButton
@@ -7009,6 +7010,19 @@ MonoBehaviour:
   duration: 1
   autoPlay: 0
   useUnscaledTime: 1
+--- !u!114 &167405421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167405415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1001 &167885397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8027,6 +8041,7 @@ MonoBehaviour:
   animateSequentially: 0
   offsetY: -200
   useUnscaledTime: 1
+  soundHopupPrefab: {fileID: 3296352006043120542, guid: 4b1d62ccb2ce1f8409bd47dfbcf3c75e, type: 3}
 --- !u!114 &199799423 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 210705967676881727, guid: 1dbe10335603c724ba5e18f6ce5fad12, type: 3}
@@ -8993,6 +9008,7 @@ MonoBehaviour:
   animateSequentially: 1
   offsetY: -200
   useUnscaledTime: 1
+  soundHopupPrefab: {fileID: 3296352006043120542, guid: 4b1d62ccb2ce1f8409bd47dfbcf3c75e, type: 3}
 --- !u!1 &241300773
 GameObject:
   m_ObjectHideFlags: 0
@@ -14099,6 +14115,7 @@ GameObject:
   - component: {fileID: 395394433}
   - component: {fileID: 395394432}
   - component: {fileID: 395394431}
+  - component: {fileID: 395394435}
   - component: {fileID: 395394434}
   m_Layer: 5
   m_Name: PauseButton
@@ -14262,6 +14279,19 @@ MonoBehaviour:
   duration: 1
   autoPlay: 1
   useUnscaledTime: 0
+--- !u!114 &395394435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395394429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &397433295
 GameObject:
   m_ObjectHideFlags: 0
@@ -14446,6 +14476,7 @@ GameObject:
   - component: {fileID: 400971420}
   - component: {fileID: 400971419}
   - component: {fileID: 400971418}
+  - component: {fileID: 400971422}
   - component: {fileID: 400971421}
   m_Layer: 5
   m_Name: X
@@ -14609,6 +14640,19 @@ MonoBehaviour:
   duration: 2
   autoPlay: 0
   useUnscaledTime: 1
+--- !u!114 &400971422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400971416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &401766300
 GameObject:
   m_ObjectHideFlags: 0
@@ -14738,6 +14782,7 @@ GameObject:
   - component: {fileID: 408006366}
   - component: {fileID: 408006365}
   - component: {fileID: 408006364}
+  - component: {fileID: 408006369}
   - component: {fileID: 408006368}
   m_Layer: 5
   m_Name: ShopButton
@@ -14901,6 +14946,19 @@ MonoBehaviour:
   duration: 1
   autoPlay: 1
   useUnscaledTime: 0
+--- !u!114 &408006369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408006363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &409095221
 GameObject:
   m_ObjectHideFlags: 0
@@ -15115,6 +15173,7 @@ MonoBehaviour:
   animateSequentially: 1
   offsetY: -200
   useUnscaledTime: 1
+  soundHopupPrefab: {fileID: 3296352006043120542, guid: 4b1d62ccb2ce1f8409bd47dfbcf3c75e, type: 3}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -15789,6 +15848,7 @@ MonoBehaviour:
   animateSequentially: 1
   offsetY: -200
   useUnscaledTime: 1
+  soundHopupPrefab: {fileID: 3296352006043120542, guid: 4b1d62ccb2ce1f8409bd47dfbcf3c75e, type: 3}
 --- !u!1 &438269674
 GameObject:
   m_ObjectHideFlags: 0
@@ -19559,6 +19619,7 @@ MonoBehaviour:
   animateSequentially: 1
   offsetY: -200
   useUnscaledTime: 1
+  soundHopupPrefab: {fileID: 3296352006043120542, guid: 4b1d62ccb2ce1f8409bd47dfbcf3c75e, type: 3}
 --- !u!1 &558635573
 GameObject:
   m_ObjectHideFlags: 0
@@ -23339,6 +23400,7 @@ GameObject:
   - component: {fileID: 671098782}
   - component: {fileID: 671098781}
   - component: {fileID: 671098780}
+  - component: {fileID: 671098784}
   - component: {fileID: 671098783}
   m_Layer: 5
   m_Name: Menu_Btn
@@ -23514,6 +23576,19 @@ MonoBehaviour:
   duration: 2
   autoPlay: 0
   useUnscaledTime: 1
+--- !u!114 &671098784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671098778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &671479245
 GameObject:
   m_ObjectHideFlags: 0
@@ -27065,6 +27140,7 @@ GameObject:
   - component: {fileID: 779388917}
   - component: {fileID: 779388916}
   - component: {fileID: 779388915}
+  - component: {fileID: 779388919}
   - component: {fileID: 779388918}
   m_Layer: 5
   m_Name: Setting_Btn
@@ -27204,6 +27280,19 @@ MonoBehaviour:
   duration: 2
   autoPlay: 0
   useUnscaledTime: 1
+--- !u!114 &779388919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779388913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &785733233
 GameObject:
   m_ObjectHideFlags: 0
@@ -27828,6 +27917,7 @@ GameObject:
   - component: {fileID: 813842978}
   - component: {fileID: 813842977}
   - component: {fileID: 813842976}
+  - component: {fileID: 813842979}
   m_Layer: 5
   m_Name: BuyShipButton
   m_TagString: Untagged
@@ -27964,6 +28054,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813842974}
   m_CullTransparentMesh: 1
+--- !u!114 &813842979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813842974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &814385439
 GameObject:
   m_ObjectHideFlags: 0
@@ -30620,6 +30723,7 @@ GameObject:
   - component: {fileID: 885022234}
   - component: {fileID: 885022233}
   - component: {fileID: 885022232}
+  - component: {fileID: 885022236}
   - component: {fileID: 885022235}
   m_Layer: 5
   m_Name: CloseShipShopButton
@@ -30771,6 +30875,19 @@ MonoBehaviour:
   duration: 1
   autoPlay: 0
   useUnscaledTime: 1
+--- !u!114 &885022236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885022230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &887679500
 GameObject:
   m_ObjectHideFlags: 0
@@ -36302,6 +36419,7 @@ GameObject:
   - component: {fileID: 1024214837}
   - component: {fileID: 1024214836}
   - component: {fileID: 1024214835}
+  - component: {fileID: 1024214839}
   - component: {fileID: 1024214838}
   m_Layer: 5
   m_Name: Menu_Btn
@@ -36501,6 +36619,19 @@ MonoBehaviour:
   duration: 1
   autoPlay: 0
   useUnscaledTime: 1
+--- !u!114 &1024214839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024214833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &1024456358
 GameObject:
   m_ObjectHideFlags: 0
@@ -36976,6 +37107,7 @@ MonoBehaviour:
   animateSequentially: 1
   offsetY: -200
   useUnscaledTime: 1
+  soundHopupPrefab: {fileID: 3296352006043120542, guid: 4b1d62ccb2ce1f8409bd47dfbcf3c75e, type: 3}
 --- !u!1 &1048203081
 GameObject:
   m_ObjectHideFlags: 0
@@ -44838,6 +44970,7 @@ GameObject:
   - component: {fileID: 1297100771}
   - component: {fileID: 1297100770}
   - component: {fileID: 1297100769}
+  - component: {fileID: 1297100773}
   - component: {fileID: 1297100772}
   m_Layer: 5
   m_Name: CloseMainWindowButton
@@ -45001,6 +45134,19 @@ MonoBehaviour:
   duration: 1
   autoPlay: 0
   useUnscaledTime: 1
+--- !u!114 &1297100773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297100767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &1297323437
 GameObject:
   m_ObjectHideFlags: 0
@@ -46309,6 +46455,7 @@ MonoBehaviour:
   animateSequentially: 1
   offsetY: -200
   useUnscaledTime: 1
+  soundHopupPrefab: {fileID: 3296352006043120542, guid: 4b1d62ccb2ce1f8409bd47dfbcf3c75e, type: 3}
 --- !u!1 &1338476700
 GameObject:
   m_ObjectHideFlags: 0
@@ -47466,6 +47613,7 @@ GameObject:
   - component: {fileID: 1366695960}
   - component: {fileID: 1366695959}
   - component: {fileID: 1366695958}
+  - component: {fileID: 1366695961}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -47623,6 +47771,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366695956}
   m_CullTransparentMesh: 1
+--- !u!114 &1366695961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366695956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &1369458232
 GameObject:
   m_ObjectHideFlags: 0
@@ -52453,6 +52614,10 @@ MonoBehaviour:
     size: 5
   - prefab: {fileID: 3296352006043120542, guid: 537eab0cbf38f554a8ec7f74ebc8adc2, type: 3}
     size: 3
+  - prefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
+    size: 3
+  - prefab: {fileID: 3296352006043120542, guid: 4b1d62ccb2ce1f8409bd47dfbcf3c75e, type: 3}
+    size: 2
   sfxGroup: {fileID: -4873237511761742332, guid: f19320005adc7ae4b99d7e83722f3cd6, type: 2}
 --- !u!4 &1480056284
 Transform:
@@ -56083,6 +56248,7 @@ GameObject:
   - component: {fileID: 1568546768}
   - component: {fileID: 1568546767}
   - component: {fileID: 1568546766}
+  - component: {fileID: 1568546770}
   - component: {fileID: 1568546769}
   m_Layer: 5
   m_Name: ResetBtn
@@ -56222,6 +56388,19 @@ MonoBehaviour:
   duration: 1
   autoPlay: 0
   useUnscaledTime: 1
+--- !u!114 &1568546770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568546764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &1569847850
 GameObject:
   m_ObjectHideFlags: 0
@@ -57270,6 +57449,7 @@ GameObject:
   - component: {fileID: 1583824294}
   - component: {fileID: 1583824293}
   - component: {fileID: 1583824292}
+  - component: {fileID: 1583824295}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -57427,6 +57607,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583824290}
   m_CullTransparentMesh: 1
+--- !u!114 &1583824295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583824290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &1585513634
 GameObject:
   m_ObjectHideFlags: 0
@@ -61027,6 +61220,7 @@ GameObject:
   - component: {fileID: 1685640087}
   - component: {fileID: 1685640086}
   - component: {fileID: 1685640085}
+  - component: {fileID: 1685640089}
   - component: {fileID: 1685640088}
   m_Layer: 5
   m_Name: Menu_Btn
@@ -61226,6 +61420,19 @@ MonoBehaviour:
   duration: 1
   autoPlay: 0
   useUnscaledTime: 1
+--- !u!114 &1685640089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685640083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &1686099035
 GameObject:
   m_ObjectHideFlags: 0
@@ -67166,6 +67373,7 @@ MonoBehaviour:
   animateSequentially: 1
   offsetY: -200
   useUnscaledTime: 1
+  soundHopupPrefab: {fileID: 3296352006043120542, guid: 4b1d62ccb2ce1f8409bd47dfbcf3c75e, type: 3}
 --- !u!1 &1841050313
 GameObject:
   m_ObjectHideFlags: 0
@@ -75151,6 +75359,7 @@ GameObject:
   - component: {fileID: 2044349441}
   - component: {fileID: 2044349440}
   - component: {fileID: 2044349439}
+  - component: {fileID: 2044349443}
   - component: {fileID: 2044349442}
   m_Layer: 5
   m_Name: ResetBtn
@@ -75302,6 +75511,19 @@ MonoBehaviour:
   duration: 1
   autoPlay: 0
   useUnscaledTime: 1
+--- !u!114 &2044349443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044349437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &2045991948
 GameObject:
   m_ObjectHideFlags: 0
@@ -75486,6 +75708,7 @@ GameObject:
   - component: {fileID: 2048937922}
   - component: {fileID: 2048937921}
   - component: {fileID: 2048937920}
+  - component: {fileID: 2048937924}
   - component: {fileID: 2048937923}
   m_Layer: 5
   m_Name: CloseShipShopButton
@@ -75637,6 +75860,19 @@ MonoBehaviour:
   duration: 1
   autoPlay: 0
   useUnscaledTime: 1
+--- !u!114 &2048937924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048937918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &2049511499
 GameObject:
   m_ObjectHideFlags: 0
@@ -76545,6 +76781,7 @@ GameObject:
   - component: {fileID: 2086490285}
   - component: {fileID: 2086490284}
   - component: {fileID: 2086490283}
+  - component: {fileID: 2086490286}
   m_Layer: 5
   m_Name: BuyBulletButton
   m_TagString: Untagged
@@ -76681,6 +76918,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086490281}
   m_CullTransparentMesh: 1
+--- !u!114 &2086490286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086490281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &2087550808
 GameObject:
   m_ObjectHideFlags: 0
@@ -79554,6 +79804,38 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1358791649384660130, guid: 1dbe10335603c724ba5e18f6ce5fad12, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: d46ad1ae4634931499b4f29d90540b91, type: 3}
+    - target: {fileID: 1358791649384660130, guid: 1dbe10335603c724ba5e18f6ce5fad12, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d46ad1ae4634931499b4f29d90540b91, type: 3}
+    - target: {fileID: 1358791649384660130, guid: 1dbe10335603c724ba5e18f6ce5fad12, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358791649384660130, guid: 1dbe10335603c724ba5e18f6ce5fad12, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -4873237511761742332, guid: f19320005adc7ae4b99d7e83722f3cd6, type: 2}
+    - target: {fileID: 3254229506371116515, guid: 1dbe10335603c724ba5e18f6ce5fad12, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: d46ad1ae4634931499b4f29d90540b91, type: 3}
+    - target: {fileID: 3254229506371116515, guid: 1dbe10335603c724ba5e18f6ce5fad12, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d46ad1ae4634931499b4f29d90540b91, type: 3}
+    - target: {fileID: 3254229506371116515, guid: 1dbe10335603c724ba5e18f6ce5fad12, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254229506371116515, guid: 1dbe10335603c724ba5e18f6ce5fad12, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -4873237511761742332, guid: f19320005adc7ae4b99d7e83722f3cd6, type: 2}
     - target: {fileID: 6233076787176255285, guid: 1dbe10335603c724ba5e18f6ce5fad12, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1

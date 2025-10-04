@@ -21,7 +21,7 @@ namespace Assets.Scripts.Sound
         public List<SoundPool> pools;
         public AudioMixerGroup sfxGroup;
 
-        private Dictionary<AudioSource, Queue<AudioSource>> poolDictionary;
+        private Dictionary<GameObject, Queue<AudioSource>> poolDictionary;
 
         private AudioMixer mainMixer;
         private const string musicParam = "SFXVolume";
@@ -41,7 +41,7 @@ namespace Assets.Scripts.Sound
 
         private void InitializePools()
         {
-            poolDictionary = new Dictionary<AudioSource, Queue<AudioSource>>();
+            poolDictionary = new Dictionary<GameObject, Queue<AudioSource>>();
 
             foreach (SoundPool pool in pools)
             {
@@ -51,7 +51,7 @@ namespace Assets.Scripts.Sound
                     AudioSource obj = CreateNewAudioSource(pool.prefab);
                     queue.Enqueue(obj);
                 }
-                poolDictionary.Add(pool.prefab, queue);
+                poolDictionary.Add(pool.prefab.gameObject, queue);
             }
         }
 
@@ -73,41 +73,39 @@ namespace Assets.Scripts.Sound
             startVal,
                        1f);
 
-            obj.gameObject.SetActive(true);
+            obj.gameObject.SetActive(false);
             return obj;
         }
 
         public void PlaySound(AudioSource prefab, float pitch = 1f)
         {
-            if (!poolDictionary.ContainsKey(prefab))
+            var key = prefab.gameObject;
+
+            if (!poolDictionary.ContainsKey(key))
             {
                 Debug.LogWarning("SoundPoolManager: Пул для префаба " + prefab.name + " не найден!");
                 return;
             }
 
-            AudioSource source;
-            if (poolDictionary[prefab].Count == 0)
-            {
-                source = CreateNewAudioSource(prefab);
-            }
-            else
-            {
-                source = poolDictionary[prefab].Dequeue();
-            }
+            Queue<AudioSource> queue = poolDictionary[key];
+
+            AudioSource source = queue.Count > 0 ? queue.Dequeue() : CreateNewAudioSource(prefab);
 
             source.gameObject.SetActive(true);
-            source.pitch = pitch; // только питч регулируем вручную
+            source.pitch = pitch;
             source.Play();
 
-            StartCoroutine(ReturnToPoolAfterPlay(prefab, source));
+            StartCoroutine(ReturnToPoolAfterPlay(key, source));
         }
 
-        private IEnumerator ReturnToPoolAfterPlay(AudioSource prefab, AudioSource source)
+
+        private IEnumerator ReturnToPoolAfterPlay(GameObject key, AudioSource source)
         {
             yield return new WaitWhile(() => source.isPlaying);
 
             source.Stop();
-            poolDictionary[prefab].Enqueue(source);
+            source.gameObject.SetActive(false);
+            poolDictionary[key].Enqueue(source);
         }
     }
 }

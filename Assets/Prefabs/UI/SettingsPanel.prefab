@@ -133,6 +133,7 @@ MonoBehaviour:
   animateSequentially: 1
   offsetY: -200
   useUnscaledTime: 1
+  soundHopupPrefab: {fileID: 3296352006043120542, guid: 4b1d62ccb2ce1f8409bd47dfbcf3c75e, type: 3}
 --- !u!1 &269128425874698885
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,6 +561,7 @@ GameObject:
   - component: {fileID: 120785787908418235}
   - component: {fileID: 3351570963478795794}
   - component: {fileID: 4944601586142023019}
+  - component: {fileID: 2646840042296798207}
   - component: {fileID: 6773588890182867105}
   m_Layer: 5
   m_Name: CloseNoMoneyButton
@@ -682,6 +684,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2646840042296798207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843600858542425298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!114 &6773588890182867105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1613,6 +1628,7 @@ GameObject:
   - component: {fileID: 4779892447834868462}
   - component: {fileID: 6040244610215785455}
   - component: {fileID: 210705967676881727}
+  - component: {fileID: 2831636407119121624}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1724,6 +1740,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2831636407119121624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8362082802746224528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &8639446160211259180
 GameObject:
   m_ObjectHideFlags: 0

@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 1750691653434673468}
   - component: {fileID: 8788480823734125104}
   - component: {fileID: 3110094859955721340}
+  - component: {fileID: 517351019946306818}
   m_Layer: 5
   m_Name: SelectButton
   m_TagString: Untagged
@@ -196,6 +197,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &517351019946306818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669724709271068725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &1810103019072374859
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +758,7 @@ MonoBehaviour:
   costItemText: {fileID: 1575035891918542874}
   idItem: 
   costItem: 0
+  description: 
   iconItem: {fileID: 7467991477584497377}
   BuyButton: {fileID: 6970354718429070698}
   SelectButton: {fileID: 669724709271068725}
@@ -972,6 +987,7 @@ GameObject:
   - component: {fileID: 6488698233704527636}
   - component: {fileID: 4858513121898023866}
   - component: {fileID: 7358465993485098773}
+  - component: {fileID: 6243488368289901336}
   m_Layer: 5
   m_Name: BuyButton
   m_TagString: Untagged
@@ -1081,6 +1097,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6243488368289901336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6970354718429070698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
 --- !u!1 &8029678322989586955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,6 +1203,7 @@ GameObject:
   - component: {fileID: 9014202823658199029}
   - component: {fileID: 7475594592650699583}
   - component: {fileID: 714359006333354124}
+  - component: {fileID: 346812892354142421}
   m_Layer: 5
   m_Name: AlreadySelect
   m_TagString: Untagged
@@ -1283,3 +1313,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &346812892354142421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8570704123469844898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf8359b9853b104b8b193f249dd8db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}

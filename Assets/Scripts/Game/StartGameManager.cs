@@ -2,6 +2,7 @@
 using Assets.Scripts.Scene;
 using Assets.Scripts.Sound;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace Assets.Scripts.Game
 {
@@ -11,6 +12,8 @@ namespace Assets.Scripts.Game
         [SerializeField] private GameObject ConfirmationPanel;
 
         [SerializeField] private AudioSettingsManager audioSettingsManager;
+        [SerializeField] private SoundPoolManager soundPoolManager;
+        [SerializeField] private AudioMixer audioMixer;
         private void Awake()
         {
             ContinueButton.SetActive(false);
@@ -25,6 +28,7 @@ namespace Assets.Scripts.Game
         private void Start()
         {
             audioSettingsManager.Initialize();
+            soundPoolManager.Initialize(audioMixer);
         }
 
         public void LoadGame()

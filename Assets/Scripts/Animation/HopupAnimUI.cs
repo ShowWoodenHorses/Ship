@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Assets.Scripts.Sound;
 
 namespace Assets.Scripts.Animation
 {
@@ -13,6 +14,9 @@ namespace Assets.Scripts.Animation
         [SerializeField] private bool animateSequentially = true;
         [SerializeField] private float offsetY = -200f;
         [SerializeField] private bool useUnscaledTime = true;  // если true — анимации идут при Time.timeScale = 0
+
+        [Header("Sound")]
+        [SerializeField] private AudioSource soundHopupPrefab;
 
         private Sequence seq;
 
@@ -56,7 +60,13 @@ namespace Assets.Scripts.Animation
 
             // Создаём последовательность
             seq = DOTween.Sequence();
-            if (useUnscaledTime) seq.SetUpdate(true); // делает всю последовательность unscaled
+            if (useUnscaledTime)
+            {
+                seq.SetUpdate(true); // делает всю последовательность unscaled
+            }
+
+            SoundPoolManager.Instance.PlaySound(soundHopupPrefab);
+
             seq.Append(parentRect.DOAnchorPos(targetAnchoredPos, duration).SetEase(Ease.OutCubic));
             seq.Join(parentCanvas.DOFade(1f, duration));
 
