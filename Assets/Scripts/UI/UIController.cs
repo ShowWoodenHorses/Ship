@@ -15,10 +15,12 @@ namespace Assets.Scripts.UI
         [SerializeField] private GameObject losePanel;
 
         [SerializeField] private TextMeshProUGUI textMoney;
+        [SerializeField] private TextMeshProUGUI textMoneyinStore;
 
         private void Update()
         {
             textMoney.text = scoreManager.GetCurrentMoney().ToString();
+            textMoneyinStore.text = scoreManager.GetCurrentMoney().ToString();
         }
 
         public void PauseButton()

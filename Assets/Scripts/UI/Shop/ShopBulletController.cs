@@ -1,12 +1,10 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Assets.Scripts.Save;
 
 namespace Assets.Scripts.UI.Shop
 {
     public class ShopBulletController : ShopController
     {
-
         public void Initialize(List<string> saveAvaliableItems, string currentItemsId, SaveLifecycle saveLifecycle)
         {
             this.saveLifecycle = saveLifecycle;
