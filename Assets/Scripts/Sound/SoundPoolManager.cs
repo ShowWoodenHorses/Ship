@@ -22,6 +22,11 @@ namespace Assets.Scripts.Sound
         public AudioMixerGroup sfxGroup;
 
         private Dictionary<GameObject, Queue<AudioSource>> poolDictionary;
+        // Лимиты для каждого звука
+        private Dictionary<GameObject, int> activeCounts = new Dictionary<GameObject, int>();
+
+        // Настраиваемый лимит (например, не больше 3 одновременных экземпляров одного звука)
+        [SerializeField] private int maxSimultaneousSameSound = 3;
 
         private AudioMixer mainMixer;
         private const string musicParam = "SFXVolume";
@@ -87,9 +92,19 @@ namespace Assets.Scripts.Sound
                 return;
             }
 
-            Queue<AudioSource> queue = poolDictionary[key];
+            // Проверяем лимит
+            if (activeCounts.TryGetValue(key, out int count) && count >= maxSimultaneousSameSound)
+            {
+                // Лимит достигнут → игнорируем новый вызов
+                return;
+            }
 
+            Queue<AudioSource> queue = poolDictionary[key];
             AudioSource source = queue.Count > 0 ? queue.Dequeue() : CreateNewAudioSource(prefab);
+
+            // Увеличиваем счётчик
+            if (!activeCounts.ContainsKey(key)) activeCounts[key] = 0;
+            activeCounts[key]++;
 
             source.gameObject.SetActive(true);
             source.pitch = pitch;
@@ -99,6 +114,7 @@ namespace Assets.Scripts.Sound
         }
 
 
+
         private IEnumerator ReturnToPoolAfterPlay(GameObject key, AudioSource source)
         {
             yield return new WaitWhile(() => source.isPlaying);
@@ -106,6 +122,13 @@ namespace Assets.Scripts.Sound
             source.Stop();
             source.gameObject.SetActive(false);
             poolDictionary[key].Enqueue(source);
+
+            // Уменьшаем счётчик активных звуков
+            if (activeCounts.ContainsKey(key))
+            {
+                activeCounts[key] = Mathf.Max(0, activeCounts[key] - 1);
+            }
         }
+
     }
 }
