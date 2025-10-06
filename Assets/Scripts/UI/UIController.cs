@@ -43,10 +43,5 @@ namespace Assets.Scripts.UI
             losePanel.GetComponent<HopupAnimUI>().Hopup();
             pauseManager.Pause();
         }
-
-        public void ExitMenu()
-        {
-            SceneManager.LoadScene("StartScene");
-        }
     }
 }

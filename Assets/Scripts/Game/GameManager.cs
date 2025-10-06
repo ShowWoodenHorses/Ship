@@ -4,6 +4,7 @@ using Assets.Scripts.Player;
 using Assets.Scripts.Scene;
 using Assets.Scripts.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.Game
 {
@@ -62,6 +63,16 @@ namespace Assets.Scripts.Game
         {
             SaveSystem.New();
             LoadingScreen.LoadScene("SampleScene");
+        }
+
+        public void ExitMenu()
+        {
+            SceneManager.LoadScene("StartScene");
+        }
+
+        public void DeleteSave()
+        {
+            SaveSystem.DeleteSave();
         }
     }
 }

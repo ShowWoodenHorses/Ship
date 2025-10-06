@@ -33,8 +33,13 @@ public static class SaveSystem
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(SavePath, json);
         Debug.Log($"[SaveSystem] Saved to {SavePath}");
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+        WebGLStorageHelper.Flush(); // синхронизируем изменения в IndexedDB
+#endif
     }
 
+    // Создание нового сейва с дефолтными значениями
     public static void New()
     {
         var fresh = CreateDefaultSave();
@@ -46,7 +51,39 @@ public static class SaveSystem
         return File.Exists(SavePath);
     }
 
-    // Загрузка
+    // Полное удаление сейва
+    public static void DeleteSave()
+    {
+        try
+        {
+            if (File.Exists(SavePath))
+            {
+                File.Delete(SavePath);
+                Debug.Log("[SaveSystem] Save deleted");
+#if UNITY_WEBGL && !UNITY_EDITOR
+                WebGLStorageHelper.Flush(); // фиксируем удаление в IndexedDB
+#endif
+            }
+            else
+            {
+                Debug.Log("[SaveSystem] No save file to delete");
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogWarning($"[SaveSystem] Failed to delete save: {e.Message}");
+        }
+    }
+
+    // Полный сброс (удаление + создание нового)
+    public static void ResetSave()
+    {
+        DeleteSave();
+        New();
+        Debug.Log("[SaveSystem] Save reset to defaults");
+    }
+
+    // Загрузка сейва
     public static SaveData Load()
     {
         try
@@ -76,7 +113,7 @@ public static class SaveSystem
         }
     }
 
-    // Миграция сейвов
+    // Миграция старых сейвов
     private static SaveData Migrate(SaveData data)
     {
         if (data.version < 2)
@@ -90,7 +127,6 @@ public static class SaveSystem
                 if (!string.IsNullOrEmpty(data.selectedShipId))
                     data.ownedItems.Add(data.selectedShipId);
             }
-
 
             data.version = 2;
             Save(data);

@@ -9006,7 +9006,7 @@ MonoBehaviour:
   childDuration: 0.3
   stagger: 0.05
   animateSequentially: 1
-  offsetY: -200
+  offsetY: 0
   useUnscaledTime: 1
   soundHopupPrefab: {fileID: 3296352006043120542, guid: 4b1d62ccb2ce1f8409bd47dfbcf3c75e, type: 3}
 --- !u!1 &241300773
@@ -10427,7 +10427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -23644,8 +23644,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 950126500}
-        m_TargetAssemblyTypeName: Assets.Scripts.UI.UIController, Assembly-CSharp
+      - m_Target: {fileID: 868381101}
+        m_TargetAssemblyTypeName: Assets.Scripts.Game.GameManager, Assembly-CSharp
         m_MethodName: ExitMenu
         m_Mode: 1
         m_Arguments:
@@ -36716,18 +36716,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 868381101}
-        m_TargetAssemblyTypeName: Assets.Scripts.Game.GameManager, Assembly-CSharp
-        m_MethodName: NewGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 408006363}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -36752,9 +36740,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 950126500}
-        m_TargetAssemblyTypeName: Assets.Scripts.UI.UIController, Assembly-CSharp
-        m_MethodName: ExitMenu
+      - m_Target: {fileID: 868381101}
+        m_TargetAssemblyTypeName: Assets.Scripts.Game.GameManager, Assembly-CSharp
+        m_MethodName: DeleteSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36764,9 +36752,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Assets.Scripts.Game.StartGameManager, Assembly-CSharp
-        m_MethodName: NewGame
+      - m_Target: {fileID: 868381101}
+        m_TargetAssemblyTypeName: Assets.Scripts.Game.GameManager, Assembly-CSharp
+        m_MethodName: ExitMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -37317,7 +37305,7 @@ MonoBehaviour:
   childDuration: 0.3
   stagger: 0.05
   animateSequentially: 1
-  offsetY: -200
+  offsetY: 0
   useUnscaledTime: 1
   soundHopupPrefab: {fileID: 3296352006043120542, guid: 4b1d62ccb2ce1f8409bd47dfbcf3c75e, type: 3}
 --- !u!1 &1048203081
@@ -61519,18 +61507,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 868381101}
-        m_TargetAssemblyTypeName: Assets.Scripts.Game.GameManager, Assembly-CSharp
-        m_MethodName: NewGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 408006363}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -61555,9 +61531,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 950126500}
-        m_TargetAssemblyTypeName: Assets.Scripts.UI.UIController, Assembly-CSharp
-        m_MethodName: ExitMenu
+      - m_Target: {fileID: 868381101}
+        m_TargetAssemblyTypeName: Assets.Scripts.Game.GameManager, Assembly-CSharp
+        m_MethodName: DeleteSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -61567,8 +61543,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 950126500}
-        m_TargetAssemblyTypeName: Assets.Scripts.UI.UIController, Assembly-CSharp
+      - m_Target: {fileID: 868381101}
+        m_TargetAssemblyTypeName: Assets.Scripts.Game.GameManager, Assembly-CSharp
         m_MethodName: ExitMenu
         m_Mode: 1
         m_Arguments:
@@ -79902,7 +79878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -80052,7 +80028,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1139335506730171754}
   m_FillRect: {fileID: 595740785427532095}
   m_HandleRect: {fileID: 3869757681669036577}
@@ -80096,7 +80072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.033775367, g: 0.6509434, b: 0.12430532, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
