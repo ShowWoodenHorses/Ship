@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6195604167390869230}
   - component: {fileID: 3206822910078208521}
   - component: {fileID: 3464951327101443701}
+  - component: {fileID: 7961742462243349647}
   m_Layer: 9
   m_Name: SM_Prop_ShipWheel_01
   m_TagString: Untagged
@@ -86,6 +87,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7961742462243349647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15279897242759171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &477149502635523068
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,6 +303,7 @@ GameObject:
   - component: {fileID: 3473108076460994788}
   - component: {fileID: 49136490725343843}
   - component: {fileID: 7210217598978880129}
+  - component: {fileID: 6917288205256157706}
   m_Layer: 9
   m_Name: SM_Veh_Extra_Barrel_01
   m_TagString: Untagged
@@ -365,6 +379,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6917288205256157706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643724519936264025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1646581428789858910
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +402,7 @@ GameObject:
   - component: {fileID: 8846685872555675167}
   - component: {fileID: 3534445356891651982}
   - component: {fileID: 3491358743468292448}
+  - component: {fileID: 3181170280024593560}
   m_Layer: 9
   m_Name: SM_Veh_Extra_Barrel_03
   m_TagString: Untagged
@@ -451,6 +478,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3181170280024593560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646581428789858910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1733103598537121010
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +501,7 @@ GameObject:
   - component: {fileID: 5681163208976171860}
   - component: {fileID: 6283566527434495599}
   - component: {fileID: 8412482531518093354}
+  - component: {fileID: 3785024134525068494}
   m_Layer: 9
   m_Name: model
   m_TagString: Untagged
@@ -540,6 +580,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3785024134525068494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733103598537121010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2107145800070621721
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,6 +603,7 @@ GameObject:
   - component: {fileID: 7998233958693125057}
   - component: {fileID: 6891257225594825376}
   - component: {fileID: 9150694911924432935}
+  - component: {fileID: 4984636369493496485}
   m_Layer: 9
   m_Name: SM_Veh_Extra_Barrel_05
   m_TagString: Untagged
@@ -626,6 +679,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4984636369493496485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107145800070621721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2359893388991672145
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,6 +702,7 @@ GameObject:
   - component: {fileID: 1773253006591745276}
   - component: {fileID: 4800822272763265998}
   - component: {fileID: 1435116859731873043}
+  - component: {fileID: 2002913409700763401}
   m_Layer: 9
   m_Name: SM_Veh_Extra_Barrel_02
   m_TagString: Untagged
@@ -712,6 +778,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2002913409700763401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2359893388991672145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3370980775222421952
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,6 +801,7 @@ GameObject:
   - component: {fileID: 2265818529524226212}
   - component: {fileID: 5684902428351788822}
   - component: {fileID: 1235856210173399316}
+  - component: {fileID: 8133002567061930684}
   m_Layer: 9
   m_Name: SM_Veh_Boat_Medium_01_Sails_Up_Pirate
   m_TagString: Untagged
@@ -798,6 +877,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8133002567061930684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3370980775222421952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4619012173435180699
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,6 +900,7 @@ GameObject:
   - component: {fileID: 8061430125452900325}
   - component: {fileID: 8210702154232757616}
   - component: {fileID: 8918151928108076271}
+  - component: {fileID: 3904950580405905031}
   m_Layer: 9
   m_Name: SM_Veh_Boat_Medium_01_Mast_Pirate
   m_TagString: Untagged
@@ -885,6 +977,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3904950580405905031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4619012173435180699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5156093161275473544
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,6 +1000,7 @@ GameObject:
   - component: {fileID: 6759873246448609644}
   - component: {fileID: 5367821219690996300}
   - component: {fileID: 4302711507069641794}
+  - component: {fileID: 9181108000732362158}
   m_Layer: 9
   m_Name: SM_Veh_Extra_Barrel_06
   m_TagString: Untagged
@@ -971,6 +1076,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9181108000732362158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5156093161275473544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8295009560048731799
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,6 +1099,7 @@ GameObject:
   - component: {fileID: 7720749641501827695}
   - component: {fileID: 1741078604037404776}
   - component: {fileID: 4624007992948963125}
+  - component: {fileID: 8878788964870855176}
   m_Layer: 9
   m_Name: SM_Veh_Extra_Barrel_04
   m_TagString: Untagged
@@ -1057,6 +1175,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8878788964870855176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8295009560048731799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9005373590986918147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,6 +1198,7 @@ GameObject:
   - component: {fileID: 7984758082270501289}
   - component: {fileID: 539413627722386859}
   - component: {fileID: 3549302953948908395}
+  - component: {fileID: 2187847273093697361}
   m_Layer: 9
   m_Name: SM_Veh_Boat_Medium_01_Sails_Pirate
   m_TagString: Untagged
@@ -1143,6 +1274,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2187847273093697361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9005373590986918147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3053494909593009315
 PrefabInstance:
   m_ObjectHideFlags: 0

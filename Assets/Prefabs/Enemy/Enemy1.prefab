@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 870602351901879613}
   - component: {fileID: 9075601499008934281}
   - component: {fileID: 3125195318411456006}
+  - component: {fileID: 4181639346902669714}
   m_Layer: 0
   m_Name: SM_Veh_Boat_Rowing_01_Hull_Pirate
   m_TagString: Untagged
@@ -86,6 +87,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4181639346902669714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099142192066148879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5758906255816628295
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +302,7 @@ GameObject:
   - component: {fileID: 4636367551579273579}
   - component: {fileID: 5515831117484701408}
   - component: {fileID: 2589553195862645022}
+  - component: {fileID: 8428461305168092079}
   m_Layer: 0
   m_Name: SM_Veh_Boat_Medium_01_Mast_Pirate
   m_TagString: Untagged
@@ -364,6 +378,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8428461305168092079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7110556383941083886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8333423734340907929
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,6 +401,7 @@ GameObject:
   - component: {fileID: 3748752794790172537}
   - component: {fileID: 6771878754402375108}
   - component: {fileID: 2836897236250879948}
+  - component: {fileID: 5336371678005312414}
   m_Layer: 0
   m_Name: SM_Veh_Boat_Medium_01_Sails_Pirate
   m_TagString: Untagged
@@ -450,6 +477,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5336371678005312414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8333423734340907929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3841808642099620667
 PrefabInstance:
   m_ObjectHideFlags: 0
