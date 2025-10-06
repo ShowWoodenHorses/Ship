@@ -32463,7 +32463,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 332405522840273019, guid: 8c5c8d006805d9243b2b42fd0fc581fe, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2368635109754773606, guid: 8c5c8d006805d9243b2b42fd0fc581fe, type: 3}
       propertyPath: m_SizeDelta.x

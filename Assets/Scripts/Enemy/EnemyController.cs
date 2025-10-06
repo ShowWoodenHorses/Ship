@@ -38,7 +38,6 @@ public class EnemyController : MonoBehaviour, IDamagable, IReward
 
     private void OnEnable()
     {
-        // Когда объект берётся из пула — восстанавливаем здоровье
         currentHealth = maxHealth;
         isDead = false;
         InitializeSliderHealth();
@@ -113,8 +112,7 @@ public class EnemyController : MonoBehaviour, IDamagable, IReward
         HealthObject.SetActive(false);
         sequence = gameplayAnimation.DestroyShip(transform);
         yield return new WaitForSeconds(2f);
-
-        // Вызываем событие смерти
+        
         OnEnemyDeath?.Invoke(gameObject);
         gameObject.SetActive(false);
         sequence?.Kill();

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5630650667529889419}
   - component: {fileID: 9137888078753115570}
   - component: {fileID: 7901056077378771109}
+  - component: {fileID: 7289264461554792867}
   m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Sails_01_Pirate
   m_TagString: Untagged
@@ -86,6 +87,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7289264461554792867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233127499582095419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &273712732766645759
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,6 +110,7 @@ GameObject:
   - component: {fileID: 3536456805372364383}
   - component: {fileID: 6914568846344869103}
   - component: {fileID: 359922014943990932}
+  - component: {fileID: 3746060392890341415}
   m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Mast_SailUp_04
   m_TagString: Untagged
@@ -172,6 +186,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3746060392890341415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273712732766645759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &657108172201589183
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +318,7 @@ GameObject:
   - component: {fileID: 4298315007126760034}
   - component: {fileID: 829301739152264195}
   - component: {fileID: 4257431503074808863}
+  - component: {fileID: 3384503175458667686}
   m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Sails_03_Pirate
   m_TagString: Untagged
@@ -367,6 +394,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3384503175458667686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096363671167192198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1425621824289768644
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,6 +417,7 @@ GameObject:
   - component: {fileID: 414505538172570191}
   - component: {fileID: 1527619761457325138}
   - component: {fileID: 5778959256023708584}
+  - component: {fileID: 8829169108993901430}
   m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Rigging_Pirate
   m_TagString: Untagged
@@ -453,6 +493,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8829169108993901430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425621824289768644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2350327761586269014
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,6 +516,7 @@ GameObject:
   - component: {fileID: 8302729342205885223}
   - component: {fileID: 323986684171608046}
   - component: {fileID: 882805095028110818}
+  - component: {fileID: 950483781192312767}
   m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Mast_SailUp_03_Pirate
   m_TagString: Untagged
@@ -539,6 +592,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &950483781192312767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2350327761586269014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3883072724397459578
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +615,7 @@ GameObject:
   - component: {fileID: 6252748420549245796}
   - component: {fileID: 8279156635924452582}
   - component: {fileID: 1438075082286938986}
+  - component: {fileID: 4341055350038416077}
   m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Mast_SailUp_01_Pirate
   m_TagString: Untagged
@@ -625,6 +691,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4341055350038416077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3883072724397459578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3931789233061839501
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,6 +714,7 @@ GameObject:
   - component: {fileID: 2290336808659921811}
   - component: {fileID: 7684502857234103889}
   - component: {fileID: 3508395491625830186}
+  - component: {fileID: 4987053795574454560}
   m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Sails_04_Pirate
   m_TagString: Untagged
@@ -711,6 +790,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4987053795574454560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3931789233061839501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4716685156279246426
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,6 +990,7 @@ GameObject:
   - component: {fileID: 6892247590280096871}
   - component: {fileID: 6491153842601487878}
   - component: {fileID: 6093867854934361766}
+  - component: {fileID: 8015950298086394678}
   m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Sails_02_Pirate
   m_TagString: Untagged
@@ -974,6 +1066,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8015950298086394678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5217144947321324233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5324637646159372385
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,6 +1089,7 @@ GameObject:
   - component: {fileID: 6979849111926552004}
   - component: {fileID: 4067506385713353606}
   - component: {fileID: 5871291086204272860}
+  - component: {fileID: 9064727734670944871}
   m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Mast_01_Pirate
   m_TagString: Untagged
@@ -1061,6 +1166,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9064727734670944871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324637646159372385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5597200765573887138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,6 +1189,7 @@ GameObject:
   - component: {fileID: 6524011753926686643}
   - component: {fileID: 8668447328795483940}
   - component: {fileID: 2199389738376186204}
+  - component: {fileID: 7975801320125785883}
   m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Sails_05_Pirate
   m_TagString: Untagged
@@ -1147,6 +1265,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7975801320125785883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5597200765573887138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5870775038255365991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,6 +1288,7 @@ GameObject:
   - component: {fileID: 6643885235417183340}
   - component: {fileID: 2384536053953124970}
   - component: {fileID: 224890486572404527}
+  - component: {fileID: 2779686177113957793}
   m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Mast_SailUp_02_Pirate
   m_TagString: Untagged
@@ -1233,6 +1364,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2779686177113957793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870775038255365991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8277173693400740253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,6 +1387,7 @@ GameObject:
   - component: {fileID: 8193364446254397675}
   - component: {fileID: 4034593191949637978}
   - component: {fileID: 1716465715451144136}
+  - component: {fileID: 1305083140818663748}
   m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Mast_03_Pirate
   m_TagString: Untagged
@@ -1320,6 +1464,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1305083140818663748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8277173693400740253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8561619045885701884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,6 +1487,7 @@ GameObject:
   - component: {fileID: 8089407004600465682}
   - component: {fileID: 6466279079333595349}
   - component: {fileID: 8995852286006674844}
+  - component: {fileID: 5045819151523635517}
   m_Layer: 9
   m_Name: SM_Veh_Boat_Warship_01_Mast_02_Pirate
   m_TagString: Untagged
@@ -1407,6 +1564,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5045819151523635517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8561619045885701884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1110131338757191311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3520,6 +3689,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6421661619389401242}
     m_Modifications:
+    - target: {fileID: 332405522840273019, guid: 8c5c8d006805d9243b2b42fd0fc581fe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4137869085853864805, guid: 8c5c8d006805d9243b2b42fd0fc581fe, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3531,6 +3704,10 @@ PrefabInstance:
     - target: {fileID: 6985918726394134965, guid: 8c5c8d006805d9243b2b42fd0fc581fe, type: 3}
       propertyPath: m_Name
       value: HealthObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985918726394134965, guid: 8c5c8d006805d9243b2b42fd0fc581fe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7223370049347597160, guid: 8c5c8d006805d9243b2b42fd0fc581fe, type: 3}
       propertyPath: m_LocalPosition.x

@@ -56,10 +56,6 @@ MonoBehaviour:
   fireRadius: 50
   reloadTime: 3
   aimToleranceDeg: 6
-  debugLevel: 2
-  debugLogInterval: 0.25
-  drawRuntimeRays: 1
-  drawGizmos: 1
   _target: {fileID: 0}
   _projectilePrefab: {fileID: 0}
   effectShot: {fileID: 6460890540305610336, guid: b7c7b0f97edd9ee4ca3e24251b614128, type: 3}
@@ -105,6 +101,7 @@ GameObject:
   - component: {fileID: 4434092979340602357}
   - component: {fileID: 8467799638512182950}
   - component: {fileID: 543994440081146764}
+  - component: {fileID: 3171297585501209712}
   m_Layer: 0
   m_Name: gun
   m_TagString: Untagged
@@ -181,3 +178,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3171297585501209712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873045405591684551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa31187b046025b438858652ae1b298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
