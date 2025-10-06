@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 111
   m_IsActive: 1
 --- !u!4 &1085227456886987370
 Transform:
@@ -166,7 +166,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 111
   m_IsActive: 1
 --- !u!4 &7415000765388110308
 Transform:
@@ -203,7 +203,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 111
   m_IsActive: 1
 --- !u!4 &5855474530279846699
 Transform:
@@ -247,7 +247,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 111
   m_IsActive: 1
 --- !u!4 &6758994861007316294
 Transform:
@@ -282,7 +282,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 111
   m_IsActive: 1
 --- !u!4 &3106195474281316334
 Transform:
@@ -321,7 +321,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 111
   m_IsActive: 1
 --- !u!4 &1253069756101459037
 Transform:
@@ -357,7 +357,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 111
   m_IsActive: 1
 --- !u!4 &4183601960149765381
 Transform:
@@ -428,7 +428,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 111
   m_IsActive: 1
 --- !u!4 &3109014875406628385
 Transform:
@@ -497,6 +497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Rickety_Dock_Platform_02 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 115408, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 459746, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
       propertyPath: m_LocalPosition.x
       value: 51.902313
@@ -558,6 +562,10 @@ PrefabInstance:
     - target: {fileID: 129968, guid: cb70b578d1fec1e4892024ee505eda1b, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 129968, guid: cb70b578d1fec1e4892024ee505eda1b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 497614, guid: cb70b578d1fec1e4892024ee505eda1b, type: 3}
       propertyPath: m_LocalScale.x
@@ -633,6 +641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_02
       objectReference: {fileID: 0}
+    - target: {fileID: 129968, guid: cb70b578d1fec1e4892024ee505eda1b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 497614, guid: cb70b578d1fec1e4892024ee505eda1b, type: 3}
       propertyPath: m_LocalScale.x
       value: 8
@@ -707,6 +719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Room_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 148076, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 467558, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.916748
@@ -768,6 +784,10 @@ PrefabInstance:
     - target: {fileID: 128746, guid: 32c513dd4f75bc24692549a1a831b5c3, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_Large_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 128746, guid: 32c513dd4f75bc24692549a1a831b5c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 400754, guid: 32c513dd4f75bc24692549a1a831b5c3, type: 3}
       propertyPath: m_LocalScale.x
@@ -843,6 +863,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Door_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 139618, guid: 190d4f5956778ad4187f87bab391090c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 413402, guid: 190d4f5956778ad4187f87bab391090c, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -917,6 +941,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Rickety_Dock_Platform_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 115408, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 459746, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
       propertyPath: m_LocalPosition.x
       value: 39.902313
@@ -979,6 +1007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Rickety_Dock_Platform_02 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 115408, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 459746, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
       propertyPath: m_LocalPosition.x
       value: -34.097717
@@ -1040,6 +1072,10 @@ PrefabInstance:
     - target: {fileID: 112590, guid: e046c93de4271d8479a58e3debc24458, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Fort_Stairs_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 112590, guid: e046c93de4271d8479a58e3debc24458, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 401024, guid: e046c93de4271d8479a58e3debc24458, type: 3}
       propertyPath: m_LocalScale.x
@@ -1115,6 +1151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Wall_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 171822, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 451906, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14
@@ -1176,6 +1216,10 @@ PrefabInstance:
     - target: {fileID: 139618, guid: 190d4f5956778ad4187f87bab391090c, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Fort_Door_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 139618, guid: 190d4f5956778ad4187f87bab391090c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 413402, guid: 190d4f5956778ad4187f87bab391090c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1239,6 +1283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_PalmTree_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 193380, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 420760, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.689148
@@ -1300,6 +1348,10 @@ PrefabInstance:
     - target: {fileID: 148076, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Fort_Room_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 148076, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 467558, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1425,6 +1477,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 129968, guid: cb70b578d1fec1e4892024ee505eda1b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 497614, guid: cb70b578d1fec1e4892024ee505eda1b, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -1499,6 +1555,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Rickety_Dock_Platform_02
       objectReference: {fileID: 0}
+    - target: {fileID: 115408, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 459746, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.902313
@@ -1560,6 +1620,10 @@ PrefabInstance:
     - target: {fileID: 109168, guid: 208fdd3ef1228294c807f19ad1f8a2b3, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_Arch_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 109168, guid: 208fdd3ef1228294c807f19ad1f8a2b3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 477554, guid: 208fdd3ef1228294c807f19ad1f8a2b3, type: 3}
       propertyPath: m_LocalScale.x
@@ -1635,6 +1699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Door_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 139618, guid: 190d4f5956778ad4187f87bab391090c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 413402, guid: 190d4f5956778ad4187f87bab391090c, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -1709,6 +1777,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Wall_01
       objectReference: {fileID: 0}
+    - target: {fileID: 171822, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 451906, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -1770,6 +1842,10 @@ PrefabInstance:
     - target: {fileID: 112590, guid: e046c93de4271d8479a58e3debc24458, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Fort_Stairs_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 112590, guid: e046c93de4271d8479a58e3debc24458, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 401024, guid: e046c93de4271d8479a58e3debc24458, type: 3}
       propertyPath: m_LocalScale.x
@@ -1845,6 +1921,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Tower_01
       objectReference: {fileID: 0}
+    - target: {fileID: 115032, guid: a27a8cc8a2d58fc4fb0a1b4d56a7ac62, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 440710, guid: a27a8cc8a2d58fc4fb0a1b4d56a7ac62, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
@@ -1906,6 +1986,10 @@ PrefabInstance:
     - target: {fileID: 154830, guid: b2422d159a2884643ba9d94d7a1c57de, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_Huge_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 154830, guid: b2422d159a2884643ba9d94d7a1c57de, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 416180, guid: b2422d159a2884643ba9d94d7a1c57de, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1969,6 +2053,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Rickety_Dock_Platform_02 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 115408, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 459746, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
       propertyPath: m_LocalPosition.x
       value: 47.902313
@@ -2031,6 +2119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Rickety_Dock_Platform_02 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 115408, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 459746, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
       propertyPath: m_LocalPosition.x
       value: 59.902313
@@ -2092,6 +2184,10 @@ PrefabInstance:
     - target: {fileID: 193380, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
       propertyPath: m_Name
       value: SM_Env_PalmTree_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 193380, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 420760, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2158,6 +2254,10 @@ PrefabInstance:
     - target: {fileID: 112590, guid: e046c93de4271d8479a58e3debc24458, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 112590, guid: e046c93de4271d8479a58e3debc24458, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 401024, guid: e046c93de4271d8479a58e3debc24458, type: 3}
       propertyPath: m_LocalScale.x
@@ -2233,6 +2333,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_GrassPatch_01
       objectReference: {fileID: 0}
+    - target: {fileID: 158966, guid: 573aff33fc7399f4495992dfcd86f602, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 447994, guid: 573aff33fc7399f4495992dfcd86f602, type: 3}
       propertyPath: m_LocalScale.x
       value: 8
@@ -2307,6 +2411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Rickety_Dock_Platform_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 115408, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 459746, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.902313
@@ -2368,6 +2476,10 @@ PrefabInstance:
     - target: {fileID: 112590, guid: e046c93de4271d8479a58e3debc24458, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Fort_Stairs_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 112590, guid: e046c93de4271d8479a58e3debc24458, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 401024, guid: e046c93de4271d8479a58e3debc24458, type: 3}
       propertyPath: m_LocalScale.x
@@ -2443,6 +2555,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Wall_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 171822, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 451906, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17
@@ -2504,6 +2620,10 @@ PrefabInstance:
     - target: {fileID: 171822, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Fort_Wall_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171822, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 451906, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2567,6 +2687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_PalmTree_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 193380, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 420760, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.059998
@@ -2628,6 +2752,10 @@ PrefabInstance:
     - target: {fileID: 115408, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Rickety_Dock_Platform_02 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 115408, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 459746, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2691,6 +2819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Rickety_Dock_Platform_02 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 115408, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 459746, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
       propertyPath: m_LocalPosition.x
       value: 59.902313
@@ -2752,6 +2884,10 @@ PrefabInstance:
     - target: {fileID: 171822, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Fort_Wall_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171822, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 451906, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2885,6 +3021,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Wall_01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 171822, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 451906, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.767944
@@ -2946,6 +3086,10 @@ PrefabInstance:
     - target: {fileID: 122516, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_Large_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 122516, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 426668, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
       propertyPath: m_LocalScale.x
@@ -3021,6 +3165,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Room_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 148076, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 467558, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -3095,6 +3243,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Tower_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 115032, guid: a27a8cc8a2d58fc4fb0a1b4d56a7ac62, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 440710, guid: a27a8cc8a2d58fc4fb0a1b4d56a7ac62, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25
@@ -3157,6 +3309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Room_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 148076, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 467558, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.916748
@@ -3218,6 +3374,10 @@ PrefabInstance:
     - target: {fileID: 115408, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Rickety_Dock_Platform_02 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 115408, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 459746, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3346,6 +3506,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Rickety_Dock_Platform_02 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 115408, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 459746, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.097717
@@ -3407,6 +3571,10 @@ PrefabInstance:
     - target: {fileID: 139618, guid: 190d4f5956778ad4187f87bab391090c, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Fort_Door_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 139618, guid: 190d4f5956778ad4187f87bab391090c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 413402, guid: 190d4f5956778ad4187f87bab391090c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3576,6 +3744,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_PalmTree_02 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 193380, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 420760, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.059998
@@ -3700,6 +3872,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Rickety_Dock_Platform_02 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 115408, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 459746, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.097717
@@ -3761,6 +3937,10 @@ PrefabInstance:
     - target: {fileID: 129968, guid: cb70b578d1fec1e4892024ee505eda1b, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 129968, guid: cb70b578d1fec1e4892024ee505eda1b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 497614, guid: cb70b578d1fec1e4892024ee505eda1b, type: 3}
       propertyPath: m_LocalScale.x
@@ -3835,6 +4015,10 @@ PrefabInstance:
     - target: {fileID: 158966, guid: 573aff33fc7399f4495992dfcd86f602, type: 3}
       propertyPath: m_Name
       value: SM_Env_GrassPatch_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 158966, guid: 573aff33fc7399f4495992dfcd86f602, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 447994, guid: 573aff33fc7399f4495992dfcd86f602, type: 3}
       propertyPath: m_LocalScale.x
@@ -3913,6 +4097,10 @@ PrefabInstance:
     - target: {fileID: 165080, guid: aaf146f0b1899d54a8a5cf4be35172cd, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 165080, guid: aaf146f0b1899d54a8a5cf4be35172cd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 454732, guid: aaf146f0b1899d54a8a5cf4be35172cd, type: 3}
       propertyPath: m_LocalScale.x
@@ -4016,6 +4204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Room_01
       objectReference: {fileID: 0}
+    - target: {fileID: 148076, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 467558, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -4090,6 +4282,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Tower_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 115032, guid: a27a8cc8a2d58fc4fb0a1b4d56a7ac62, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 440710, guid: a27a8cc8a2d58fc4fb0a1b4d56a7ac62, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
@@ -4151,6 +4347,10 @@ PrefabInstance:
     - target: {fileID: 176212, guid: 05a5ccf2524700d478ec12ced4d3ab30, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Fort_Door_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 176212, guid: 05a5ccf2524700d478ec12ced4d3ab30, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 466408, guid: 05a5ccf2524700d478ec12ced4d3ab30, type: 3}
       propertyPath: m_LocalScale.x
@@ -4225,6 +4425,10 @@ PrefabInstance:
     - target: {fileID: 193380, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
       propertyPath: m_Name
       value: SM_Env_PalmTree_02 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 193380, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 420760, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4350,6 +4554,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Room_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 148076, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 467558, guid: 4ccb1c3bf907ef74b92d63c996c095f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.916748
@@ -4411,6 +4619,10 @@ PrefabInstance:
     - target: {fileID: 115408, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Rickety_Dock_Platform_02 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 115408, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 459746, guid: 5af47ec0ed24a954cbd9f00d841a6107, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4474,6 +4686,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Wall_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 171822, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 451906, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14
@@ -4535,6 +4751,10 @@ PrefabInstance:
     - target: {fileID: 112590, guid: e046c93de4271d8479a58e3debc24458, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Fort_Stairs_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 112590, guid: e046c93de4271d8479a58e3debc24458, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 401024, guid: e046c93de4271d8479a58e3debc24458, type: 3}
       propertyPath: m_LocalScale.x
@@ -4610,6 +4830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_Large_09
       objectReference: {fileID: 0}
+    - target: {fileID: 146674, guid: 6aab6a688220bd24fb3ed0efc8a33722, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 450442, guid: 6aab6a688220bd24fb3ed0efc8a33722, type: 3}
       propertyPath: m_LocalScale.x
       value: 4
@@ -4684,6 +4908,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Wall_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 171822, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 451906, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.767914
@@ -4745,6 +4973,10 @@ PrefabInstance:
     - target: {fileID: 171822, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Fort_Wall_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171822, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 451906, guid: 268a16c5bfb05284b87a038b894cdd8f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4808,6 +5040,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Tower_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 115032, guid: a27a8cc8a2d58fc4fb0a1b4d56a7ac62, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 440710, guid: a27a8cc8a2d58fc4fb0a1b4d56a7ac62, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14
@@ -4869,6 +5105,10 @@ PrefabInstance:
     - target: {fileID: 129968, guid: cb70b578d1fec1e4892024ee505eda1b, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 129968, guid: cb70b578d1fec1e4892024ee505eda1b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 497614, guid: cb70b578d1fec1e4892024ee505eda1b, type: 3}
       propertyPath: m_LocalScale.x
@@ -4943,6 +5183,10 @@ PrefabInstance:
     - target: {fileID: 158966, guid: 573aff33fc7399f4495992dfcd86f602, type: 3}
       propertyPath: m_Name
       value: SM_Env_GrassPatch_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 158966, guid: 573aff33fc7399f4495992dfcd86f602, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 447994, guid: 573aff33fc7399f4495992dfcd86f602, type: 3}
       propertyPath: m_LocalScale.x

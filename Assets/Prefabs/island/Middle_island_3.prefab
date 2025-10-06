@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 111
   m_IsActive: 1
 --- !u!4 &7986714218886341479
 Transform:
@@ -82,6 +82,10 @@ PrefabInstance:
     - target: {fileID: 158966, guid: 573aff33fc7399f4495992dfcd86f602, type: 3}
       propertyPath: m_Name
       value: SM_Env_GrassPatch_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 158966, guid: 573aff33fc7399f4495992dfcd86f602, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 447994, guid: 573aff33fc7399f4495992dfcd86f602, type: 3}
       propertyPath: m_LocalScale.x
@@ -157,6 +161,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Grass_03
       objectReference: {fileID: 0}
+    - target: {fileID: 133126, guid: ab08969352dd15648919e529870214e2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 438250, guid: ab08969352dd15648919e529870214e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.9456954
@@ -218,6 +226,10 @@ PrefabInstance:
     - target: {fileID: 151648, guid: 5e7b6b95fb6b328478f2ffbc8cf7f9e5, type: 3}
       propertyPath: m_Name
       value: SM_Env_Mangrove_Tree_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 151648, guid: 5e7b6b95fb6b328478f2ffbc8cf7f9e5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 495546, guid: 5e7b6b95fb6b328478f2ffbc8cf7f9e5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -284,6 +296,10 @@ PrefabInstance:
     - target: {fileID: 172296, guid: 34bbbcb578754d24782b09d5786905a9, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 172296, guid: 34bbbcb578754d24782b09d5786905a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 458228, guid: 34bbbcb578754d24782b09d5786905a9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -374,6 +390,10 @@ PrefabInstance:
     - target: {fileID: 151648, guid: 5e7b6b95fb6b328478f2ffbc8cf7f9e5, type: 3}
       propertyPath: m_Name
       value: SM_Env_Mangrove_Tree_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 151648, guid: 5e7b6b95fb6b328478f2ffbc8cf7f9e5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 495546, guid: 5e7b6b95fb6b328478f2ffbc8cf7f9e5, type: 3}
       propertyPath: m_LocalPosition.x

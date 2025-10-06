@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 111
   m_IsActive: 1
 --- !u!4 &2426146404654181081
 Transform:
@@ -83,6 +83,10 @@ PrefabInstance:
     - target: {fileID: 149894, guid: aa20fb1f8fc0c534b9ece3c761be15f1, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149894, guid: aa20fb1f8fc0c534b9ece3c761be15f1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 464018, guid: aa20fb1f8fc0c534b9ece3c761be15f1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -173,6 +177,10 @@ PrefabInstance:
     - target: {fileID: 163448, guid: 289536fb3806f9447a117b250647974d, type: 3}
       propertyPath: m_Name
       value: SM_Env_Flowers_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 163448, guid: 289536fb3806f9447a117b250647974d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 478270, guid: 289536fb3806f9447a117b250647974d, type: 3}
       propertyPath: m_LocalScale.x

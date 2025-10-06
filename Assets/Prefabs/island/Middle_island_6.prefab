@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 111
   m_IsActive: 1
 --- !u!4 &4882653959859641339
 Transform:
@@ -87,6 +87,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_Canopy_03
       objectReference: {fileID: 0}
+    - target: {fileID: 175800, guid: c299059ada8bdd84caa1932d26a54eae, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 434452, guid: c299059ada8bdd84caa1932d26a54eae, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -156,6 +160,10 @@ PrefabInstance:
     - target: {fileID: 167606, guid: 92bb6e2f8fc23254f8d299b6f2b7601c, type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_Base_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 167606, guid: 92bb6e2f8fc23254f8d299b6f2b7601c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 464656, guid: 92bb6e2f8fc23254f8d299b6f2b7601c, type: 3}
       propertyPath: m_LocalScale.x
@@ -231,6 +239,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_Large_02 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 147766, guid: 5020b8d7aa9cd7a46a242706ea6cdcb9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 490046, guid: 5020b8d7aa9cd7a46a242706ea6cdcb9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.615726
@@ -293,6 +305,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_Large_02 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 147766, guid: 5020b8d7aa9cd7a46a242706ea6cdcb9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 490046, guid: 5020b8d7aa9cd7a46a242706ea6cdcb9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.384602
@@ -354,6 +370,10 @@ PrefabInstance:
     - target: {fileID: 129498, guid: 509ce055e3e7b2e458b05260bdf87f7e, type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_Vines_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 129498, guid: 509ce055e3e7b2e458b05260bdf87f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 434310, guid: 509ce055e3e7b2e458b05260bdf87f7e, type: 3}
       propertyPath: m_LocalScale.x
@@ -429,6 +449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_Large_02
       objectReference: {fileID: 0}
+    - target: {fileID: 147766, guid: 5020b8d7aa9cd7a46a242706ea6cdcb9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 490046, guid: 5020b8d7aa9cd7a46a242706ea6cdcb9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.758465
@@ -494,6 +518,10 @@ PrefabInstance:
     - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalScale.x
@@ -597,6 +625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_Large_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 147766, guid: 5020b8d7aa9cd7a46a242706ea6cdcb9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 490046, guid: 5020b8d7aa9cd7a46a242706ea6cdcb9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.27052057
@@ -658,6 +690,10 @@ PrefabInstance:
     - target: {fileID: 147766, guid: 5020b8d7aa9cd7a46a242706ea6cdcb9, type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_Large_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 147766, guid: 5020b8d7aa9cd7a46a242706ea6cdcb9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 490046, guid: 5020b8d7aa9cd7a46a242706ea6cdcb9, type: 3}
       propertyPath: m_LocalScale.x

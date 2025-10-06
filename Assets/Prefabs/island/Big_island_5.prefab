@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 111
   m_IsActive: 1
 --- !u!4 &4645307926077419915
 Transform:
@@ -122,6 +122,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_PalmTree_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 131766, guid: ff55c53b30dc5cc4a882b2c38c4bd8f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 497036, guid: ff55c53b30dc5cc4a882b2c38c4bd8f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.88
@@ -183,6 +187,10 @@ PrefabInstance:
     - target: {fileID: 131766, guid: ff55c53b30dc5cc4a882b2c38c4bd8f2, type: 3}
       propertyPath: m_Name
       value: SM_Env_PalmTree_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 131766, guid: ff55c53b30dc5cc4a882b2c38c4bd8f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 497036, guid: ff55c53b30dc5cc4a882b2c38c4bd8f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -246,6 +254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_PalmTree_02
       objectReference: {fileID: 0}
+    - target: {fileID: 193380, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 420760, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.478294
@@ -308,6 +320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_Canopy_01
       objectReference: {fileID: 0}
+    - target: {fileID: 178582, guid: cfca1c089299e6d4bb39400674ffee14, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 410200, guid: cfca1c089299e6d4bb39400674ffee14, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.6684356
@@ -369,6 +385,10 @@ PrefabInstance:
     - target: {fileID: 163448, guid: 289536fb3806f9447a117b250647974d, type: 3}
       propertyPath: m_Name
       value: SM_Env_Flowers_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 163448, guid: 289536fb3806f9447a117b250647974d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 478270, guid: 289536fb3806f9447a117b250647974d, type: 3}
       propertyPath: m_LocalScale.x
@@ -444,6 +464,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Flowers_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 163448, guid: 289536fb3806f9447a117b250647974d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 478270, guid: 289536fb3806f9447a117b250647974d, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -518,6 +542,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Tree_Canopy_04
       objectReference: {fileID: 0}
+    - target: {fileID: 180182, guid: fa968fd5cd6b6c04f96dc2a247a893b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 425938, guid: fa968fd5cd6b6c04f96dc2a247a893b5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.11
@@ -579,6 +607,10 @@ PrefabInstance:
     - target: {fileID: 180182, guid: fa968fd5cd6b6c04f96dc2a247a893b5, type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_Canopy_04 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 180182, guid: fa968fd5cd6b6c04f96dc2a247a893b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 425938, guid: fa968fd5cd6b6c04f96dc2a247a893b5, type: 3}
       propertyPath: m_LocalScale.x
@@ -650,6 +682,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Shanty_Preset_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 168460, guid: 0f2c24d6d5629e348b89418d85ed89ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 445380, guid: 0f2c24d6d5629e348b89418d85ed89ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.9599905
@@ -712,6 +748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_PalmTree_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 193380, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 420760, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.94
@@ -773,6 +813,10 @@ PrefabInstance:
     - target: {fileID: 110346, guid: aac9c1a836afea640963b9afeffd9f6f, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Shanty_Preset_Bar_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 110346, guid: aac9c1a836afea640963b9afeffd9f6f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 415744, guid: aac9c1a836afea640963b9afeffd9f6f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -839,6 +883,10 @@ PrefabInstance:
     - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalScale.x
@@ -942,6 +990,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Rickety_Tower_03
       objectReference: {fileID: 0}
+    - target: {fileID: 185566, guid: be5b4381dc9e4814b9db55a58c8c9d30, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 423242, guid: be5b4381dc9e4814b9db55a58c8c9d30, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.288786
@@ -1003,6 +1055,10 @@ PrefabInstance:
     - target: {fileID: 168460, guid: 0f2c24d6d5629e348b89418d85ed89ca, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Shanty_Preset_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 168460, guid: 0f2c24d6d5629e348b89418d85ed89ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 445380, guid: 0f2c24d6d5629e348b89418d85ed89ca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1066,6 +1122,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Shanty_SideAttachment_02
       objectReference: {fileID: 0}
+    - target: {fileID: 111286, guid: 55deae894dcf8e340ba7cc54cddf5ab5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 429016, guid: 55deae894dcf8e340ba7cc54cddf5ab5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.411343
@@ -1127,6 +1187,10 @@ PrefabInstance:
     - target: {fileID: 126662, guid: e34c64e923271524bb4523c806498a47, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Dock_Bridge_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 126662, guid: e34c64e923271524bb4523c806498a47, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 419620, guid: e34c64e923271524bb4523c806498a47, type: 3}
       propertyPath: m_LocalScale.x
@@ -1202,6 +1266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Flowers_02
       objectReference: {fileID: 0}
+    - target: {fileID: 163448, guid: 289536fb3806f9447a117b250647974d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 478270, guid: 289536fb3806f9447a117b250647974d, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -1276,6 +1344,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_PalmTree_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 193380, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 420760, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.06
@@ -1341,6 +1413,10 @@ PrefabInstance:
     - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalScale.x
@@ -1444,6 +1520,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_PalmTree_02 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 193380, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 420760, guid: cc73a13bbda6a7f4ca14d0763f94fc5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.26
@@ -1506,6 +1586,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Shanty_Preset_02
       objectReference: {fileID: 0}
+    - target: {fileID: 168460, guid: 0f2c24d6d5629e348b89418d85ed89ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 445380, guid: 0f2c24d6d5629e348b89418d85ed89ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.76
@@ -1567,6 +1651,10 @@ PrefabInstance:
     - target: {fileID: 180244, guid: b29aec4749f571f4ebd074e202f6bd51, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Shanty_Preset_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 180244, guid: b29aec4749f571f4ebd074e202f6bd51, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 495580, guid: b29aec4749f571f4ebd074e202f6bd51, type: 3}
       propertyPath: m_LocalPosition.x
