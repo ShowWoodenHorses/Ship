@@ -11,6 +11,6 @@ namespace Assets.Scripts.Configs
         public EnemyType[] enemyTypes;
 
         public int maxLimitEnemy;
-        public int intervalSpawn;
+        public float intervalSpawn;
     }
 }

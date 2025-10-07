@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabRef: {fileID: 0}
-  maxHealth: 100
+  maxHealth: 60
   currentHealth: 0
   reward: 25
   isReward: 1

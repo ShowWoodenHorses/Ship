@@ -16,7 +16,7 @@ MonoBehaviour:
   nameItemText_EN: '"Carrack"'
   iconItem: {fileID: 21300000, guid: ec048dbce06d03b429a553f7dd8771f3, type: 3}
   idItem: ship4
-  costItem: 400
+  costItem: 500
   description: "\u0422\u0435\u043D\u0435\u0432\u043E\u0439 \u043A\u043E\u0440\u0430\u0431\u043B\u044C
     \u0441 \u0432\u0435\u043B\u0438\u043A\u043E\u043B\u0435\u043F\u043D\u043E\u0439 
     \u043F\u043E\u0434\u0432\u0438\u0436\u043D\u043E\u0441\u0442\u044C\u044E. \u0415\u0434\u0438\u043D\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0439,

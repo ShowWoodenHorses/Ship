@@ -105,7 +105,7 @@ MonoBehaviour:
   soundShotPrefab: {fileID: 3296352006043120542, guid: 552e0fea8872dc04f921e67aaa5027aa, type: 3}
   soundShotWavePrefab: {fileID: 3296352006043120542, guid: 4353cb33cf5ba574fbc368b83e9f4d27, type: 3}
   soundTakeDamagePrefab: {fileID: 3296352006043120542, guid: 537eab0cbf38f554a8ec7f74ebc8adc2, type: 3}
-  bulletConfig: {fileID: 11400000, guid: c5839aeeff6d32840b42c18e9bb04a73, type: 2}
+  bulletConfig: {fileID: 11400000, guid: 63efcfe928002464dad2518ebf80d9df, type: 2}
 --- !u!1 &3743165973978822154
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,13 +15,13 @@ MonoBehaviour:
   id: level10
   enemyTypes:
   - prefab: {fileID: 4716685156279246426, guid: a2be166c16198914bb89ccb475327be8, type: 3}
-    maxCount: 1
-    currentCount: 1
-  - prefab: {fileID: 1834302381995290884, guid: 63cc3412357bd45429ce60caf6bc70fb, type: 3}
     maxCount: 2
-    currentCount: 2
-  - prefab: {fileID: 1834302381995290884, guid: d69d896e31aeb0549a9eb78145abf6c1, type: 3}
-    maxCount: 1
-    currentCount: 1
+    currentCount: 0
+  - prefab: {fileID: 1834302381995290884, guid: 63cc3412357bd45429ce60caf6bc70fb, type: 3}
+    maxCount: 3
+    currentCount: 0
+  - prefab: {fileID: 4851598311652638919, guid: b0952a464d38b8c4481ac800efddbe35, type: 3}
+    maxCount: 5
+    currentCount: 0
   maxLimitEnemy: 10
-  intervalSpawn: 15
+  intervalSpawn: 2

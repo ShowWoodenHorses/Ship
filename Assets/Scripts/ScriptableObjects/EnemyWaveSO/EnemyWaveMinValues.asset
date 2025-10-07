@@ -13,25 +13,43 @@ MonoBehaviour:
   m_Name: EnemyWaveMinValues
   m_EditorClassIdentifier: 
   minValueEnemies:
-  - minScore: 15
+  - minScore: 0
     enemyWaveId: level1
-  - minScore: 55
+  - minScore: 40
     enemyWaveId: level2
   - minScore: 100
     enemyWaveId: level3
-  - minScore: 200
+  - minScore: 240
     enemyWaveId: level4
-  - minScore: 300
+  - minScore: 400
     enemyWaveId: level5
-  - minScore: 500
+  - minScore: 790
     enemyWaveId: level6
-  - minScore: 600
+  - minScore: 1230
     enemyWaveId: level7
-  - minScore: 900
+  - minScore: 1780
     enemyWaveId: level8
-  - minScore: 1200
+  - minScore: 2640
     enemyWaveId: level9
-  - minScore: 1500
+  - minScore: 3650
     enemyWaveId: level10
+  - minScore: 5480
+    enemyWaveId: level11
   - minScore: 2000
     enemyWaveId: level11
+  - minScore: 2000
+    enemyWaveId: level11
+  - minScore: 2000
+    enemyWaveId: level11
+  - minScore: 16060
+    enemyWaveId: level15
+  - minScore: 21000
+    enemyWaveId: level16
+  - minScore: 2000
+    enemyWaveId: level11
+  - minScore: 32280
+    enemyWaveId: level18
+  - minScore: 38600
+    enemyWaveId: level19
+  - minScore: 45850
+    enemyWaveId: level20

@@ -178,7 +178,7 @@ public class EnemySpawner : MonoBehaviour
         maxTotalEnemies = newMaxLimitEnemy;
     }
 
-    private void UpdateCheckInterval(int newInterval)
+    private void UpdateCheckInterval(float newInterval)
     {
         checkInterval = newInterval;
     }

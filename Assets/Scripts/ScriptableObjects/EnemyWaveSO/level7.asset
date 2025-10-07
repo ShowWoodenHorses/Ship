@@ -14,11 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: level7
   enemyTypes:
-  - prefab: {fileID: 1834302381995290884, guid: d69d896e31aeb0549a9eb78145abf6c1, type: 3}
-    maxCount: 3
+  - prefab: {fileID: 4851598311652638919, guid: b0952a464d38b8c4481ac800efddbe35, type: 3}
+    maxCount: 6
     currentCount: 0
-  - prefab: {fileID: 1224564754865152093, guid: db2e0361dfbcaa24eaaddf2b2cc72523, type: 3}
-    maxCount: 1
+  - prefab: {fileID: 477149502635523068, guid: f9e27846cfda7e44a92d7f8e3e484135, type: 3}
+    maxCount: 6
     currentCount: 0
-  maxLimitEnemy: 4
-  intervalSpawn: 10
+  - prefab: {fileID: 6193194426652999280, guid: fa849650c8c64184c857ba6a5818e1b9, type: 3}
+    maxCount: 4
+    currentCount: 0
+  maxLimitEnemy: 16
+  intervalSpawn: 1

@@ -609,9 +609,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabRef: {fileID: 0}
-  maxHealth: 300
+  maxHealth: 400
   currentHealth: 0
-  reward: 90
+  reward: 200
   isReward: 1
   HealthObject: {fileID: 6967008774786704014}
   timeShowHealth: 2
