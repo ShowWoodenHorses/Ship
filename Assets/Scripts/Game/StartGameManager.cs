@@ -14,6 +14,7 @@ namespace Assets.Scripts.Game
         [SerializeField] private AudioSettingsManager audioSettingsManager;
         [SerializeField] private SoundPoolManager soundPoolManager;
         [SerializeField] private AudioMixer audioMixer;
+        [SerializeField] private MusicManager musicManager;
         private void Awake()
         {
             ContinueButton.SetActive(false);
@@ -29,6 +30,7 @@ namespace Assets.Scripts.Game
         {
             audioSettingsManager.Initialize();
             soundPoolManager.Initialize(audioMixer);
+            musicManager.Initialize(audioSettingsManager, audioMixer);
         }
 
         public void LoadGame()
