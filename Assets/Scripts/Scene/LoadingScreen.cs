@@ -9,16 +9,17 @@ namespace Assets.Scripts.Scene
     public class LoadingScreen : MonoBehaviour
     {
         [Header("UI элементы")]
-        public Image progressBar;          // спрайт полосы (Image, type = Filled)
-        public Image progressItem;          // спрайт полосы (Image, type = Filled)
-        public TextMeshProUGUI progressText; // проценты
+        public Image progressBar;           // Полоса прогресса (Image, type = Filled)
+        public Image progressItem;          // Иконка, движущаяся по полосе
+        public TextMeshProUGUI progressText; // Текст с процентами
 
-        private static string sceneToLoad; // сюда передадим имя сцены
+        private static string sceneToLoad;
+        private float fakeProgress = 0f;    // Псевдопрогресс (0–100)
 
         public static void LoadScene(string sceneName)
         {
             sceneToLoad = sceneName;
-            SceneManager.LoadScene("LoadingScene"); // грузим сцену загрузки
+            SceneManager.LoadScene("LoadingScene"); // Сначала грузим сцену загрузки
         }
 
         private void Start()
@@ -31,42 +32,56 @@ namespace Assets.Scripts.Scene
             yield return null;
 
             AsyncOperation op = SceneManager.LoadSceneAsync(sceneToLoad);
-            op.allowSceneActivation = false; // ждём полной загрузки
+            op.allowSceneActivation = false;
+
+            float realProgress = 0f;
 
             while (!op.isDone)
             {
-                // Прогресс идёт до 0.9, потом ждёт активации
-                float progress = Mathf.Clamp01(op.progress / 0.9f);
+                // Прогресс Unity идёт до 0.9
+                realProgress = Mathf.Clamp01(op.progress / 0.9f);
 
-                if (progressBar != null)
-                    progressBar.fillAmount = progress;
-
-                if (progressText != null)
-                    progressText.text = Mathf.RoundToInt(progress * 100f) + "%";
-
-                if (progressItem != null)
+                // --- Плавный визуальный прогресс ---
+                if (fakeProgress < realProgress * 100f)
                 {
-                    RectTransform barRect = progressBar.GetComponent<RectTransform>();
-                    RectTransform itemRect = progressItem.GetComponent<RectTransform>();
-
-                    // ширина заполненной части
-                    float barWidth = barRect.rect.width;
-
-                    // смещение от левого края
-                    float newX = -barWidth / 2f + barWidth * progress;
-
-                    // обновляем локальную позицию иконки
-                    itemRect.anchoredPosition = new Vector3(newX, itemRect.localPosition.y, itemRect.localPosition.z);
+                    fakeProgress += Time.deltaTime * 30f; // скорость подъёма
+                }
+                else if (realProgress >= 0.9f)
+                {
+                    // Когда сцена реально почти загружена — дотягиваем до 100%
+                    fakeProgress = Mathf.MoveTowards(fakeProgress, 100f, Time.deltaTime * 40f);
                 }
 
-                // Если сцена загрузилась на 90% → активируем
-                if (op.progress >= 0.9f)
+                // Обновляем UI
+                UpdateUI(fakeProgress / 100f);
+
+                // Когда псевдопрогресс достиг 100 — активируем сцену
+                if (fakeProgress >= 100f)
                 {
-                    // можно сделать задержку/анимацию
                     op.allowSceneActivation = true;
                 }
 
                 yield return null;
+            }
+        }
+
+        private void UpdateUI(float normalizedProgress)
+        {
+            if (progressBar != null)
+                progressBar.fillAmount = normalizedProgress;
+
+            if (progressText != null)
+                progressText.text = Mathf.RoundToInt(normalizedProgress * 100f) + "%";
+
+            if (progressItem != null && progressBar != null)
+            {
+                RectTransform barRect = progressBar.GetComponent<RectTransform>();
+                RectTransform itemRect = progressItem.GetComponent<RectTransform>();
+
+                float barWidth = barRect.rect.width;
+                float newX = -barWidth / 2f + barWidth * normalizedProgress;
+
+                itemRect.anchoredPosition = new Vector3(newX, itemRect.localPosition.y, itemRect.localPosition.z);
             }
         }
     }
