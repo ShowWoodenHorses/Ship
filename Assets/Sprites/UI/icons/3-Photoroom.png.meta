@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -311,10 +311,10 @@ TextureImporter:
       name: 3-Photoroom_9
       rect:
         serializedVersion: 2
-        x: 643
-        y: 712
-        width: 118
-        height: 117
+        x: 637
+        y: 706
+        width: 130
+        height: 127
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

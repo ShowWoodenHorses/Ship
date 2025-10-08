@@ -144,7 +144,7 @@ Material:
     - _Foam_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Light: {r: 0, g: 0.3, b: 0.2, a: 0}
     - _LightColor: {r: 0, g: 0, b: 0, a: 0}
-    - _Shallow_Color: {r: 0.21586865, g: 0.770759, b: 0.9339623, a: 1}
+    - _Shallow_Color: {r: 0.12428801, g: 0.44510558, b: 0.5377358, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _darkColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []

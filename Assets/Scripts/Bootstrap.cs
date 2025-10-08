@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using Assets.Scripts.Animation;
+﻿using Assets.Scripts.Animation;
 using Assets.Scripts.Control;
 using Assets.Scripts.Game;
 using Assets.Scripts.Interface;
@@ -66,8 +65,6 @@ namespace Assets.Scripts
             IShipInput shipInput = platform.CheckCurrentPlatform();
 
             saveLifecycle.Initialize(data);
-
-            mapGeneration.Initialize();
 
             enemyPool.Initialize();
             bulletPool.Initialize();

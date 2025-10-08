@@ -54,6 +54,7 @@ SpriteAtlas:
     - {fileID: -668238208, guid: 53915ee239bb4fc4fba645b4b2160d7c, type: 3}
     - {fileID: -473687154, guid: 53915ee239bb4fc4fba645b4b2160d7c, type: 3}
     - {fileID: -884715325, guid: 53915ee239bb4fc4fba645b4b2160d7c, type: 3}
+    - {fileID: 340085224, guid: eb1c9a307899cf044aac763161c35423, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -63,6 +64,7 @@ SpriteAtlas:
     - eb1c9a307899cf044aac763161c35423: -1199674843
     - eb1c9a307899cf044aac763161c35423: 1367315635
     - eb1c9a307899cf044aac763161c35423: 906584592
+    - eb1c9a307899cf044aac763161c35423: 340085224
     - eb1c9a307899cf044aac763161c35423: -7841678
     - eb1c9a307899cf044aac763161c35423: 1820328885
     - 53915ee239bb4fc4fba645b4b2160d7c: -1589096331
@@ -87,6 +89,7 @@ SpriteAtlas:
   - {fileID: -1199674843, guid: eb1c9a307899cf044aac763161c35423, type: 3}
   - {fileID: 1367315635, guid: eb1c9a307899cf044aac763161c35423, type: 3}
   - {fileID: 906584592, guid: eb1c9a307899cf044aac763161c35423, type: 3}
+  - {fileID: 340085224, guid: eb1c9a307899cf044aac763161c35423, type: 3}
   - {fileID: -7841678, guid: eb1c9a307899cf044aac763161c35423, type: 3}
   - {fileID: 1820328885, guid: eb1c9a307899cf044aac763161c35423, type: 3}
   - {fileID: -1589096331, guid: 53915ee239bb4fc4fba645b4b2160d7c, type: 3}
@@ -110,6 +113,7 @@ SpriteAtlas:
   - 3-Photoroom_10
   - 3-Photoroom_16
   - 3-Photoroom_17
+  - 3-Photoroom_9
   - 3-Photoroom_0
   - 3-Photoroom_5
   - 10241024-icon_9
