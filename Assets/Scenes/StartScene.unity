@@ -2702,8 +2702,8 @@ MonoBehaviour:
   mainMixer: {fileID: 24100000, guid: f19320005adc7ae4b99d7e83722f3cd6, type: 2}
   musicSlider: {fileID: 2082820872}
   soundSlider: {fileID: 2082820871}
-  defaultMusicVolume: 0.5
-  defaultSFXVolume: 0.5
+  defaultMusicVolume: 0.3
+  defaultSFXVolume: 0.3
   musicFadeInDuration: 3
   muteButton: {fileID: 2082820873}
 --- !u!4 &2115142706

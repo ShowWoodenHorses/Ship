@@ -71,7 +71,7 @@ namespace Assets.Scripts.Scene
                 progressBar.fillAmount = normalizedProgress;
 
             if (progressText != null)
-                progressText.text = Mathf.RoundToInt(normalizedProgress * 100f) + "%";
+                progressText.text = Mathf.RoundToInt(normalizedProgress * 99f) + "%";
 
             if (progressItem != null && progressBar != null)
             {

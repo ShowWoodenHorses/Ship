@@ -16,9 +16,9 @@ namespace Assets.Scripts.Sound
         [SerializeField] private Slider soundSlider;
 
         [Range(0.01f, 1f)]
-        [SerializeField] private float defaultMusicVolume = 0.8f;
+        [SerializeField] private float defaultMusicVolume = 0.3f;
         [Range(0.01f, 1f)]
-        [SerializeField] private float defaultSFXVolume = 0.8f;
+        [SerializeField] private float defaultSFXVolume = 0.3f;
 
         [Tooltip("Время плавного нарастания музыки при первом запуске")]
         [SerializeField] private float musicFadeInDuration = 3f;
@@ -30,7 +30,7 @@ namespace Assets.Scripts.Sound
         public void Initialize()
         {
             // Проверяем сохранённые значения
-            float savedMusic = PlayerPrefs.HasKey(MusicKey) ? PlayerPrefs.GetFloat(MusicKey) : 0.01f;
+            float savedMusic = PlayerPrefs.HasKey(MusicKey) ? PlayerPrefs.GetFloat(MusicKey) : defaultMusicVolume;
             float savedSFX = PlayerPrefs.HasKey(SFXKey) ? PlayerPrefs.GetFloat(SFXKey) : defaultSFXVolume;
 
             // Сначала выставляем громкость в миксер (без вызова событий)

@@ -99,14 +99,14 @@ Material:
     - _DstBlendAlpha: 10
     - _EmissionScaleUI: 0
     - _EnvironmentReflections: 1
-    - _Foam_Depth: 1
+    - _Foam_Depth: 1.1
     - _Foam_Noise_Scale: 11
     - _Foam_Ripple_Speed: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.307
     - _GlossinessSource: 0
     - _GlossyReflections: 1
-    - _Intesity: 0.3
+    - _Intesity: 0.01
     - _Metallic: 0.336
     - _Mode: 3
     - _OcclusionStrength: 1
@@ -138,15 +138,15 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0.3537736, g: 0.76630425, b: 1, a: 1}
     - _Color: {r: 0.35377356, g: 0.7663042, b: 1, a: 1}
-    - _Deep_Color: {r: 0.32156864, g: 0.6901961, b: 0.8039216, a: 1}
+    - _Deep_Color: {r: 0.15, g: 0.45, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
-    - _Foam_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Foam_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
     - _Light: {r: 0, g: 0.3, b: 0.2, a: 0}
     - _LightColor: {r: 0, g: 0, b: 0, a: 0}
-    - _Shallow_Color: {r: 0.12428801, g: 0.44510558, b: 0.5377358, a: 1}
+    - _Shallow_Color: {r: 0.2, g: 0.7, b: 0.8, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _darkColor: {r: 1, g: 1, b: 1, a: 0}
+    - _darkColor: {r: 0.15138839, g: 0.37933576, b: 0.509434, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &6634533587640591072
