@@ -3,6 +3,7 @@ using System.Collections;
 using Assets.Scripts.Configs;
 using Assets.Scripts.Save;
 using UnityEngine;
+using YG;
 
 namespace Assets.Scripts
 {
@@ -28,6 +29,7 @@ namespace Assets.Scripts
             currentMoney += amount;
             allTimeMoney += amount;
             saveLifecycle.AddMoney(currentMoney, allTimeMoney);
+            YG2.SetLeaderboard("leaderboardShip", allTimeMoney);
             CheckAndSendForUpdate();
         }
 
