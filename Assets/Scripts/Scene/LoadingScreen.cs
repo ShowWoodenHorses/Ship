@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using YG;
 
 namespace Assets.Scripts.Scene
 {
@@ -18,6 +19,7 @@ namespace Assets.Scripts.Scene
 
         public static void LoadScene(string sceneName)
         {
+            YG2.InterstitialAdvShow();
             sceneToLoad = sceneName;
             SceneManager.LoadScene("LoadingScene"); // Сначала грузим сцену загрузки
         }
