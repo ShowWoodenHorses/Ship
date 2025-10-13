@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItemText: "\"\u041A\u0430\u0440\u0430\u043A\u043A\u0430\""
   nameItemText_EN: '"Carrack"'
+  nameItemText_TR: '"Carrack"'
   iconItem: {fileID: 21300000, guid: ec048dbce06d03b429a553f7dd8771f3, type: 3}
   idItem: ship4
   costItem: 500
@@ -26,3 +27,9 @@ MonoBehaviour:
     \u0438\u0437 \u0441\u0442\u043E\u0440\u043E\u043D), \u0442\u0430\u043A \u0436\u0435
     \u043E\u0431\u043B\u0430\u0434\u0430\u0435\u0442 2 \u043E\u0440\u0443\u0434\u0438\u044F\u043C\u0438
     \u0441 \u0444\u0440\u043E\u043D\u0442\u0430 \u0438 \u0432 \u043A\u043E\u0440\u043C\u0435"
+  description_EN: A shadow ship with excellent maneuverability. The only one that,
+    in addition to the standard broadside guns (three on each side), also has two
+    guns, one at the front and one at the rear.
+  description_TR: "M\xFCkemmel manevra kabiliyetine sahip bir g\xF6lge gemi. Standart
+    borda toplar\u0131na (her iki tarafta \xFC\xE7er adet) ek olarak, biri \xF6nde,
+    biri arkada olmak \xFCzere iki top daha bulunduran tek gemi."

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItemText: "\"\u0413\u0430\u043B\u0435\u0430\u0441\""
   nameItemText_EN: '"Galleass"'
+  nameItemText_TR: '"Galleass"'
   iconItem: {fileID: 21300000, guid: c3a533d193eccf3469209b5bf9b48c38, type: 3}
   idItem: ship2
   costItem: 100
@@ -27,3 +28,10 @@ MonoBehaviour:
     \u0432 \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u0438 \u0438 \u043C\u0430\u043D\u0435\u0432\u0440\u0435\u043D\u043D\u043E\u0441\u0442\u0438
     \u0431\u043E\u043B\u044C\u0448\u0438\u043D\u0441\u0442\u0432\u0443 \u043A\u043E\u0440\u0430\u0431\u043B\u0435\u0439
     \u043F\u043E\u043B\u0443\u043E\u0441\u0442\u0440\u043E\u0432\u0430"
+  description_EN: The ship possesses considerable combat power, as it has five guns
+    on the left and five on the right. At the same time, it is comparable in speed
+    and maneuverability to most ships on the peninsula.
+  description_TR: "Gemi, sol ve sa\u011F tarafta be\u015Fer topuyla hat\u0131r\u0131
+    say\u0131l\u0131r bir muharebe g\xFCc\xFCne sahip. Ayn\u0131 zamanda, yar\u0131madadaki
+    \xE7o\u011Fu gemiyle k\u0131yaslanabilir bir h\u0131z ve manevra kabiliyetine
+    sahip."

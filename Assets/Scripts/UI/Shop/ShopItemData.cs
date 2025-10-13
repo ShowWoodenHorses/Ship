@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using Assets.Scripts.Configs;
 using System;
+using YG;
 
 namespace Assets.Scripts.UI.Shop
 {
@@ -38,12 +39,27 @@ namespace Assets.Scripts.UI.Shop
         public void Initialize(ShopItemConfig shopItemConfig, TextMeshProUGUI descriptionItem)
         {
             this.idItem = shopItemConfig.idItem;
-            this.nameItemText.text = shopItemConfig.nameItemText;
             this.costItemText.text = shopItemConfig.costItem.ToString();
             this.costItem = shopItemConfig.costItem;
             this.iconItem.sprite = shopItemConfig.iconItem;
-            this.description = shopItemConfig.description;
             this.descriptionItem = descriptionItem;
+
+            if (YG2.lang == "en")
+            {
+                this.nameItemText.text = shopItemConfig.nameItemText_EN;
+                this.description = shopItemConfig.description_EN;
+            }
+
+            else if (YG2.lang == "tr")
+            {
+                this.nameItemText.text = shopItemConfig.nameItemText_TR;
+                this.description = shopItemConfig.description_TR;
+            }
+            else
+            {
+                this.nameItemText.text = shopItemConfig.nameItemText;
+                this.description = shopItemConfig.description;
+            }
 
             AddButtons();
             UpdateButtons(BuyButton);

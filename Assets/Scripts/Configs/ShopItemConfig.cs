@@ -7,6 +7,7 @@ namespace Assets.Scripts.Configs
     {
         public string nameItemText;
         public string nameItemText_EN;
+        public string nameItemText_TR;
         public Sprite iconItem;
 
         public string idItem;
@@ -14,5 +15,7 @@ namespace Assets.Scripts.Configs
 
         [TextArea]
         public string description;
+        public string description_EN;
+        public string description_TR;
     }
 }

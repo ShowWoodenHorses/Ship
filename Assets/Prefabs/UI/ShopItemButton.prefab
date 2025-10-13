@@ -357,6 +357,7 @@ GameObject:
   - component: {fileID: 7828258989062140075}
   - component: {fileID: 8410335025522950778}
   - component: {fileID: 2774608435011114040}
+  - component: {fileID: 505884551800826444}
   m_Layer: 5
   m_Name: already_text
   m_TagString: Untagged
@@ -482,6 +483,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &505884551800826444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3213477995960402113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2db93639b70c6e40a0b6ceb4fc9b43b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ru: "\u0423\u0436\u0435 \u0432\u044B\u0431\u0440\u0430\u043D"
+  en: Already selected
+  tr: "Zaten se\xE7ili"
 --- !u!1 &3859498724026826548
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +866,7 @@ GameObject:
   - component: {fileID: 6519653621729822570}
   - component: {fileID: 9110682958711593403}
   - component: {fileID: 7959340684333054045}
+  - component: {fileID: 6132770962286843317}
   m_Layer: 5
   m_Name: select_text
   m_TagString: Untagged
@@ -975,6 +992,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6132770962286843317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6913168275321145575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2db93639b70c6e40a0b6ceb4fc9b43b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ru: "\u0412\u044B\u0431\u0440\u0430\u0442\u044C"
+  en: Choose
+  tr: "Se\xE7mek"
 --- !u!1 &6970354718429070698
 GameObject:
   m_ObjectHideFlags: 0

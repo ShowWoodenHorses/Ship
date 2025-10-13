@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItemText: "\"\u041A\u0430\u0440\u0442\u0435\u0447\u044C\""
   nameItemText_EN: '"Buckshot"'
+  nameItemText_TR: '"Buckshot"'
   iconItem: {fileID: 21300000, guid: a9665d552505470469860e7e5e2c3889, type: 3}
   idItem: bullet2
   costItem: 50
@@ -24,3 +25,8 @@ MonoBehaviour:
     \u0441\u0435\u0440\u044C\u0435\u0437\u043D\u043E\u0433\u043E \u0443\u0440\u043E\u043D\u0430
     \u043F\u043E \u0441\u043E\u043E\u0440\u0443\u0436\u0435\u043D\u0438\u044F\u043C
     \u043D\u0435 \u0433\u043E\u0434\u044F\u0442\u0441\u044F"
+  description_EN: Small cannonballs for massive destruction of enemy ships. However,
+    they are not suitable for causing serious damage to structures.
+  description_TR: "D\xFC\u015Fman gemilerine b\xFCy\xFCk \xE7apl\u0131 hasar vermek
+    i\xE7in kullan\u0131lan k\xFC\xE7\xFCk g\xFCllelerdir. Ancak, yap\u0131lara ciddi
+    hasar vermek i\xE7in uygun de\u011Fillerdir."

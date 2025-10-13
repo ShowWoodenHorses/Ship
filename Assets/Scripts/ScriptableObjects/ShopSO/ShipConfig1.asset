@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItemText: "\"\u0411\u0430\u0440\u043A\u0430\u0441\""
   nameItemText_EN: '"Barque"'
+  nameItemText_TR: '"Barque"'
   iconItem: {fileID: 21300000, guid: cd67a50df36b554479ed566125aaa7bb, type: 3}
   idItem: ship1
   costItem: 0
@@ -25,3 +26,8 @@ MonoBehaviour:
     \u0432\u043E\u043E\u0440\u0443\u0436\u0435\u043D\u0438\u044F: 2 \u043F\u0443\u0448\u043A\u0438
     \u043F\u043E \u043B\u0435\u0432\u043E\u043C\u0443 \u0438 \u043F\u0440\u0430\u0432\u043E\u043C\u0443
     \u0431\u043E\u0440\u0442\u0443"
+  description_EN: 'The ship has little combat power, but good speed and mediocre
+    maneuverability. Armament: two cannons, one port and one starboard.'
+  description_TR: "Geminin sava\u015F g\xFCc\xFC d\xFC\u015F\xFCk, ancak h\u0131z\u0131
+    iyi ve manevra kabiliyeti vasat. Silahlanma: \u0130ki top, biri iskelede, biri
+    sancakta."
