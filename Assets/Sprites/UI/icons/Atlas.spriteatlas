@@ -55,6 +55,7 @@ SpriteAtlas:
     - {fileID: -473687154, guid: 53915ee239bb4fc4fba645b4b2160d7c, type: 3}
     - {fileID: -884715325, guid: 53915ee239bb4fc4fba645b4b2160d7c, type: 3}
     - {fileID: 340085224, guid: eb1c9a307899cf044aac763161c35423, type: 3}
+    - {fileID: 2800000, guid: 6bfb610d252e4bc459ec8a4ba20bcbc0, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -82,6 +83,7 @@ SpriteAtlas:
     - 56e3955bbb4d87a4f99703c5b6305eaf: 819254880
     - 56e3955bbb4d87a4f99703c5b6305eaf: -554312225
     - 56e3955bbb4d87a4f99703c5b6305eaf: -420501667
+    - 6bfb610d252e4bc459ec8a4ba20bcbc0: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 878185781, guid: eb1c9a307899cf044aac763161c35423, type: 3}
@@ -107,6 +109,7 @@ SpriteAtlas:
   - {fileID: 819254880, guid: 56e3955bbb4d87a4f99703c5b6305eaf, type: 3}
   - {fileID: -554312225, guid: 56e3955bbb4d87a4f99703c5b6305eaf, type: 3}
   - {fileID: -420501667, guid: 56e3955bbb4d87a4f99703c5b6305eaf, type: 3}
+  - {fileID: 21300000, guid: 6bfb610d252e4bc459ec8a4ba20bcbc0, type: 3}
   m_PackedSpriteNamesToIndex:
   - 3-Photoroom_26
   - 3-Photoroom_28
@@ -131,6 +134,7 @@ SpriteAtlas:
   - 1024_1024_icon_3_48
   - 1024_1024_icon_3_19
   - 1024_1024_icon_3_50
+  - 128_ads_icon
   m_RenderDataMap: {}
   m_Tag: Atlas
   m_IsVariant: 0

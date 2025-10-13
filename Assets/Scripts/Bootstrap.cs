@@ -58,7 +58,8 @@ namespace Assets.Scripts
         [SerializeField] private MusicManager musicManager;
         [SerializeField] private AudioSettingsManager audioSettingsManager;
 
-
+        [Header("Ads")]
+        [SerializeField] private RewardsAds rewardsAds;
         private void Awake()
         {
             data = SaveSystem.Load();
@@ -77,6 +78,8 @@ namespace Assets.Scripts
             audioSettingsManager.Initialize();
             soundPoolManager.Initialize(mainMixer);
             musicManager.Initialize(audioSettingsManager, mainMixer);
+
+            rewardsAds.Initialize(scoreManager);
 
             shipManager.Initialize(data.selectedShipId, data.selectedBulletId, gameplayAnimationController, uiDisplayCannon, shipInput);
             gameManager.Initialize(uiController, scoreManager);

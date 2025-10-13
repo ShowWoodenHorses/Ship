@@ -5,6 +5,7 @@ using Assets.Scripts.Scene;
 using Assets.Scripts.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using YG;
 
 namespace Assets.Scripts.Game
 {
@@ -41,12 +42,14 @@ namespace Assets.Scripts.Game
             countDestroyedBuildingForWin--;
             if (countDestroyedBuildingForWin <= 0)
             {
+                YG2.InterstitialAdvShow();
                 uiController.ShowWinPanel();
             }
         }
 
         private void CheckPlayerHealth(GameObject obj)
         {
+            YG2.InterstitialAdvShow();
             uiController.ShowLosePanel();
         }
 
@@ -67,7 +70,7 @@ namespace Assets.Scripts.Game
 
         public void ExitMenu()
         {
-            SceneManager.LoadScene("StartScene");
+            LoadingScreen.LoadScene("StartScene");
         }
 
         public void DeleteSave()
