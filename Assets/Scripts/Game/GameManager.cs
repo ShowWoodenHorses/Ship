@@ -70,6 +70,7 @@ namespace Assets.Scripts.Game
 
         public void ExitMenu()
         {
+            YG2.GameplayStop();
             LoadingScreen.LoadScene("StartScene");
         }
 

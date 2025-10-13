@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Sound;
 using UnityEngine;
+using YG;
 
 namespace Assets.Scripts
 {
@@ -38,12 +39,14 @@ namespace Assets.Scripts
         public void Pause()
         {
             userPaused = true;
+            YG2.GameplayStop();
             UpdatePause();
         }
 
         public void Resume()
         {
             userPaused = false;
+            YG2.GameplayStart();
             UpdatePause();
         }
     }

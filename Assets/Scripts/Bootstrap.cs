@@ -10,6 +10,7 @@ using Assets.Scripts.UI;
 using Assets.Scripts.UI.Shop;
 using UnityEngine;
 using UnityEngine.Audio;
+using YG;
 
 namespace Assets.Scripts
 {
@@ -84,6 +85,8 @@ namespace Assets.Scripts
             shipManager.Initialize(data.selectedShipId, data.selectedBulletId, gameplayAnimationController, uiDisplayCannon, shipInput);
             gameManager.Initialize(uiController, scoreManager);
             enemySpawner.Initialize(data.currentWaveEnemyId, playerTransform, gameplayAnimationController);
+
+            YG2.GameplayStart();
         }
     }
 }
