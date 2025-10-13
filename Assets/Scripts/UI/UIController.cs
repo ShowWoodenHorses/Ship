@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using Assets.Scripts.Animation;
+using YG;
 
 namespace Assets.Scripts.UI
 {
@@ -35,11 +36,13 @@ namespace Assets.Scripts.UI
 
         public void ShowWinPanel()
         {
+            YG2.MetricaSend("win");
             winPanel.GetComponent<HopupAnimUI>().Hopup();
             pauseManager.Pause();
         }
         public void ShowLosePanel()
         {
+            YG2.MetricaSend("gameOver");
             losePanel.GetComponent<HopupAnimUI>().Hopup();
             pauseManager.Pause();
         }
