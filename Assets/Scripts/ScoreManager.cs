@@ -61,6 +61,8 @@ namespace Assets.Scripts
                     currentWaveId = enemyWaveMinValues.minValueEnemies[i].enemyWaveId;
                     saveLifecycle.ChangeWave(currentWaveId);
                     OnUpdateWave?.Invoke(currentWaveId);
+
+                    YG2.MetricaSend("scoreCount", currentWaveId, allTimeMoney.ToString());
                     break;
                 }
             }

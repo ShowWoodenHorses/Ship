@@ -20,6 +20,7 @@ namespace Assets.Scripts.Game
 
         private void RewardCoin()
         {
+            YG2.MetricaSend("showRewardAds");
             scoreManager.AddMoney(countMoneyReward);
         }
 

@@ -3,6 +3,7 @@ using Assets.Scripts.Scene;
 using Assets.Scripts.Sound;
 using UnityEngine;
 using UnityEngine.Audio;
+using YG;
 
 namespace Assets.Scripts.Game
 {
@@ -35,6 +36,7 @@ namespace Assets.Scripts.Game
 
         public void LoadGame()
         {
+            YG2.MetricaSend("startGame");
             LoadingScreen.LoadScene("SampleScene");
 
         }

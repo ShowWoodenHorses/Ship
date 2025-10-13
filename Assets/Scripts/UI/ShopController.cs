@@ -6,6 +6,7 @@ using Assets.Scripts.Save;
 using Assets.Scripts.UI.Shop;
 using TMPro;
 using UnityEngine;
+using YG;
 
 namespace Assets.Scripts.UI
 {
@@ -91,6 +92,8 @@ namespace Assets.Scripts.UI
             itemData.UpdateButtons(itemData.SelectButton);
             avaliableItems.Add(itemData.idItem);
             saveLifecycle.BuyItem(itemData.idItem);
+
+            YG2.MetricaSend("buyItem", itemData.idItem, itemData.costItem.ToString());
         }
 
         private protected void ChoiceItemHandler(ShopItemData itemData)
@@ -102,6 +105,9 @@ namespace Assets.Scripts.UI
                 UpdateItem(itemData.idItem);
                 currentIdItem = itemData.idItem;
                 itemData.UpdateButtons(itemData.SelectItemText);
+
+                YG2.MetricaSend("selectItem", itemData.idItem, itemData.costItem.ToString());
+
                 UpdateAvaliableItems();
             }
         }
