@@ -210,8 +210,8 @@ MonoBehaviour:
     loadAdv: 0
     testFailAds: 0
   Templates:
-    logoImageFormat: 0
-    backgroundImgFormat: 0
+    logoImageFormat: 1
+    backgroundImgFormat: 4
     gradientBackgroundByLoadGame:
       radial: 0
       angleInclination: 140
@@ -220,16 +220,16 @@ MonoBehaviour:
     customProgressBar: 1
     progressBarSettigs:
       round: 1
-      roundAngle: 10
+      roundAngle: 2
       width: 30
       height: 24
       color1: {r: 0.25, g: 0.6392, b: 1, a: 1}
-      color2: {r: 1, g: 0.831, b: 0.149, a: 0.7}
-    fixedAspectRatio: 0
+      color2: {r: 0.03564434, g: 0.27787575, b: 0.8396226, a: 0.7}
+    fixedAspectRatio: 1
     aspectRatio: 16/9
     disableForMobile: 1
-    fillBackground: 0
-    imageBackground: 0
+    fillBackground: 1
+    imageBackground: 1
     imageName: background.jpg
     gradientBackgroundByAspectRatio:
       radial: 0
