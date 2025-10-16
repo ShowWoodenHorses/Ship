@@ -225,10 +225,10 @@ MonoBehaviour:
       height: 24
       color1: {r: 0.25, g: 0.6392, b: 1, a: 1}
       color2: {r: 0.03564434, g: 0.27787575, b: 0.8396226, a: 0.7}
-    fixedAspectRatio: 1
+    fixedAspectRatio: 0
     aspectRatio: 16/9
     disableForMobile: 1
-    fillBackground: 1
+    fillBackground: 0
     imageBackground: 1
     imageName: background.jpg
     gradientBackgroundByAspectRatio:

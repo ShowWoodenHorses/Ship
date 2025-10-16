@@ -88,5 +88,10 @@ namespace Assets.Scripts
 
             YG2.GameplayStart();
         }
+
+        private void Start()
+        {
+            GlobalAudioManager.Instance.MuteSoundOnStart();
+        }
     }
 }

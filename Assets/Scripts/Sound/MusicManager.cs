@@ -8,16 +8,15 @@ namespace Assets.Scripts.Sound
     {
         public static MusicManager Instance;
 
-        [SerializeField] private AudioSource audioSourcePrefab;
         [SerializeField] private AudioMixer mainMixer;          // общий миксер
         [SerializeField] private AudioMixerGroup musicGroup;    // группа для музыки
         [SerializeField] private string musicParam = "MusicVolume"; // параметр в миксере
 
-        private AudioSource currentAudio;
+        [SerializeField] private AudioSource currentAudio;
         private AudioSettingsManager audioSettingsManager;
         private const string MusicKey = "MusicVolume";
 
-        public void Initialize(AudioSettingsManager audioSettingsManager, AudioMixer mainMixer)
+        private void Awake()
         {
             if (Instance == null) Instance = this;
             else
@@ -25,15 +24,12 @@ namespace Assets.Scripts.Sound
                 Destroy(gameObject);
                 return;
             }
+        }
 
+        public void Initialize(AudioSettingsManager audioSettingsManager, AudioMixer mainMixer)
+        {
             this.audioSettingsManager = audioSettingsManager;
             this.mainMixer = mainMixer;
-
-            currentAudio = Instantiate(audioSourcePrefab, transform);
-            currentAudio.loop = true;
-            currentAudio.playOnAwake = false;
-            currentAudio.outputAudioMixerGroup = musicGroup;
-            currentAudio.volume = 1f; // всегда 1, регулировка только через AudioMixer
 
             PlayMusic();
         }
@@ -64,6 +60,8 @@ namespace Assets.Scripts.Sound
                            startVal,
                            fadeTime);
             }
+
+            AudioListener.pause = PlayerPrefs.GetInt("muteSound") == 1;
         }
 
         public void StopMusic(float fadeTime = 1f)
@@ -77,6 +75,16 @@ namespace Assets.Scripts.Sound
                        0.01f,   // не ставим 0, иначе log10
                        fadeTime)
                    .OnComplete(() => currentAudio.Stop());
+        }
+
+        public void PauseMusic()
+        {
+            if (currentAudio != null) currentAudio.mute = true;
+        }
+
+        public void ContinueMusic()
+        {
+            if (currentAudio != null) currentAudio.mute = false;
         }
 
         private void FadeInMusicDOTween(float from, float to, float duration)

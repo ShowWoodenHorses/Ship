@@ -22853,6 +22853,73 @@ MonoBehaviour:
   ru: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
   en: Settings
   tr: Ayarlar
+--- !u!1001 &619292343
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2123451555}
+    m_Modifications:
+    - target: {fileID: 5385409230362860995, guid: f1a701a8c4b0329489887fdb2014ac61, type: 3}
+      propertyPath: m_Name
+      value: back_music
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250494135394849323, guid: f1a701a8c4b0329489887fdb2014ac61, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250494135394849323, guid: f1a701a8c4b0329489887fdb2014ac61, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250494135394849323, guid: f1a701a8c4b0329489887fdb2014ac61, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250494135394849323, guid: f1a701a8c4b0329489887fdb2014ac61, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250494135394849323, guid: f1a701a8c4b0329489887fdb2014ac61, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250494135394849323, guid: f1a701a8c4b0329489887fdb2014ac61, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250494135394849323, guid: f1a701a8c4b0329489887fdb2014ac61, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250494135394849323, guid: f1a701a8c4b0329489887fdb2014ac61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250494135394849323, guid: f1a701a8c4b0329489887fdb2014ac61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250494135394849323, guid: f1a701a8c4b0329489887fdb2014ac61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1a701a8c4b0329489887fdb2014ac61, type: 3}
+--- !u!82 &619292344 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3296352006043120542, guid: f1a701a8c4b0329489887fdb2014ac61, type: 3}
+  m_PrefabInstance: {fileID: 619292343}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &619292345 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8250494135394849323, guid: f1a701a8c4b0329489887fdb2014ac61, type: 3}
+  m_PrefabInstance: {fileID: 619292343}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &619977084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81728,10 +81795,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ad40f25abcd5d14fa759a70697a4b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSourcePrefab: {fileID: 3296352006043120542, guid: f1a701a8c4b0329489887fdb2014ac61, type: 3}
   mainMixer: {fileID: 24100000, guid: f19320005adc7ae4b99d7e83722f3cd6, type: 2}
   musicGroup: {fileID: 9087867144161894413, guid: f19320005adc7ae4b99d7e83722f3cd6, type: 2}
   musicParam: MusicVolume
+  currentAudio: {fileID: 619292344}
 --- !u!4 &2123451555
 Transform:
   m_ObjectHideFlags: 0
@@ -81744,7 +81811,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 619292345}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2125163037

@@ -32,6 +32,7 @@ namespace Assets.Scripts.Game
             audioSettingsManager.Initialize();
             soundPoolManager.Initialize(audioMixer);
             musicManager.Initialize(audioSettingsManager, audioMixer);
+            GlobalAudioManager.Instance.MuteSoundOnStart();
         }
 
         public void LoadGame()

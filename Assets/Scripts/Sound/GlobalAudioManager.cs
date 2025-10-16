@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Assets.Scripts.Sound
@@ -13,13 +14,18 @@ namespace Assets.Scripts.Sound
         [SerializeField] private GameObject activeSoundImage;
         [SerializeField] private GameObject disableSoundImage;
 
+        public Action<bool> OnToggleMute;
+
         private const string MuteKey = "muteSound";
 
         private void Awake()
         {
             if (Instance == null) Instance = this;
             else Destroy(gameObject);
+        }
 
+        public void Initialize()
+        {
             // загружаем сохранённое значение mute игрока
             userMuted = PlayerPrefs.GetInt(MuteKey, 0) == 1;
             ApplyState();
@@ -30,6 +36,7 @@ namespace Assets.Scripts.Sound
             userMuted = !userMuted;
             PlayerPrefs.SetInt(MuteKey, userMuted ? 1 : 0);
             PlayerPrefs.Save();
+
             ApplyState();
         }
 
@@ -37,6 +44,13 @@ namespace Assets.Scripts.Sound
         {
             systemMuted = value;
             ApplyState();
+        }
+
+        public void MuteSoundOnStart()
+        {
+            AudioListener.pause = true;
+            if (activeSoundImage != null) activeSoundImage.SetActive(false);
+            if (disableSoundImage != null) disableSoundImage.SetActive(true);
         }
 
         private void ApplyState()

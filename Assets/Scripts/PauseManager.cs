@@ -16,14 +16,14 @@ namespace Assets.Scripts
 
         private void OnApplicationFocus(bool hasFocus)
         {
-            GlobalAudioManager.Instance?.SetSystemMute(!hasFocus);
+            GlobalAudioManager.Instance.SetSystemMute(!hasFocus);
             systemPaused = !hasFocus;
             UpdatePause();
         }
 
         private void OnApplicationPause(bool pauseStatus)
         {
-            GlobalAudioManager.Instance?.SetSystemMute(pauseStatus);
+            GlobalAudioManager.Instance.SetSystemMute(pauseStatus);
             systemPaused = pauseStatus;
             UpdatePause();
         }
