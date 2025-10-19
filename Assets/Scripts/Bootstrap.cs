@@ -56,8 +56,6 @@ namespace Assets.Scripts
 
         [Header("Sound")]
         [SerializeField] private AudioMixer mainMixer;
-        [SerializeField] private MusicManager musicManager;
-        [SerializeField] private AudioSettingsManager audioSettingsManager;
 
         [Header("Ads")]
         [SerializeField] private RewardsAds rewardsAds;
@@ -76,9 +74,7 @@ namespace Assets.Scripts
             shopShipController.Initialize(data.ownedItems, data.selectedShipId, saveLifecycle);
             scoreManager.Initialize(data.currentCoins, data.allCoins, saveLifecycle);
 
-            audioSettingsManager.Initialize();
             soundPoolManager.Initialize(mainMixer);
-            musicManager.Initialize(audioSettingsManager, mainMixer);
 
             rewardsAds.Initialize(scoreManager);
 
@@ -87,11 +83,6 @@ namespace Assets.Scripts
             enemySpawner.Initialize(data.currentWaveEnemyId, playerTransform, gameplayAnimationController);
 
             YG2.GameplayStart();
-        }
-
-        private void Start()
-        {
-            GlobalAudioManager.Instance.MuteSoundOnStart();
         }
     }
 }

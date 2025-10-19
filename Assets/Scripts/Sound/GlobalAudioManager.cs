@@ -8,13 +8,13 @@ namespace Assets.Scripts.Sound
     {
         public static GlobalAudioManager Instance;
 
+        public GameObject settingsCanvas;
+
         private bool userMuted = false;   // mute по кнопке
         private bool systemMuted = false; // mute при потере фокуса
 
         [SerializeField] private GameObject activeSoundImage;
         [SerializeField] private GameObject disableSoundImage;
-
-        public Action<bool> OnToggleMute;
 
         private const string MuteKey = "muteSound";
 

@@ -25,20 +25,6 @@ namespace Assets.Scripts.Sound
         [Header("Mute")]
         [SerializeField] private Button muteButton;
 
-        private float currentValueMusic = 0f;
-        private float currentValueSFX = 0f;
-
-        private void OnEnable()
-        {
-            GlobalAudioManager.Instance.OnToggleMute += MuteSound;
-        }
-
-        private void OnDisable()
-        {
-            GlobalAudioManager.Instance.OnToggleMute -= MuteSound;
-        }
-
-
         public void Initialize()
         {
             // Проверяем сохранённые значения
@@ -95,44 +81,6 @@ namespace Assets.Scripts.Sound
         public float GetMusicFadeInDuration()
         {
             return musicFadeInDuration;
-        }
-
-        private void MuteSound(bool isMute)
-        {
-            if (isMute)
-            {
-                float minValue = 0.01f;
-                currentValueMusic = musicSlider.value;
-                currentValueSFX = soundSlider.value;
-
-                musicSlider.SetValueWithoutNotify(minValue);
-                soundSlider.SetValueWithoutNotify(minValue);
-
-                PlayerPrefs.SetFloat(MusicKey, minValue);
-                PlayerPrefs.SetFloat(SFXKey, minValue);
-
-                PlayerPrefs.Save();
-
-                if (musicSlider.value <= 0.05f)
-                    MusicManager.Instance.PauseMusic();
-
-            }
-            else
-            {
-                musicSlider.value = currentValueMusic;
-                soundSlider.value = currentValueSFX;
-
-                musicSlider.SetValueWithoutNotify(musicSlider.value);
-                soundSlider.SetValueWithoutNotify(soundSlider.value);
-
-                PlayerPrefs.SetFloat(MusicKey, musicSlider.value);
-                PlayerPrefs.SetFloat(SFXKey, soundSlider.value);
-
-                PlayerPrefs.Save();
-
-                if (musicSlider.value > 0.05f)
-                    MusicManager.Instance.ContinueMusic();
-            }
         }
 
         private void OnMusicSliderChanged(float value)

@@ -7925,17 +7925,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8700081467528558537, guid: 1dbe10335603c724ba5e18f6ce5fad12, type: 3}
   m_PrefabInstance: {fileID: 6341553813375599163}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &185563150 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8093864977061865333, guid: 1dbe10335603c724ba5e18f6ce5fad12, type: 3}
-  m_PrefabInstance: {fileID: 6341553813375599163}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 492b541afeffcd14dac1843f204645cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &186702517
 GameObject:
   m_ObjectHideFlags: 0
@@ -24078,7 +24067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &659089739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24125,6 +24114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42bc15e62f2fec747ba3138e0de42f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settingsCanvas: {fileID: 0}
   activeSoundImage: {fileID: 253493916}
   disableSoundImage: {fileID: 316614844}
 --- !u!1 &659429448
@@ -28534,6 +28524,7 @@ GameObject:
   - component: {fileID: 779388915}
   - component: {fileID: 779388919}
   - component: {fileID: 779388918}
+  - component: {fileID: 779388920}
   m_Layer: 5
   m_Name: Setting_Btn
   m_TagString: Untagged
@@ -28604,19 +28595,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 779388916}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 185563150}
-        m_TargetAssemblyTypeName: Assets.Scripts.Animation.HopupAnimUI, Assembly-CSharp
-        m_MethodName: Hopup
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &779388916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28685,6 +28664,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundClickPrefab: {fileID: 3296352006043120542, guid: 5d2be9856fb7f2744862930ccad19bf5, type: 3}
+--- !u!114 &779388920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779388913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf8ea1aca260c54eb390d548adc1d56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsButton: {fileID: 779388915}
+  settingsPanel: {fileID: 0}
 --- !u!1 &785733233
 GameObject:
   m_ObjectHideFlags: 0
@@ -81782,7 +81775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2123451554
 MonoBehaviour:
   m_ObjectHideFlags: 0
