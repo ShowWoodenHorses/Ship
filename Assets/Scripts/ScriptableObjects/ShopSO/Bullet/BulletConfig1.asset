@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItemText: "\"\u0427\u0443\u0433\u0443\u043D\u043D\u043E\u0435 \u044F\u0434\u0440\u043E\""
   nameItemText_EN: '"Iron core"'
-  nameItemText_TR: '"Iron core"'
+  nameItemText_TR: "\"D\xF6kme demir mermi\""
   iconItem: {fileID: 21300000, guid: 5283f1879d7f039449f16fad120f67a2, type: 3}
   idItem: bullet1
   costItem: 0

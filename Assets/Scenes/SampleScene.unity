@@ -6850,8 +6850,6 @@ MonoBehaviour:
   uiController: {fileID: 950126500}
   uiDisplayCannon: {fileID: 1875640231}
   mainMixer: {fileID: 24100000, guid: f19320005adc7ae4b99d7e83722f3cd6, type: 2}
-  musicManager: {fileID: 2123451554}
-  audioSettingsManager: {fileID: 659089739}
   rewardsAds: {fileID: 191181343}
 --- !u!4 &158090193
 Transform:
@@ -31174,7 +31172,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0435
-    \u043E\u0447\u043A\u0438"
+    100 \u043E\u0447\u043A\u043E\u0432"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31266,9 +31264,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ru: "\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0435
-    \u043E\u0447\u043A\u0438"
-  en: Extra points
-  tr: Ekstra puanlar
+    100 \u043E\u0447\u043A\u043E\u0432"
+  en: Additional 100 points
+  tr: Ek 100 puan
 --- !u!1 &856900738
 GameObject:
   m_ObjectHideFlags: 0

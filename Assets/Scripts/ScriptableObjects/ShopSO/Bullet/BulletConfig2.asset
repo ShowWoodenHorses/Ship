@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItemText: "\"\u041A\u0430\u0440\u0442\u0435\u0447\u044C\""
   nameItemText_EN: '"Buckshot"'
-  nameItemText_TR: '"Buckshot"'
+  nameItemText_TR: "\"Sa\xE7ma\""
   iconItem: {fileID: 21300000, guid: a9665d552505470469860e7e5e2c3889, type: 3}
   idItem: bullet2
   costItem: 50

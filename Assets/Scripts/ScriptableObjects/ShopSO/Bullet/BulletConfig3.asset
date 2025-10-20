@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItemText: "\"\u041A\u0430\u043B\u0451\u043D\u043E\u0435 \u044F\u0434\u0440\u043E\""
   nameItemText_EN: '"Hot core"'
-  nameItemText_TR: '"Hot core"'
+  nameItemText_TR: "\"S\u0131cak \xC7ekirdek\""
   iconItem: {fileID: 21300000, guid: 8bfe71b58fabbbf419d5048081f07062, type: 3}
   idItem: bullet3
   costItem: 100

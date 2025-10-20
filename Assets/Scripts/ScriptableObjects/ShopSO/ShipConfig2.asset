@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItemText: "\"\u0413\u0430\u043B\u0435\u0430\u0441\""
   nameItemText_EN: '"Galleass"'
-  nameItemText_TR: '"Galleass"'
+  nameItemText_TR: '"Kalyon"'
   iconItem: {fileID: 21300000, guid: c3a533d193eccf3469209b5bf9b48c38, type: 3}
   idItem: ship2
   costItem: 100
